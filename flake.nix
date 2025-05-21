@@ -1,5 +1,5 @@
 {
-  description = "AHM1A - Nix Configuration for M1 MacBook Air";
+  description = "M1 MacBook Air Nix Configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
