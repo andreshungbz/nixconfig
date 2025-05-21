@@ -1,4 +1,12 @@
-{ user, lib, ... }: {
+{ user, lib, pkgs, ... }:
+let
+  base = if pkgs.stdenv.hostPlatform.isLinux then
+    "/home"
+  else if pkgs.stdenv.hostPlatform.isDarwin then
+    "/Users"
+  else
+    "";
+in {
   zsh = {
     enable = true;
     initContent = lib.mkBefore ''
@@ -8,7 +16,7 @@
 
   starship = {
     enable = true;
-    settings = builtins.fromTOML (builtins.readFile ../dotfiles/starship.toml);
+    settings = builtins.fromTOML (builtins.readFile ./dotfiles/starship.toml);
   };
 
   git = {
@@ -27,7 +35,7 @@
     matchBlocks = {
       "github.com" = {
         identitiesOnly = true;
-        identityFile = [ "/Users/${user}/.ssh/id_ed25519" ];
+        identityFile = [ "${base}/${user}/.ssh/id_ed25519" ];
       };
     };
   };

@@ -19,7 +19,7 @@ in {
     useUserPackages = true;
     users.${user} = {
       home.stateVersion = "23.11";
-      programs = import ../../common/home { inherit lib user; };
+      programs = import ../../common/home.nix { inherit lib user pkgs; };
     };
   };
 
