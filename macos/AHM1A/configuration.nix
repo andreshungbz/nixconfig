@@ -1,4 +1,4 @@
-{ user, pkgs, lib, ... }:
+{ lib, pkgs, user, ... }:
 let
   sharedPkgs = import ../shared/packages.nix { inherit pkgs; };
   localPkgs = import ./modules/packages.nix { inherit pkgs; };
@@ -19,7 +19,7 @@ in {
     useUserPackages = true;
     users.${user.username} = {
       home.stateVersion = "23.11";
-      programs = import ../../common/home.nix { inherit lib user pkgs; };
+      programs = import ../../common/home.nix { inherit lib pkgs user; };
     };
   };
 

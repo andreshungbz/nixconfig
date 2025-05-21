@@ -1,4 +1,4 @@
-{ user, lib, pkgs, ... }:
+{ lib, pkgs, user, ... }:
 let
   base = if pkgs.stdenv.hostPlatform.isLinux then
     "/home"
