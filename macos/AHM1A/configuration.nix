@@ -1,7 +1,7 @@
 { user, pkgs, ... }:
 let
   shared = import ../shared/packages.nix { inherit pkgs; };
-  local = import ./modules/local.nix { inherit pkgs; };
+  local = import ./modules/packages.nix { inherit pkgs; };
 in {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   imports = [ ./modules/home.nix ./modules/macos.nix ];

@@ -19,7 +19,7 @@
         modules = [
           { nixpkgs.config.allowUnfree = true; }
           home-manager.darwinModules.home-manager
-          ./configuration.nix
+          ./macos/AHM1A/configuration.nix
         ];
       };
     };
