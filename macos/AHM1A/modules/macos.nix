@@ -1,27 +1,7 @@
-# MacOS system settings
-
-{ user, ... }:
-let shared = import ../../shared/defaults.nix;
-in {
-  # TouchID sudo authentication
-  security = { pam.services.sudo_local.touchIdAuth = true; };
-
+{
   system = {
-    primaryUser = user;
-    stateVersion = 4;
-    checks.verifyNixPath = false;
-
-    startup.chime = false;
-    defaults = shared // {
-      # dock
+    defaults = {
       dock = {
-        autohide = true;
-        launchanim = true;
-        orientation = "bottom";
-        show-recents = false;
-        tilesize = 48;
-
-        # dock format
         persistent-apps = [
           { app = "/System/Applications/Mail.app"; }
           { app = "/System/Applications/Calendar.app"; }
@@ -39,26 +19,12 @@ in {
           { app = "/Applications/Warp.app"; }
           { app = "/Applications/Visual Studio Code.app"; }
         ];
-
-        # hot corners
-        wvous-tl-corner = 13; # Lock Screen
-        wvous-tr-corner = 12; # Notification Center
-        wvous-bl-corner = 11; # Launchpad
-        wvous-br-corner = 4; # Desktop
       };
 
-      # lock screen
       loginwindow = {
         GuestEnabled = false;
         LoginwindowText = "andres.hung@outlook.com";
       };
-    };
-
-    activationScripts.restartDock = {
-      text = ''
-        echo "Restarting Dock to apply persistent apps changes..."
-        killall Dock || true
-      '';
     };
   };
 }

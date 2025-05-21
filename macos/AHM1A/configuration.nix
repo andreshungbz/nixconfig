@@ -1,10 +1,14 @@
 { user, pkgs, ... }:
 let
-  shared = import ../shared/packages.nix { inherit pkgs; };
-  local = import ./modules/packages.nix { inherit pkgs; };
+  sharedPkgs = import ../shared/packages.nix { inherit pkgs; };
+  localPkgs = import ./modules/packages.nix { inherit pkgs; };
 in {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  imports = [ ./modules/home.nix ./modules/macos.nix ];
+  imports = [
+    (import ../shared/macos.nix { inherit user; }) # shared settings
+    ./modules/macos.nix # extend settings
+    ./modules/home.nix
+  ];
 
   users.users.${user} = {
     name = user;
@@ -13,12 +17,12 @@ in {
     shell = pkgs.zsh;
   };
 
-  environment.systemPackages = (builtins.attrValues shared.packages)
-    ++ (builtins.attrValues local.packages);
+  environment.systemPackages = (builtins.attrValues sharedPkgs.packages)
+    ++ (builtins.attrValues localPkgs.packages);
 
   homebrew = {
     enable = true;
-    casks = shared.casks ++ local.casks;
-    masApps = shared.mas // local.mas;
+    casks = sharedPkgs.casks ++ localPkgs.casks;
+    masApps = sharedPkgs.mas // localPkgs.mas;
   };
 }
