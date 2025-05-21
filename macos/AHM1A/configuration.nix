@@ -29,6 +29,8 @@ in {
     ./local/macos.nix # extend settings
   ];
 
+  environment.variables = { TEST = "test"; };
+
   environment.systemPackages = (builtins.attrValues sharedPkgs.packages)
     ++ (builtins.attrValues localPkgs.packages);
 
