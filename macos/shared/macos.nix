@@ -4,7 +4,6 @@
 
   system = {
     primaryUser = user;
-    stateVersion = 4;
     checks.verifyNixPath = false;
     startup.chime = false;
 
