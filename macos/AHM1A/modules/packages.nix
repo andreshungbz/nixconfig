@@ -1,4 +1,4 @@
-{ pkgs }: {
+{ pkgs, ... }: {
   packages = { inherit (pkgs) ookla-speedtest; };
 
   casks = [
