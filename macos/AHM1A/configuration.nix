@@ -24,6 +24,7 @@ in {
   };
 
   imports = [
+    ../../common/font.nix
     (import ../shared/macos.nix { inherit user; }) # shared settings
     ./modules/macos.nix # extend settings
   ];
