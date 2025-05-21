@@ -1,7 +1,7 @@
 { lib, pkgs, user, ... }:
 let
   sharedPkgs = import ../shared/packages.nix { inherit pkgs; };
-  localPkgs = import ./modules/packages.nix { inherit pkgs; };
+  localPkgs = import ./local/packages.nix { inherit pkgs; };
 in {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -26,7 +26,7 @@ in {
   imports = [
     ../../common/font.nix
     (import ../shared/macos.nix { inherit user; }) # shared settings
-    ./modules/macos.nix # extend settings
+    ./local/macos.nix # extend settings
   ];
 
   environment.systemPackages = (builtins.attrValues sharedPkgs.packages)
