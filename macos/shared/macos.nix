@@ -3,7 +3,7 @@
   security = { pam.services.sudo_local.touchIdAuth = true; };
 
   system = {
-    primaryUser = user;
+    primaryUser = user.username;
     checks.verifyNixPath = false;
     startup.chime = false;
 

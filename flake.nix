@@ -11,7 +11,12 @@
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, darwin }:
-    let user = "andreshung";
+    let
+      user = {
+        username = "andreshung";
+        name = "Andres Hung";
+        email = "andres.hung@outlook.com";
+      };
     in {
       darwinConfigurations."AHM1A" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";

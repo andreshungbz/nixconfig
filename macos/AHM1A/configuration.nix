@@ -5,9 +5,9 @@ let
 in {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  users.users.${user} = {
-    name = user;
-    home = "/Users/${user}";
+  users.users.${user.username} = {
+    name = user.username;
+    home = "/Users/${user.username}";
     isHidden = false;
     shell = pkgs.zsh;
   };
@@ -17,7 +17,7 @@ in {
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.${user} = {
+    users.${user.username} = {
       home.stateVersion = "23.11";
       programs = import ../../common/home.nix { inherit lib user pkgs; };
     };

@@ -21,8 +21,8 @@ in {
 
   git = {
     enable = true;
-    userName = "Andres Hung";
-    userEmail = "andres.hung@outlook.com";
+    userName = user.name;
+    userEmail = user.email;
     extraConfig = {
       init.defaultBranch = "main";
       pull.rebase = true;
@@ -35,7 +35,7 @@ in {
     matchBlocks = {
       "github.com" = {
         identitiesOnly = true;
-        identityFile = [ "${base}/${user}/.ssh/id_ed25519" ];
+        identityFile = [ "${base}/${user.username}/.ssh/id_ed25519" ];
       };
     };
   };
