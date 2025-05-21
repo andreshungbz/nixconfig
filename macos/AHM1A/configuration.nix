@@ -4,6 +4,7 @@ let
   local = import ./modules/local.nix { inherit pkgs; };
 in {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  imports = [ ./modules/home.nix ./modules/macos.nix ];
 
   users.users.${user} = {
     name = user;

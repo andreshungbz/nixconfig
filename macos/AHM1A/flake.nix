@@ -20,8 +20,6 @@
           { nixpkgs.config.allowUnfree = true; }
           home-manager.darwinModules.home-manager
           ./configuration.nix
-          ./modules/home.nix
-          ./modules/macos.nix
         ];
       };
     };
