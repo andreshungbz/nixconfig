@@ -37,7 +37,7 @@ in {
     matchBlocks = {
       "github.com" = {
         identitiesOnly = true;
-        identityFile = [ "${base}/${user.username}/.ssh/id_ed25519" ];
+        identityFile = [ "${base}/${user.username}/.ssh/github" ];
       };
     };
   };
