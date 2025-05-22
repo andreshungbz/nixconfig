@@ -15,12 +15,12 @@
     # "wireshark"
 
     # communication tools
-    # "discord"
+    "discord"
     # "zoom"
 
     # browsers
     # "arc"
-    # "firefox"
+    "firefox"
     # "google-chrome"
     # "microsoft-edge"
 
@@ -44,6 +44,6 @@
     # "Goodnotes 6: AI Notes & Docs" = 1444383602;
     # "Pixelmator Pro" = 1289583905;
     "Telegram" = 747648890;
-    # "WhatsApp Messenger" = 310633997;
+    "WhatsApp Messenger" = 310633997;
   };
 }
