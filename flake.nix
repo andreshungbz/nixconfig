@@ -1,5 +1,5 @@
 {
-  description = "M1 MacBook Air Nix Configuration";
+  description = "Andres' Nix Configurations for MacOS & NixOS";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";

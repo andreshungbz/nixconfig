@@ -1,6 +1,10 @@
+# Shared Nix Packages, Homebrew Casks, and App Store Apps
+
 { pkgs, ... }: {
+  # nix packages
   packages = { inherit (pkgs) nixfmt-classic; };
 
+  # homebrew casks
   casks = [
     # development tools
     "visual-studio-code"
@@ -9,12 +13,13 @@
     # browsers
     "firefox@developer-edition"
 
-    # applications
+    # other
     "alt-tab"
     "coconutbattery"
     "rectangle"
   ];
 
+  # app store applications
   mas = {
     "CopyClip - Clipboard History" = 595191960;
     "Hidden Bar" = 1452453066;

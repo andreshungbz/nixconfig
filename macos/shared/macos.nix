@@ -1,5 +1,7 @@
+# Shared MacOS Settings
+
 { user, ... }: {
-  # TouchID sudo authentication
+  # sudo authentication with TouchID
   security = { pam.services.sudo_local.touchIdAuth = true; };
 
   system = {
@@ -37,6 +39,7 @@
           DSDontWriteUSBStores = true;
         };
 
+        # advertising
         "com.apple.AdLib" = { allowApplePersonalizedAdvertising = false; };
 
         # don't open Photos automatically when connecting a device

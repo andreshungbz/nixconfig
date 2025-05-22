@@ -1,10 +1,17 @@
+# Nix Configuration - M1 MacBook Air
+
 { lib, pkgs, user, ... }:
 let
+  # shared pkgs/casks/mas
   sharedPkgs = import ../shared/packages.nix { inherit pkgs; };
+  # host-specific pkgs/casks/mas
   localPkgs = import ./local/packages.nix { inherit pkgs; };
 in {
+  # nix-darwin settings
+  system.stateVersion = 4;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # users
   users.users.${user.username} = {
     name = user.username;
     home = "/Users/${user.username}";
@@ -12,8 +19,7 @@ in {
     shell = pkgs.zsh;
   };
 
-  system.stateVersion = 4;
-
+  # home manager (module)
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
@@ -24,19 +30,22 @@ in {
   };
 
   imports = [
-    ../../common/font.nix
-    (import ../shared/macos.nix { inherit user; }) # shared settings
-    ./local/macos.nix # extend settings
+    ../../common/font.nix # shared fonts
+    (import ../shared/macos.nix { inherit user; }) # shared MacOS settings
+    ./local/macos.nix # host-specific MacOS settings
   ];
 
-  environment.variables = { TEST = "test"; };
-
+  # nix packages
   environment.systemPackages = (builtins.attrValues sharedPkgs.packages)
     ++ (builtins.attrValues localPkgs.packages);
 
+  # homebrew packages
   homebrew = {
     enable = true;
     casks = sharedPkgs.casks ++ localPkgs.casks;
     masApps = sharedPkgs.mas // localPkgs.mas;
   };
+
+  # environment variables
+  environment.variables = { };
 }

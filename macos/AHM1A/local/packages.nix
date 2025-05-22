@@ -1,6 +1,10 @@
+# Local Nix Packages, Homebrew Casks, and App Store Apps
+
 { pkgs, ... }: {
+  # nix packages
   packages = { inherit (pkgs) ookla-speedtest; };
 
+  # homebrew casks
   casks = [
     # development tools
     # "homebrew/cask/docker"
@@ -31,6 +35,7 @@
     # "steam"
   ];
 
+  # app store applications
   mas = {
     # "Bitwarden" = 1352778147;
     # "Affinity Designer 2" = 1616831348;

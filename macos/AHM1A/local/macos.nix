@@ -1,7 +1,10 @@
+# Local MacOS Settings
+
 {
   system = {
     defaults = {
       dock = {
+        # dock customization
         persistent-apps = [
           { app = "/System/Applications/Mail.app"; }
           { app = "/System/Applications/Calendar.app"; }
@@ -21,6 +24,7 @@
         ];
       };
 
+      # lock screen
       loginwindow = {
         GuestEnabled = false;
         LoginwindowText = "andres.hung@outlook.com";
