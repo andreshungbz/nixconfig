@@ -24,7 +24,7 @@ in {
     useGlobalPkgs = true;
     useUserPackages = true;
     users.${user.username} = {
-      home.stateVersion = "23.11";
+      home.stateVersion = "25.05";
       programs = import ../../common/home.nix { inherit lib pkgs user; };
     };
   };
