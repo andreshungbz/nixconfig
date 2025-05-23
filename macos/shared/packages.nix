@@ -1,8 +1,9 @@
 # Shared Nix Packages, Homebrew Casks, and App Store Apps
 
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # nix packages
-  packages = { inherit (pkgs) nixfmt-rfc-style; };
+  packages = { inherit (pkgs) fastfetch nixfmt-rfc-style; };
 
   # homebrew casks
   casks = [

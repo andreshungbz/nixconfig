@@ -10,8 +10,8 @@
     warp-terminal
 
     # command-line
-    nixfmt-rfc-style
     fastfetch
+    nixfmt-rfc-style
   ];
 
   programs.zsh.enable = true;
