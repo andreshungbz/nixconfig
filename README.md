@@ -93,3 +93,7 @@ sudo nixos-rebuild switch --flake .#AHNIX
 | Apply configuration changes (NixOS)    | `sudo nixos-rebuild switch --flake .#AHNIX`  |
 | Update packages                        | `nix flake update`                           |
 | Clean up previous generations          | `sudo nix-collect-garbage --delete-old`      |
+
+## Attributions
+
+Many ideas and lessons learned in the process of organizing this Nix configuration repository are thanks to [Andrey0189's nix configuration](https://github.com/Andrey0189/nixos-config-reborn) and [dustylion's nix configuration](https://github.com/dustinlyons/nixos-config).
