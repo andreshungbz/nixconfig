@@ -26,7 +26,7 @@
     # eza
     # ffmpeg
     # ffmpegthumbnailer
-    # ookla-speedtest
+    ookla-speedtest
     # tldr
     # tree
     # wget
