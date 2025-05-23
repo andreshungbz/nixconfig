@@ -12,10 +12,7 @@ Feel free to explore the repository and take ideas for your Nix configuration!
 ### MacOS
 
 1. Install the [Homebrew](https://brew.sh/) package manager.
-2. Install [Nix](https://nixos.org/) through the [Determinate Nix](https://determinate.systems/) Installer (answer no to the prompt).
-
-> [!NOTE]
-> This step adds the `--nix-build-group-id 30000` option.
+2. Install [Nix](https://nixos.org/) through the [Determinate Nix](https://determinate.systems/) Installer (answer no to the prompt; `--nix-build-group-id 30000` option added).
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --nix-build-group-id 30000
