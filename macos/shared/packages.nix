@@ -16,8 +16,8 @@
 
     # other
     "alt-tab"
-    "coconutbattery"
     "rectangle"
+    "stats"
   ];
 
   # app store applications
