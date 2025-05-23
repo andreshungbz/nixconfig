@@ -5,32 +5,34 @@
   # nix system packages
   environment.systemPackages = with pkgs; [
     # desktop
-    # bitwarden-desktop
-    # discord
-    # firefox
-    # krita
-    # microsoft-edge
-    # obsidian
-    # obs-studio
-    # postman
-    # powershell
-    # qbittorrent
+    bitwarden-desktop
+    discord
+    firefox
+    kdePackages.filelight
+    kdePackages.koi
+    krita
+    obsidian
+    obs-studio
+    postman
+    powershell
+    qbittorrent
     telegram-desktop
-    # wireshark
-    # zoom-us
+    thunderbird
+    wireshark
+    zoom-us
 
     # command-line
-    # btop
-    # cloc
-    # exiftool
-    # eza
-    # ffmpeg
-    # ffmpegthumbnailer
+    btop
+    cloc
+    exiftool
+    ffmpeg
+    ffmpegthumbnailer
     ookla-speedtest
-    # tldr
-    # tree
-    # wget
-    # yt-dlp
+    tldr
+    tree
+    wget
+    yt-dlp
+    wl-clipboard
   ];
 
   # Docker
