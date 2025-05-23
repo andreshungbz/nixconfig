@@ -1,6 +1,15 @@
-{ lib, pkgs, user, ... }: {
+{
+  lib,
+  pkgs,
+  user,
+  ...
+}:
+{
   system.stateVersion = "25.11";
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nixpkgs.config.allowUnfree = true;
 
   imports = [
@@ -18,7 +27,11 @@
       ${user.username} = {
         description = user.name;
         isNormalUser = true;
-        extraGroups = [ "wheel" "networkmanager" "docker" ];
+        extraGroups = [
+          "wheel"
+          "networkmanager"
+          "docker"
+        ];
         shell = pkgs.zsh;
       };
     };
@@ -28,6 +41,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    backupFileExtension = "backup";
     users.${user.username} = {
       home.stateVersion = "25.05";
       programs = import ../../common/home.nix { inherit lib pkgs user; };
