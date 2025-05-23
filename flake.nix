@@ -30,13 +30,15 @@
       };
     in
     {
-      darwinConfigurations."AHM1A" = darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
-        specialArgs = { inherit user; };
-        modules = [
-          home-manager.darwinModules.home-manager
-          ./macos/AHM1A/configuration.nix
-        ];
+      darwinConfigurations = {
+        "AHM1A" = darwin.lib.darwinSystem {
+          system = "aarch64-darwin";
+          specialArgs = { inherit user; };
+          modules = [
+            home-manager.darwinModules.home-manager
+            ./macos/AHM1A/configuration.nix
+          ];
+        };
       };
 
       nixosConfigurations = {
