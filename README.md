@@ -69,6 +69,8 @@ sudo ln -s ~/Projects/nixconfig /etc/nixos
 sudo nixos-rebuild switch --flake .#AHNIX
 ```
 
+9. Restart the computer.
+
 ## Management
 
 ### MacOS
