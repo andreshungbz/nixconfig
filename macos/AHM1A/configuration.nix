@@ -10,6 +10,7 @@ in {
   # nix-darwin settings
   system.stateVersion = 4;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowUnfree = true;
 
   # users
   users.users.${user.username} = {

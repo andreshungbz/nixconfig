@@ -27,7 +27,6 @@
         system = "aarch64-darwin";
         specialArgs = { inherit user; };
         modules = [
-          { nixpkgs.config.allowUnfree = true; }
           home-manager.darwinModules.home-manager
           ./macos/AHM1A/configuration.nix
         ];
@@ -42,6 +41,6 @@
             ./nixos/AHNIX/configuration.nix
           ];
         };
-      }
+      };
     };
 }
