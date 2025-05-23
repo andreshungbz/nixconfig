@@ -1,6 +1,6 @@
 # Nix Configuration
 
-Welcome to my Nix configuration for both MacOS and NixOS. This repository contains configuration files and package setup for each host of a respective system. Some configurations are shared between the two systems, as well as between different hosts.
+Welcome to my Nix configuration for both macOS and NixOS. This repository contains configuration files and package setup for each host of a respective system. Some configurations are shared between the two systems and between different hosts.
 
 Feel free to explore the repository and take ideas for your Nix configuration!
 
@@ -25,7 +25,7 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 git clone https://github.com/andreshungbz/nixconfig.git && cd nixconfig
 ```
 
-5. Install the selected flake configuration for the first time (e.g. `#AHM1A`).
+5. Install the selected flake configuration for the first time (e.g., `#AHM1A`).
 
 ```
 sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#AHM1A
@@ -52,7 +52,7 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
 sudo nixos-rebuild switch
 ```
 
-4. Create a `Projects` directory in the home directory and change into it.
+4. Create a `Projects` directory and change into the home directory.
 
 ```
 mkdir ~/Projects && cd ~/Projects
