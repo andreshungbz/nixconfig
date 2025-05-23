@@ -1,11 +1,11 @@
 { lib, pkgs, user, ... }: {
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
   imports = [
     ./hardware-configuration.nix
-    ../../common.font.nix
+    ../../common/font.nix
     ../shared/modules # shared NixOS settings
     ./local/modules # local NixOS settings
     ../shared/packages.nix # shared packages
@@ -14,12 +14,12 @@
 
   # users
   users = {
-    defaultUserShell = pkgs.zsh;
     users = {
       ${user.username} = {
         description = user.name;
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" "docker" ];
+        shell = pkgs.zsh;
       };
     };
   };
