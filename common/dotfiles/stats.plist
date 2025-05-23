@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Battery_position</key>
+	<integer>6</integer>
+	<key>Battery_state</key>
+	<false/>
+	<key>Bluetooth_position</key>
+	<integer>7</integer>
+	<key>CPU_position</key>
+	<integer>0</integer>
+	<key>CPU_state</key>
+	<false/>
+	<key>Clock_position</key>
+	<integer>8</integer>
+	<key>CombinedModules</key>
+	<true/>
+	<key>CombinedModules_popup</key>
+	<true/>
+	<key>CombinedModules_separator</key>
+	<true/>
+	<key>CombinedModules_spacing</key>
+	<string>none</string>
+	<key>Disk_position</key>
+	<integer>3</integer>
+	<key>Disk_state</key>
+	<false/>
+	<key>GPU_position</key>
+	<integer>1</integer>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{800, 448}</string>
+	<key>NSStatusItem Preferred Position CombinedModules</key>
+	<real>428</real>
+	<key>NSStatusItem Restore Position Battery_battery</key>
+	<integer>554</integer>
+	<key>NSStatusItem Restore Position CPU_mini</key>
+	<integer>761</integer>
+	<key>NSStatusItem Restore Position Disk_mini</key>
+	<integer>667</integer>
+	<key>NSStatusItem Restore Position Network_speed</key>
+	<integer>475</integer>
+	<key>NSStatusItem Restore Position Network_text</key>
+	<integer>475</integer>
+	<key>NSStatusItem Restore Position RAM_mini</key>
+	<integer>714</integer>
+	<key>NSStatusItem Restore Position Sensors_mini</key>
+	<integer>428</integer>
+	<key>NSStatusItem Restore Position Sensors_sensors</key>
+	<integer>428</integer>
+	<key>NSWindow Frame NSNavPanelAutosaveName</key>
+	<string>320 320 800 448 0 0 1440 875 </string>
+	<key>Network_label_position</key>
+	<integer>1</integer>
+	<key>Network_networkChart_position</key>
+	<integer>3</integer>
+	<key>Network_position</key>
+	<integer>4</integer>
+	<key>Network_speed_position</key>
+	<integer>0</integer>
+	<key>Network_state_position</key>
+	<integer>4</integer>
+	<key>Network_text_position</key>
+	<integer>2</integer>
+	<key>Network_widget</key>
+	<string>speed</string>
+	<key>RAM_position</key>
+	<integer>2</integer>
+	<key>RAM_state</key>
+	<false/>
+	<key>Sensor_mini_alignment</key>
+	<string>right</string>
+	<key>Sensor_mini_color</key>
+	<string>monochrome</string>
+	<key>Sensor_mini_label</key>
+	<true/>
+	<key>Sensors_barChart_position</key>
+	<integer>2</integer>
+	<key>Sensors_hid</key>
+	<false/>
+	<key>Sensors_label_position</key>
+	<integer>3</integer>
+	<key>Sensors_mini_position</key>
+	<integer>0</integer>
+	<key>Sensors_position</key>
+	<integer>5</integer>
+	<key>Sensors_sensor</key>
+	<string>TB1T</string>
+	<key>Sensors_stack_position</key>
+	<integer>1</integer>
+	<key>Sensors_state</key>
+	<true/>
+	<key>Sensors_unknown</key>
+	<false/>
+	<key>Sensors_widget</key>
+	<string>mini</string>
+	<key>runAtLoginInitialized</key>
+	<true/>
+	<key>sensor_PPBR</key>
+	<false/>
+	<key>sensor_TB1T</key>
+	<true/>
+	<key>sensor_TB2T</key>
+	<true/>
+	<key>sensor_TH0x</key>
+	<true/>
+	<key>sensor_TW0P</key>
+	<true/>
+	<key>sensor_Total System Consumption</key>
+	<false/>
+	<key>setupProcess</key>
+	<true/>
+	<key>telemetry</key>
+	<false/>
+	<key>temperature_units</key>
+	<string>celsius</string>
+	<key>updater_check_ts</key>
+	<integer>1748039027</integer>
+	<key>version</key>
+	<string>2.11.43</string>
+</dict>
+</plist>
