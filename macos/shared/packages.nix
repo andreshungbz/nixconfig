@@ -2,7 +2,7 @@
 
 { pkgs, ... }: {
   # nix packages
-  packages = { inherit (pkgs) nixfmt-classic; };
+  packages = { inherit (pkgs) nixfmt-rfc-style; };
 
   # homebrew casks
   casks = [
