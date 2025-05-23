@@ -1,4 +1,8 @@
-# Nix Configurations
+# Nix Configuration
+
+Welcome to my Nix configuration for both MacOS and NixOS. This repository contains configuration files and package setup for each host of a respective system. Some configurations are shared between the two systems, as well as between different hosts.
+
+Feel free to explore the repository and take ideas for your Nix configuration!
 
 ## Installation
 
