@@ -1,15 +1,24 @@
 # Nix Configuration - M1 MacBook Air
 
-{ lib, pkgs, user, ... }:
+{
+  lib,
+  pkgs,
+  user,
+  ...
+}:
 let
   # shared pkgs/casks/mas
   sharedPkgs = import ../shared/packages.nix { inherit pkgs; };
   # host-specific pkgs/casks/mas
   localPkgs = import ./local/packages.nix { inherit pkgs; };
-in {
+in
+{
   # nix-darwin settings
   system.stateVersion = 4;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nixpkgs.config.allowUnfree = true;
 
   # users
@@ -37,8 +46,8 @@ in {
   ];
 
   # nix packages
-  environment.systemPackages = (builtins.attrValues sharedPkgs.packages)
-    ++ (builtins.attrValues localPkgs.packages);
+  environment.systemPackages =
+    (builtins.attrValues sharedPkgs.packages) ++ (builtins.attrValues localPkgs.packages);
 
   # homebrew packages
   homebrew = {

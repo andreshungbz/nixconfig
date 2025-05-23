@@ -1,8 +1,11 @@
 # Shared MacOS Settings
 
-{ user, ... }: {
+{ user, ... }:
+{
   # sudo authentication with TouchID
-  security = { pam.services.sudo_local.touchIdAuth = true; };
+  security = {
+    pam.services.sudo_local.touchIdAuth = true;
+  };
 
   system = {
     primaryUser = user.username;
@@ -40,14 +43,18 @@
         };
 
         # advertising
-        "com.apple.AdLib" = { allowApplePersonalizedAdvertising = false; };
+        "com.apple.AdLib" = {
+          allowApplePersonalizedAdvertising = false;
+        };
 
         # don't open Photos automatically when connecting a device
         "com.apple.ImageCapture".disableHotPlug = true;
       };
 
       # control center
-      controlcenter = { BatteryShowPercentage = true; };
+      controlcenter = {
+        BatteryShowPercentage = true;
+      };
 
       # dock
       dock = {

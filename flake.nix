@@ -15,14 +15,21 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, darwin }:
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      home-manager,
+      darwin,
+    }:
     let
       user = {
         username = "andreshung";
         name = "Andres Hung";
         email = "andres.hung@outlook.com";
       };
-    in {
+    in
+    {
       darwinConfigurations."AHM1A" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         specialArgs = { inherit user; };

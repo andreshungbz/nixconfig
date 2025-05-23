@@ -1,14 +1,21 @@
 # Common Home Manager Program Configurations
 
-{ lib, pkgs, user, ... }:
+{
+  lib,
+  pkgs,
+  user,
+  ...
+}:
 let
-  base = if pkgs.stdenv.hostPlatform.isLinux then
-    "/home"
-  else if pkgs.stdenv.hostPlatform.isDarwin then
-    "/Users"
-  else
-    "";
-in {
+  base =
+    if pkgs.stdenv.hostPlatform.isLinux then
+      "/home"
+    else if pkgs.stdenv.hostPlatform.isDarwin then
+      "/Users"
+    else
+      "";
+in
+{
   zsh = {
     enable = true;
     autosuggestion.enable = true;
@@ -20,12 +27,16 @@ in {
       ignoreAllDups = true;
     };
 
-    shellAliases = { ls = "eza --icons=always --color=always"; };
+    shellAliases = {
+      ls = "eza --icons=always --color=always";
+    };
 
-    plugins = [{
-      name = "fzf-tab";
-      src = "${pkgs.zsh-fzf-tab}/share/fzf-tab";
-    }];
+    plugins = [
+      {
+        name = "fzf-tab";
+        src = "${pkgs.zsh-fzf-tab}/share/fzf-tab";
+      }
+    ];
 
     initContent = lib.mkBefore ''
       eval "$(starship init zsh)"
@@ -43,9 +54,15 @@ in {
     '';
   };
 
-  fzf = { enable = true; };
-  eza = { enable = true; };
-  bat = { enable = true; };
+  fzf = {
+    enable = true;
+  };
+  eza = {
+    enable = true;
+  };
+  bat = {
+    enable = true;
+  };
 
   starship = {
     enable = true;

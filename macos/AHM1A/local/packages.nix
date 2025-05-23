@@ -1,6 +1,7 @@
 # Local Nix Packages, Homebrew Casks, and App Store Apps
 
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # nix packages
   packages = { inherit (pkgs) ookla-speedtest; };
 
