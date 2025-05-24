@@ -13,6 +13,7 @@
     krita
     obsidian
     obs-studio
+    polychromatic
     postman
     powershell
     qbittorrent
@@ -33,6 +34,9 @@
     wget
     yt-dlp
     wl-clipboard
+
+    # other
+    openrazer-daemon
   ];
 
   # Docker

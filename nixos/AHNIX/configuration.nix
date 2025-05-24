@@ -31,6 +31,7 @@
           "wheel"
           "networkmanager"
           "docker"
+          "openrazer"
         ];
         shell = pkgs.zsh;
       };
@@ -54,4 +55,5 @@
   # host-specific configurations
   boot.initrd.kernelModules = [ "amdgpu" ];
   boot.loader.grub.gfxmodeEfi = "2560x1440";
+  hardware.openrazer.enable = true;
 }
