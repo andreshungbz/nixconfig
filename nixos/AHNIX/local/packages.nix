@@ -17,6 +17,7 @@
     postman
     powershell
     qbittorrent
+    readest
     telegram-desktop
     thunderbird
     wireshark
