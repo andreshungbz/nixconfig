@@ -8,8 +8,8 @@
         persistent-apps = [
           { app = "/System/Applications/Mail.app"; }
           { app = "/System/Applications/Calendar.app"; }
-          { app = "/System/Applications/Notes.app"; }
           { app = "/System/Applications/Reminders.app"; }
+          { app = "/System/Applications/Notes.app"; }
           { app = "/System/Applications/News.app"; }
           { app = "/System/Applications/Photos.app"; }
           { app = "/System/Applications/Books.app"; }
