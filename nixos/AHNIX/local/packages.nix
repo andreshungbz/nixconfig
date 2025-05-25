@@ -10,6 +10,7 @@
     firefox
     kdePackages.filelight
     kdePackages.koi
+    kdePackages.partitionmanager
     krita
     obsidian
     obs-studio
