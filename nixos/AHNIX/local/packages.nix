@@ -39,6 +39,7 @@
 
     # other
     corefonts
+    exfatprogs
     openrazer-daemon
   ];
 
