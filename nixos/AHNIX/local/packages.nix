@@ -37,6 +37,7 @@
     wl-clipboard
 
     # other
+    corefonts
     openrazer-daemon
   ];
 
