@@ -32,6 +32,7 @@
           "networkmanager"
           "docker"
           "openrazer"
+          "wireshark"
         ];
         shell = pkgs.zsh;
       };
