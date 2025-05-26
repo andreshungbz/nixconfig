@@ -52,6 +52,10 @@
     };
   };
 
+  virtualisation.multipass = {
+    enable = true;
+  };
+
   # Steam
   programs.steam = {
     enable = true;
