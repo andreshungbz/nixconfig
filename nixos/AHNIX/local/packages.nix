@@ -52,6 +52,7 @@
     };
   };
 
+  # Multipass
   virtualisation.multipass = {
     enable = true;
   };
