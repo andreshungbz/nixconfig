@@ -33,6 +33,7 @@
     "obsidian"
     "protonvpn"
     "qbittorrent"
+    "raycast"
     # "steam"
   ];
 

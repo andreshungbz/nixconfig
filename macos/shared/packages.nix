@@ -16,13 +16,11 @@
 
     # other
     "alt-tab"
-    "rectangle"
     "stats"
   ];
 
   # app store applications
   mas = {
-    "CopyClip - Clipboard History" = 595191960;
     "Hidden Bar" = 1452453066;
   };
 }
