@@ -26,6 +26,7 @@
     # "microsoft-edge"
 
     # applications
+    "chatgpt"
     "google-drive"
     "iina"
     "microsoft-office"
