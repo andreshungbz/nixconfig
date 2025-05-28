@@ -73,7 +73,7 @@
 
       # finder
       finder = {
-        _FXShowPosixPathInTitle = true;
+        _FXShowPosixPathInTitle = false;
         FXRemoveOldTrashItems = true;
         NewWindowTarget = "Home";
         ShowPathbar = true;
