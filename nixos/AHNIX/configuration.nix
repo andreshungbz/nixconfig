@@ -27,6 +27,8 @@
       ${user.username} = {
         description = user.name;
         isNormalUser = true;
+        shell = pkgs.zsh;
+
         extraGroups = [
           "wheel"
           "networkmanager"
@@ -34,7 +36,6 @@
           "openrazer"
           "wireshark"
         ];
-        shell = pkgs.zsh;
       };
     };
   };

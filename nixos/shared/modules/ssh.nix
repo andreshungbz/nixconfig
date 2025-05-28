@@ -5,9 +5,10 @@
     enable = true;
     ports = [ 22 ];
     settings = {
-      AllowUsers = null;
       UseDns = true;
       X11Forwarding = true;
+      PasswordAuthentication = false;
+      KbdInteractiveAuthentication = false;
     };
   };
 }
