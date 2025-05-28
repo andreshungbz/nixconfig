@@ -87,6 +87,18 @@ in
         identitiesOnly = true;
         identityFile = [ "${base}/${user.username}/.ssh/github" ];
       };
+
+      "AHNIX.local" = {
+        user = "andreshung";
+        identitiesOnly = true;
+        identityFile = [ "${base}/${user.username}/.ssh/github" ];
+      };
+
+      "AHM1A.local" = {
+        user = "andreshung";
+        identitiesOnly = true;
+        identityFile = [ "${base}/${user.username}/.ssh/github" ];
+      };
     };
   };
 }
