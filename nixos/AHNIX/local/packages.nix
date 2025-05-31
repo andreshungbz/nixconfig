@@ -19,6 +19,7 @@
     powershell
     qbittorrent
     readest
+    signal-desktop
     telegram-desktop
     thunderbird
     wireshark
