@@ -52,7 +52,10 @@
   };
 
   # environment variables
-  environment.sessionVariables = rec { };
+  environment.sessionVariables = rec {
+    # disable adaptive brightness on monitor for KDE Wayland
+    POWERDEVIL_NO_DDCUTIL = "1";
+  };
 
   # host-specific configurations
   boot.initrd.kernelModules = [ "amdgpu" ];
