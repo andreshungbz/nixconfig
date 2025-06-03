@@ -40,6 +40,7 @@
     wl-clipboard
 
     # other
+    ciscoPacketTracer8
     corefonts
     exfatprogs
     nvd
