@@ -1,4 +1,4 @@
-# Shared Nix Packages & Environment Variables
+# Shared Nix Packages
 
 { pkgs, ... }:
 {

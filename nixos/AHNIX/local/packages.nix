@@ -1,4 +1,4 @@
-# Local Nix Packages & Environment Variables
+# Local Nix Packages
 
 { pkgs, ... }:
 {
