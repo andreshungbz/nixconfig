@@ -6,6 +6,7 @@
   environment.systemPackages = with pkgs; [
     # desktop
     bitwarden-desktop
+    blender
     discord
     firefox
     kdePackages.filelight
