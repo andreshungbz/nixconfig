@@ -40,7 +40,7 @@
     wl-clipboard
 
     # other
-    ciscoPacketTracer8
+    ciscoPacketTracer8 # https://nixos.wiki/wiki/Packettracer
     corefonts
     exfatprogs
     nvd
