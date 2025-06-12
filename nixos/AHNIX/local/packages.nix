@@ -9,21 +9,15 @@
     blender
     discord
     firefox
-    kdePackages.filelight
-    kdePackages.koi
-    kdePackages.partitionmanager
     krita
     obsidian
     obs-studio
-    polychromatic
     postman
-    powershell
     qbittorrent
     readest
     signal-desktop
     telegram-desktop
     thunderbird
-    wireshark
     zoom-us
 
     # command-line
@@ -32,22 +26,32 @@
     exiftool
     ffmpeg
     ffmpegthumbnailer
-    helix
     ookla-speedtest
+    powershell
     tldr
     tree
     wget
     yt-dlp
     wl-clipboard
 
-    # other
+    # KDE
+    kdePackages.filelight # disk usage
+    kdePackages.koi # auto light/dark theming
+    kdePackages.partitionmanager
+
+    # Razer peripheral lighting
+    openrazer-daemon
+    polychromatic
+
+    # school
     ciscoPacketTracer8 # https://nixos.wiki/wiki/Packettracer
-    corefonts
-    exfatprogs
     gns3-gui
     gns3-server
-    nvd
-    openrazer-daemon
+    wireshark
+
+    # other
+    corefonts
+    exfatprogs # add exFAT formatting
   ];
 
   # Docker
@@ -64,6 +68,13 @@
     enable = true;
   };
 
+  # Wireshark
+  programs.wireshark = {
+    enable = true;
+    dumpcap.enable = true;
+    usbmon.enable = true;
+  };
+
   # Steam
   programs.steam = {
     enable = true;
@@ -71,13 +82,5 @@
     dedicatedServer.openFirewall = true; # Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true;
     gamescopeSession.enable = true;
-  };
-  programs.gamemode.enable = true;
-
-  # Wireshark
-  programs.wireshark = {
-    enable = true;
-    dumpcap.enable = true;
-    usbmon.enable = true;
   };
 }

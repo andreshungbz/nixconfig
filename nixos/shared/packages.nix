@@ -11,7 +11,9 @@
 
     # command-line
     fastfetch
+    helix
     nixfmt-rfc-style
+    nvd
   ];
 
   programs.zsh.enable = true;
