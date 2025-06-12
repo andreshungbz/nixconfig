@@ -32,6 +32,7 @@
     exiftool
     ffmpeg
     ffmpegthumbnailer
+    helix
     ookla-speedtest
     tldr
     tree
