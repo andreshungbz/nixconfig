@@ -9,6 +9,7 @@
     blender
     discord
     firefox
+    ghostty
     krita
     obsidian
     obs-studio
