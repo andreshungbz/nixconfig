@@ -53,6 +53,7 @@
     # other
     corefonts
     exfatprogs # add exFAT formatting
+    flatpak
   ];
 
   # Docker
