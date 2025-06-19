@@ -8,6 +8,7 @@
     bitwarden-desktop
     blender
     discord
+    dolphin-emu
     firefox
     ghostty
     krita
