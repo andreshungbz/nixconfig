@@ -38,6 +38,7 @@
     # system information
     inxi
     mesa-demos
+    lm_sensors
     pciutils
 
     # KDE
