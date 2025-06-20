@@ -35,6 +35,10 @@
     wget
     yt-dlp
     wl-clipboard
+    # system information
+    inxi
+    mesa-demos
+    pciutils
 
     # KDE
     kdePackages.filelight # disk usage
@@ -46,7 +50,7 @@
     polychromatic
 
     # school
-    ciscoPacketTracer8 # https://nixos.wiki/wiki/Packettracer
+    # ciscoPacketTracer8 # https://nixos.wiki/wiki/Packettracer
     gns3-gui
     gns3-server
     wireshark
