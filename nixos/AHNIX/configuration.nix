@@ -62,4 +62,5 @@
   boot.loader.grub.gfxmodeEfi = "2560x1440";
   hardware.openrazer.enable = true;
   services.flatpak.enable = true;
+  programs.kdeconnect.enable = true;
 }
