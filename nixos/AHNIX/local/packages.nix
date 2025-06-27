@@ -12,6 +12,7 @@
     firefox
     ghostty
     krita
+    libreoffice-qt6-fresh
     obsidian
     obs-studio
     postman
