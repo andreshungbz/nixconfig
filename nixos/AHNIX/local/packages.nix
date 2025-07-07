@@ -1,66 +1,62 @@
 # Local Nix Packages
 
 { pkgs, ... }:
+let
+  plasmaPackages = import ./modules/plasma-packages.nix { inherit pkgs; };
+in
 {
   # nix system packages
-  environment.systemPackages = with pkgs; [
-    # desktop
-    bitwarden-desktop
-    blender
-    discord
-    dolphin-emu
-    firefox
-    ghostty
-    krita
-    libreoffice-qt6-fresh
-    obsidian
-    obs-studio
-    postman
-    qbittorrent
-    readest
-    signal-desktop
-    telegram-desktop
-    thunderbird
-    zoom-us
+  environment.systemPackages =
+    with pkgs;
+    [
+      # desktop
+      bitwarden-desktop
+      blender
+      discord
+      dolphin-emu
+      firefox
+      ghostty
+      krita
+      libreoffice-qt6-fresh
+      obsidian
+      obs-studio
+      postman
+      qbittorrent
+      readest
+      signal-desktop
+      telegram-desktop
+      thunderbird
+      zoom-us
 
-    # command-line
-    btop
-    cloc
-    exiftool
-    ffmpeg
-    ffmpegthumbnailer
-    ookla-speedtest
-    powershell
-    tldr
-    tree
-    wget
-    yt-dlp
-    wl-clipboard
-    # system information
-    inxi
-    mesa-demos
-    lm_sensors
-    pciutils
+      # command-line
+      btop
+      cloc
+      exiftool
+      ffmpeg
+      ffmpegthumbnailer
+      ookla-speedtest
+      powershell
+      tldr
+      tree
+      wget
+      yt-dlp
+      wl-clipboard
 
-    # KDE
-    kdePackages.filelight # disk usage
-    kdePackages.koi # auto light/dark theming
-    kdePackages.partitionmanager
+      # Razer peripheral lighting
+      openrazer-daemon
+      polychromatic
 
-    # Razer peripheral lighting
-    openrazer-daemon
-    polychromatic
+      # school
+      # ciscoPacketTracer8 # https://nixos.wiki/wiki/Packettracer
+      gns3-gui
+      gns3-server
+      wireshark
 
-    # school
-    # ciscoPacketTracer8 # https://nixos.wiki/wiki/Packettracer
-    gns3-gui
-    gns3-server
-    wireshark
-
-    # other
-    corefonts
-    exfatprogs # add exFAT formatting
-  ];
+      # other
+      corefonts
+      exfatprogs # add exFAT formatting
+    ]
+    ++ plasmaPackages;
 
   # Docker
   virtualisation.docker = {
