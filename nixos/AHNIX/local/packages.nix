@@ -93,6 +93,7 @@ in
         host    all             all             127.0.0.1/32            scram-sha-256
         host    all             all             ::1/128                 scram-sha-256
         host    all             all             192.168.18.0/24         scram-sha-256
+        host    all             all             172.17.0.0/24           scram-sha-256
 
         # Optional stricter rules:
         # host    mydb            myappuser       192.168.1.0/24          scram-sha-256
