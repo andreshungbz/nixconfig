@@ -29,6 +29,7 @@
     "chatgpt"
     "google-drive"
     "iina"
+    "krita"
     "microsoft-office"
     "obs"
     "obsidian"
