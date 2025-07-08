@@ -75,6 +75,7 @@ in
   # PostgreSQL 17
   services.postgresql = {
     enable = true;
+    enableTCPIP = true;
     package = pkgs.postgresql_17_jit;
 
     # server configuration
@@ -91,7 +92,7 @@ in
         local   all             postgres                                peer
         host    all             all             127.0.0.1/32            scram-sha-256
         host    all             all             ::1/128                 scram-sha-256
-        host    all             all             192.168.1.0/24          scram-sha-256
+        host    all             all             192.168.18.0/24          scram-sha-256
 
         # Optional stricter rules:
         # host    mydb            myappuser       192.168.1.0/24          scram-sha-256
