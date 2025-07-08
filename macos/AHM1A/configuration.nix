@@ -35,6 +35,8 @@ in
     useUserPackages = true;
     users.${user.username} = {
       home.stateVersion = "25.05";
+      home.sessionPath =
+        if pkgs.stdenv.hostPlatform.isDarwin then [ "/opt/homebrew/opt/postgresql@17/bin" ] else [ ];
       programs = import ../../common/home.nix { inherit lib pkgs user; };
     };
   };
@@ -54,6 +56,7 @@ in
     enable = true;
     casks = sharedPkgs.casks ++ localPkgs.casks;
     masApps = sharedPkgs.mas // localPkgs.mas;
+    brews = [ "postgresql@17" ];
   };
 
   # environment variables
