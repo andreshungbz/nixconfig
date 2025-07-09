@@ -9,6 +9,7 @@
       X11Forwarding = true;
       PasswordAuthentication = false;
       KbdInteractiveAuthentication = false;
+      AllowAgentForwarding = "yes";
     };
   };
 }
