@@ -72,6 +72,9 @@ in
     enable = true;
   };
 
+  # Nix-ld
+  programs.nix-ld.enable = true;
+
   # PostgreSQL 17
   services.postgresql = {
     enable = true;
