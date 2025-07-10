@@ -31,6 +31,7 @@ in
       # command-line
       btop
       cloc
+      devcontainer
       exiftool
       ffmpeg
       ffmpegthumbnailer
