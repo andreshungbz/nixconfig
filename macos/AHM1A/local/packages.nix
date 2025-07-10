@@ -23,6 +23,7 @@
     # browsers
     "arc"
     "firefox"
+    "zen"
     # "google-chrome"
     # "microsoft-edge"
 
