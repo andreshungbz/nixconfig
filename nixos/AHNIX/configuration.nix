@@ -34,6 +34,7 @@
           "networkmanager"
           "docker"
           "openrazer"
+          "vboxusers"
           "wireshark"
         ];
       };

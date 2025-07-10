@@ -125,6 +125,14 @@ in
     '';
   };
 
+  # VirtualBox
+  virtualisation.virtualbox = {
+    host = {
+      enable = true;
+      enableExtensionPack = true;
+    };
+  };
+
   # Wireshark
   programs.wireshark = {
     enable = true;
