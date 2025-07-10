@@ -1,16 +1,16 @@
 #                                 
 
 format = """
-[](fg:#078D70 bg:#078D70)\
+[](fg:#ffc43e bg:#ffc43e)\
 $os\
 $username\
-[](fg:#078D70 bg:#26CEAA)\
+[](fg:#ffc43e bg:#26CEAA)\
 $directory\
 [](fg:#26CEAA bg:#98E8C1)\
 $git_branch\
 $git_status\
-[](fg:#98E8C1 bg:#7BADE2)\
-[ ](fg:#7BADE2)\
+[](fg:#98E8C1 bg:#ffc43e)\
+[ ](fg:#ffc43e)\
 """
 
 right_format = """
@@ -21,7 +21,7 @@ $character
 """
 
 [os]
-style = "fg:#ffffff  bg:#078D70"    
+style = "fg:#ffffff  bg:#ffc43e"    
 format = "[$symbol ]($style)"
 disabled = false    
 
@@ -49,8 +49,8 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-style_user = "fg:#ffffff bg:#078D70"
-style_root = "fg:#ffffff bg:#078D70"
+style_user = "fg:#000000 bg:#ffc43e"
+style_root = "fg:#000000 bg:#ffc43e"
 format = '[$user ]($style)'
 disabled = false
 
