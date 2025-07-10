@@ -5,6 +5,7 @@ with pkgs;
 [
   # KDE
   kdePackages.filelight # disk usage
+  kdePackages.kleopatra
   kdePackages.koi # auto light/dark theming
   kdePackages.partitionmanager
 
@@ -13,4 +14,8 @@ with pkgs;
   mesa-demos
   lm_sensors
   pciutils
+
+  # GPG
+  gnupg
+  pinentry-qt
 ]
