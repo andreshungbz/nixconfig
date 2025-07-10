@@ -8,6 +8,7 @@
   # homebrew casks
   casks = [
     # development tools
+    "gpg-suite"
     "homebrew/cask/docker"
     "jetbrains-toolbox"
     "netspot"
