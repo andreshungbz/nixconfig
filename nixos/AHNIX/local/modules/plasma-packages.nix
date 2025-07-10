@@ -16,6 +16,7 @@ with pkgs;
   pciutils
 
   # GPG
+  cryptsetup
   gnupg
   pinentry-qt
 ]
