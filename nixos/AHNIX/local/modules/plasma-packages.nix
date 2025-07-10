@@ -7,7 +7,10 @@ with pkgs;
   kdePackages.filelight # disk usage
   kdePackages.kleopatra
   kdePackages.koi # auto light/dark theming
+  kdePackages.isoimagewriter
   kdePackages.partitionmanager
+  kdePackages.sddm-kcm
+  kdePackages.ksystemlog
 
   # system information
   inxi
