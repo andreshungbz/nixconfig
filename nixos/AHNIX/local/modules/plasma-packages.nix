@@ -11,15 +11,4 @@ with pkgs;
   kdePackages.partitionmanager
   kdePackages.sddm-kcm
   kdePackages.ksystemlog
-
-  # system information
-  inxi
-  mesa-demos
-  lm_sensors
-  pciutils
-
-  # GPG
-  cryptsetup
-  gnupg
-  pinentry-qt
 ]

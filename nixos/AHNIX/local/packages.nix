@@ -53,6 +53,18 @@ in
       gns3-server
       wireshark
 
+      # system information
+      inxi
+      mesa-demos
+      lm_sensors
+      pciutils
+
+      # GPG
+      cryptsetup
+      gnupg
+      pinentry-qt
+      pinentry-tty
+
       # other
       corefonts
       exfatprogs # add exFAT formatting
