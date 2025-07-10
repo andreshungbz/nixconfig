@@ -10,5 +10,4 @@ with pkgs;
   kdePackages.isoimagewriter
   kdePackages.partitionmanager
   kdePackages.sddm-kcm
-  kdePackages.ksystemlog
 ]
