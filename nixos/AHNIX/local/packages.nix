@@ -62,8 +62,6 @@ in
       # GPG
       cryptsetup
       gnupg
-      pinentry-qt
-      pinentry-tty
 
       # other
       corefonts
@@ -77,6 +75,15 @@ in
     rootless = {
       enable = false;
       setSocketVariable = false;
+    };
+  };
+
+  # GPG
+
+  programs.gnupg = {
+    agent = {
+      enable = true;
+      pinentryPackage = pkgs.pinentry-tty;
     };
   };
 
