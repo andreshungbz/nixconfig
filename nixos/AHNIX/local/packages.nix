@@ -26,6 +26,7 @@ in
       signal-desktop
       telegram-desktop
       thunderbird
+      vlc
       zoom-us
 
       # command-line
