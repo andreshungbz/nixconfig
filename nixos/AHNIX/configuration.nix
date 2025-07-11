@@ -59,6 +59,8 @@
   };
 
   # host-specific configurations
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
   boot.initrd.kernelModules = [ "amdgpu" ];
   boot.loader.grub.gfxmodeEfi = "2560x1440";
   hardware.openrazer.enable = true;

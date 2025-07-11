@@ -1,74 +1,76 @@
 # Local Nix Packages
 
 { pkgs, lib, ... }:
-let
-  plasmaPackages = import ./modules/plasma-packages.nix { inherit pkgs; };
-in
 {
   # nix system packages
-  environment.systemPackages =
-    with pkgs;
-    [
-      # desktop
-      bitwarden-desktop
-      blender
-      discord
-      dolphin-emu
-      firefox
-      ghostty
-      krita
-      libreoffice-qt6-fresh
-      obsidian
-      obs-studio
-      postman
-      qbittorrent
-      readest
-      signal-desktop
-      telegram-desktop
-      thunderbird
-      vlc
-      zoom-us
+  environment.systemPackages = with pkgs; [
+    # KDE
+    kdePackages.filelight # disk usage
+    kdePackages.kleopatra
+    kdePackages.koi # auto light/dark theming
+    kdePackages.isoimagewriter
+    kdePackages.partitionmanager
+    kdePackages.sddm-kcm
 
-      # command-line
-      btop
-      cloc
-      devcontainer
-      exiftool
-      ffmpeg
-      ffmpegthumbnailer
-      ookla-speedtest
-      powershell
-      tldr
-      tree
-      wget
-      yt-dlp
-      wl-clipboard
+    # Razer peripheral lighting
+    openrazer-daemon
+    polychromatic
 
-      # Razer peripheral lighting
-      openrazer-daemon
-      polychromatic
+    # desktop
+    bitwarden-desktop
+    blender
+    discord
+    dolphin-emu
+    firefox
+    ghostty
+    krita
+    libreoffice-qt6-fresh
+    obsidian
+    obs-studio
+    postman
+    qbittorrent
+    readest
+    signal-desktop
+    telegram-desktop
+    thunderbird
+    vlc
+    zoom-us
 
-      # school
-      # ciscoPacketTracer8 # https://nixos.wiki/wiki/Packettracer
-      gns3-gui
-      gns3-server
-      wireshark
+    # command-line
+    btop
+    cloc
+    devcontainer
+    exiftool
+    ffmpeg
+    ffmpegthumbnailer
+    ookla-speedtest
+    powershell
+    tldr
+    tree
+    wget
+    yt-dlp
+    wl-clipboard
 
-      # system information
-      inxi
-      mesa-demos
-      lm_sensors
-      pciutils
+    # school
+    # ciscoPacketTracer8 # https://nixos.wiki/wiki/Packettracer
+    gns3-gui
+    gns3-server
+    wireshark
 
-      # GPG
-      cryptsetup
-      gnupg
+    # system information
+    inxi
+    mesa-demos
+    lm_sensors
+    pciutils
 
-      # other
-      corefonts
-      exfatprogs # add exFAT formatting
-    ]
-    ++ plasmaPackages;
+    # GPG
+    cryptsetup
+    gnupg
+
+    # other
+    corefonts
+    exfatprogs # add exFAT formatting
+  ];
 
   # Docker
   virtualisation.docker = {

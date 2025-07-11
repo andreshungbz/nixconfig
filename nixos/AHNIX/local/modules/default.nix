@@ -4,6 +4,5 @@
   imports = [
     ./boot.nix
     ./network.nix
-    ./plasma.nix
   ];
 }
