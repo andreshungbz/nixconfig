@@ -40,6 +40,7 @@
     bitwarden-desktop
     blender
     discord
+    davinci-resolve
     dolphin-emu
     firefox
     krita

@@ -67,4 +67,11 @@
   services.flatpak.enable = true;
   programs.kdeconnect.enable = true;
   environment.enableDebugInfo = true;
+
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      rocmPackages.clr.icd
+    ];
+  };
 }
