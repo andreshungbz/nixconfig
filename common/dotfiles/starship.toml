@@ -17,7 +17,6 @@ right_format = """
 [](fg:#5049CC)\  
 $time\
 $all
-$character
 """
 
 [os]
