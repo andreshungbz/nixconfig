@@ -162,3 +162,4 @@ format = "[ took $duration ]($style)"
 
 [character]
 success_symbol = "[ ](fg:#ffc43e)"
+error_symbol = "[ ](fg:#ffc43e)"
