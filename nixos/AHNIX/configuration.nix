@@ -66,4 +66,5 @@
   hardware.openrazer.enable = true;
   services.flatpak.enable = true;
   programs.kdeconnect.enable = true;
+  environment.enableDebugInfo = true;
 }

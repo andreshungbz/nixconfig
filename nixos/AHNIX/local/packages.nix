@@ -4,6 +4,7 @@
 {
   environment.systemPackages = with pkgs; [
     # KDE packages
+    kdePackages.drkonqi
     kdePackages.filelight
     kdePackages.kleopatra
     kdePackages.koi
@@ -24,11 +25,13 @@
     exfatprogs # exFAT formatting
     ffmpeg
     ffmpegthumbnailer
+    gdb
     gnupg
     ookla-speedtest
     powershell
     tldr
     tree
+    valgrind
     wget
     yt-dlp
     wl-clipboard
