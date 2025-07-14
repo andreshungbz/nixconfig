@@ -59,15 +59,19 @@
   };
 
   # host-specific configurations
+
+  # KDE Plasma 6
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-  boot.initrd.kernelModules = [ "amdgpu" ];
-  boot.loader.grub.gfxmodeEfi = "2560x1440";
-  hardware.openrazer.enable = true;
-  services.flatpak.enable = true;
   programs.kdeconnect.enable = true;
-  environment.enableDebugInfo = true;
+  environment.enableDebugInfo = true; # crash handling
 
+  boot.initrd.kernelModules = [ "amdgpu" ]; # AMD GPU resolution
+  boot.loader.grub.gfxmodeEfi = "2560x1440"; # Grub resolution
+  hardware.openrazer.enable = true; # OpenRazer
+  services.flatpak.enable = true; # Flatpak
+
+  # makes DaVinci Resolve recognize GPU
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
