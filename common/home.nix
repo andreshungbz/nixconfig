@@ -103,6 +103,20 @@ in
         identitiesOnly = true;
         identityFile = [ "${base}/${user.username}/.ssh/github" ];
       };
+
+      # Tailscale
+      
+      "*.ts.net" = {
+        user = "andreshung";
+        identitiesOnly = true;
+        identityFile = [ "${base}/${user.username}/.ssh/github" ];
+      };
+
+      "100.*" = {
+        user = "andreshung";
+        identitiesOnly = true;
+        identityFile = [ "${base}/${user.username}/.ssh/github" ];
+      };
     };
   };
 }
