@@ -4,8 +4,15 @@
 {
   environment.systemPackages = with pkgs; [
     # KDE packages
+    karp
+    kdePackages.alligator
     kdePackages.drkonqi
     kdePackages.filelight
+    kdePackages.kcalc
+    kdePackages.kcharselect
+    kdePackages.kcolorchooser
+    kdePackages.khelpcenter
+    kdePackages.kjournald
     kdePackages.kleopatra
     kdePackages.koi
     kdePackages.isoimagewriter
