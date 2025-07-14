@@ -69,6 +69,13 @@
     gamescopeSession.enable = true;
   };
 
+  # Tailscale
+  # https://nixos.wiki/wiki/Tailscale
+  services.resolved.enable = true;
+  services.tailscale = {
+    enable = true;
+  };
+
   # VirtualBox
   # https://nixos.wiki/wiki/VirtualBox
   virtualisation.virtualbox = {
