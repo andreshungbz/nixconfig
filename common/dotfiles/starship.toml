@@ -10,7 +10,6 @@ $directory\
 $git_branch\
 $git_status\
 [](fg:#98E8C1 bg:#ffc43e)\
-[ ](fg:#ffc43e)\
 $character
 """
 
@@ -163,5 +162,4 @@ style = "fg:#000000 bg:yellow"
 format = "[ took $duration ]($style)"
 
 [character]
-success_symbol = " "
-error_symbol = " "
+success_symbol = "[ ](fg:#ffc43e)"
