@@ -5,6 +5,7 @@
     ./audio.nix
     ./avahi.nix
     ./bluetooth.nix
+    ./font.nix
     ./international.nix
     ./print.nix
     ./ssh.nix
