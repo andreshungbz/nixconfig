@@ -49,6 +49,7 @@
     "Affinity Publisher 2" = 1606941598;
     "Goodnotes 6: AI Notes & Docs" = 1444383602;
     "Pixelmator Pro" = 1289583905;
+    "Tailscale" = 1475387142;
     "Telegram" = 747648890;
     "WhatsApp Messenger" = 310633997;
   };
