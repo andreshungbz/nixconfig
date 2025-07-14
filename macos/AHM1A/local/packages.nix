@@ -38,6 +38,7 @@
     "protonvpn"
     "qbittorrent"
     "raycast"
+    "rustdesk"
     # "steam"
   ];
 
