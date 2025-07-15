@@ -25,16 +25,16 @@
 
     # command-line
     btop
-    cloc
-    cryptsetup
+    cloc # source code stats
+    cryptsetup # LUKS encryption
     devcontainer
     exiftool
     exfatprogs # exFAT formatting
     ffmpeg
     ffmpegthumbnailer
-    gdb
+    gdb # debugging
     gnupg
-    lsof
+    lsof # checking used ports
     ookla-speedtest
     powershell
     tldr
