@@ -230,11 +230,13 @@ in
     };
   };
 
-  ghostty = {
-    settings = {
-      font-size = 10;
-    };
-  };
+  # MacOS package marked broken
+  # ghostty = {
+  #   enable = true;
+  #   settings = {
+  #     font-size = 10;
+  #   };
+  # };
 
   git = {
     enable = true;
