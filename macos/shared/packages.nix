@@ -3,7 +3,7 @@
 { pkgs, ... }:
 {
   # nix packages
-  packages = { inherit (pkgs) fastfetch helix nixfmt-rfc-style; };
+  packages = { inherit (pkgs) helix nixfmt-rfc-style; };
 
   # homebrew casks
   casks = [
