@@ -56,6 +56,7 @@
     obs-studio
     qbittorrent
     readest
+    rustdesk-flutter
     signal-desktop
     telegram-desktop
     thunderbird
