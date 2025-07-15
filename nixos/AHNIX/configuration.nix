@@ -33,8 +33,8 @@
           "wheel"
           "networkmanager"
           "docker"
+          "libvirtd"
           "openrazer"
-          "vboxusers"
           "wireshark"
         ];
       };

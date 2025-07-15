@@ -84,12 +84,13 @@
     enable = true;
   };
 
-  # VirtualBox
-  # https://nixos.wiki/wiki/VirtualBox
-  virtualisation.virtualbox = {
-    host = {
+  # Virt-manager
+  # https://nixos.wiki/wiki/Virt-manager
+  programs.virt-manager.enable = true;
+  virtualisation = {
+    spiceUSBRedirection.enable = true;
+    libvirtd = {
       enable = true;
-      enableExtensionPack = true;
     };
   };
 
