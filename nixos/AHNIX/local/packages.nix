@@ -34,6 +34,7 @@
     ffmpegthumbnailer
     gdb
     gnupg
+    lsof
     ookla-speedtest
     powershell
     tldr
