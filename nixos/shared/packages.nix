@@ -7,7 +7,6 @@
     firefox-devedition
     vscode
 
-    fastfetch
     nixfmt-rfc-style
     nvd
   ];

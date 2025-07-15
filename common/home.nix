@@ -57,9 +57,11 @@ in
   fzf = {
     enable = true;
   };
+
   eza = {
     enable = true;
   };
+
   bat = {
     enable = true;
   };
@@ -67,6 +69,175 @@ in
   starship = {
     enable = true;
     settings = builtins.fromTOML (builtins.readFile ./dotfiles/starship.toml);
+  };
+
+  fastfetch = {
+    enable = true;
+    settings = {
+      "$schema" = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
+      logo = {
+        source = "nixos";
+        padding = {
+          top = 1;
+          left = 2;
+          right = 0;
+        };
+      };
+      display = {
+        separator = "| ";
+      };
+      modules = [
+        "break"
+        {
+          type = "title";
+          key = "           Identity ";
+        }
+        "break"
+        {
+          type = "host";
+          key = "               Host ";
+          format = "{2} ({4})";
+        }
+        {
+          type = "cpu";
+          key = "                CPU ";
+        }
+        {
+          type = "gpu";
+          key = "                GPU ";
+        }
+        {
+          type = "memory";
+          key = "        Memory Used ";
+          format = "{used} / {total} ({percentage})";
+          percent = {
+            type = [
+              "num"
+            ];
+          };
+        }
+        {
+          type = "disk";
+          key = "        System Disk ";
+          format = "{size-used} / {size-total} ({size-percentage}) - ({filesystem})";
+          folders = "/";
+          percent = {
+            type = [
+              "num"
+            ];
+          };
+        }
+        {
+          type = "swap";
+          key = "          Swap Used ";
+          format = "{used} / {total} ({percentage})";
+          percent = {
+            type = [
+              "num"
+            ];
+          };
+        }
+        {
+          type = "loadavg";
+          key = "               Load ";
+        }
+        {
+          type = "processes";
+          key = "          Processes ";
+        }
+        {
+          type = "display";
+          key = "            Monitor ";
+          format = "{6}";
+        }
+        "break"
+        {
+          type = "os";
+          key = "   Operating System ";
+          format = "{pretty-name}";
+        }
+        {
+          type = "disk";
+          key = "              Birth ";
+          folders = "/";
+          format = "{create-time:10} ({days} days)";
+        }
+        {
+          type = "kernel";
+          key = "             Kernel ";
+          format = "{2}";
+        }
+        {
+          type = "packages";
+          key = "           Packages ";
+        }
+        {
+          type = "uptime";
+          key = "      System Uptime ";
+          format = "{?days}{days} Days + {?}{hours}:{minutes}:{seconds}";
+        }
+        {
+          type = "lm";
+          key = "      Login Manager ";
+          format = "{2}";
+        }
+        {
+          type = "de";
+          key = "Desktop Environment ";
+        }
+        {
+          type = "wm";
+          key = "     Window Manager ";
+        }
+        {
+          type = "wmtheme";
+          key = "           WM Theme ";
+        }
+        {
+          type = "shell";
+          key = "              Shell ";
+        }
+        {
+          type = "terminal";
+          key = "           Terminal ";
+        }
+        {
+          type = "terminalfont";
+          key = "      Terminal Font ";
+          format = "{1}";
+        }
+        "break"
+        {
+          type = "player";
+          key = "       Media Player ";
+        }
+        {
+          type = "media";
+          key = "            Playing ";
+        }
+        {
+          type = "version";
+          key = "               Info ";
+          format = "{1} {2}";
+        }
+        "break"
+        {
+          type = "colors";
+          paddingLeft = 22;
+          symbol = "";
+        }
+        "break"
+        {
+        }
+      ];
+    };
+  };
+
+  ghostty = {
+    enable = true;
+    settings = {
+      font-size = 10;
+    };
   };
 
   git = {
@@ -105,7 +276,7 @@ in
       };
 
       # Tailscale
-      
+
       "*.ts.net" = {
         user = "andreshung";
         identitiesOnly = true;
