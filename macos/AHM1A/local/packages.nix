@@ -14,6 +14,7 @@
     "netspot"
     "powershell"
     "tailscale-app"
+    "termius"
     "utm"
     "wireshark"
 
