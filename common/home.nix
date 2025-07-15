@@ -137,9 +137,8 @@ in
           };
         }
         {
-          type = "display";
-          key = "            Monitor ";
-          format = "{6}";
+          type = "monitor";
+          key = "            Display ";
         }
         {
           type = "loadavg";
