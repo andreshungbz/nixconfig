@@ -59,6 +59,14 @@
     '';
   };
 
+  # RustDesk Server
+  # https://wiki.nixos.org/wiki/RustDesk
+  # services.rustdesk-server = {
+  #   enable = true;
+  #   openFirewall = true;
+  #   signal.relayHosts = [ "ahnix.coydog-matrix.ts.net:21117" ];
+  # };
+
   # Steam
   # https://nixos.wiki/wiki/Steam
   programs.steam = {
