@@ -66,6 +66,7 @@
 
     # development
     # ciscoPacketTracer8 # https://nixos.wiki/wiki/Packettracer
+    ghostty
     gns3-gui
     gns3-server
     helix
