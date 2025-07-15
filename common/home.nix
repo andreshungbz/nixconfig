@@ -107,7 +107,7 @@ in
         }
         {
           type = "memory";
-          key = "        Memory Used ";
+          key = "             Memory ";
           format = "{used} / {total} ({percentage})";
           percent = {
             type = [
@@ -117,7 +117,7 @@ in
         }
         {
           type = "disk";
-          key = "        System Disk ";
+          key = "               Disk ";
           format = "{size-used} / {size-total} ({size-percentage}) - ({filesystem})";
           folders = "/";
           percent = {
@@ -128,13 +128,18 @@ in
         }
         {
           type = "swap";
-          key = "          Swap Used ";
+          key = "               Swap ";
           format = "{used} / {total} ({percentage})";
           percent = {
             type = [
               "num"
             ];
           };
+        }
+        {
+          type = "display";
+          key = "            Monitor ";
+          format = "{6}";
         }
         {
           type = "loadavg";
@@ -144,34 +149,28 @@ in
           type = "processes";
           key = "          Processes ";
         }
-        {
-          type = "display";
-          key = "            Monitor ";
-          format = "{6}";
-        }
         "break"
         {
           type = "os";
           key = "   Operating System ";
         }
         {
-          type = "disk";
-          key = "              Birth ";
-          folders = "/";
-          format = "{create-time:10} ({days} days)";
-        }
-        {
           type = "kernel";
           key = "             Kernel ";
         }
         {
-          type = "packages";
-          key = "           Packages ";
+          type = "disk";
+          key = "          Birthdate ";
+          folders = "/";
+          format = "{create-time:10} ({days} days)";
         }
         {
           type = "uptime";
-          key = "      System Uptime ";
-          format = "{?days}{days} Days + {?}{hours}:{minutes}:{seconds}";
+          key = "             Uptime ";
+        }
+        {
+          type = "packages";
+          key = "           Packages ";
         }
         {
           type = "lm";
