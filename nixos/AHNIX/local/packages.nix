@@ -53,6 +53,7 @@
     firefox
     krita
     libreoffice-qt6-fresh
+    librewolf
     obsidian
     obs-studio
     qbittorrent
