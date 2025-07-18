@@ -56,6 +56,7 @@
     librewolf
     obsidian
     obs-studio
+    prismlauncher
     qbittorrent
     readest
     rustdesk-flutter
