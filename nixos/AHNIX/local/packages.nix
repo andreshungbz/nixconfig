@@ -54,6 +54,7 @@
     krita
     libreoffice-qt6-fresh
     librewolf
+    microsoft-edge
     obsidian
     obs-studio
     prismlauncher

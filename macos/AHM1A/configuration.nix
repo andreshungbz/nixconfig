@@ -37,7 +37,11 @@ in
       home.stateVersion = "25.05";
       home.sessionPath =
         if pkgs.stdenv.hostPlatform.isDarwin then [ "/opt/homebrew/opt/postgresql@17/bin" ] else [ ];
-      programs = import ../../common/home.nix { inherit lib pkgs user; };
+
+      programs = lib.mkMerge [
+        (import ../../common/home.nix { inherit lib pkgs user; })
+        (import ../../common/modules/programs.nix { inherit lib pkgs; })
+      ];
     };
   };
 
