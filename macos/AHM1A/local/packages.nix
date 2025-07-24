@@ -27,7 +27,7 @@
     "firefox"
     "zen"
     # "google-chrome"
-    # "microsoft-edge"
+    "microsoft-edge"
 
     # applications
     "chatgpt"
