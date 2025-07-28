@@ -19,10 +19,10 @@
           { app = "/Applications/Telegram.app"; }
           { app = "/Applications/Discord.app"; }
           { app = "/Applications/Firefox.app"; }
-          { app = "/Applications/Firefox Developer Edition.app"; }
+          { app = "/Applications/Microsoft Edge.app"; }
+          { app = "/Applications/Visual Studio Code.app"; }
           { app = "/Applications/Obsidian.app"; }
           { app = "/Applications/Warp.app"; }
-          { app = "/Applications/Visual Studio Code.app"; }
         ];
       };
 
