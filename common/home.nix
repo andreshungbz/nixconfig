@@ -25,7 +25,7 @@ in
       pull.rebase = true;
       rebase.autoStash = true;
 
-      commit.gpgSign = true;
+      commit.gpgSign = false;
       user.signingKey = "532A3106F50E419F";
       gpg.format = "openpgp";
     };
