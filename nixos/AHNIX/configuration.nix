@@ -57,7 +57,7 @@
   };
 
   # environment variables
-  environment.sessionVariables = rec {
+  environment.variables = rec {
     # disable adaptive brightness on monitor for KDE Wayland
     POWERDEVIL_NO_DDCUTIL = "1";
   };

@@ -27,7 +27,6 @@
     btop
     cloc # source code stats
     cryptsetup # LUKS encryption
-    devcontainer
     exiftool
     exfatprogs # exFAT formatting
     ffmpeg
@@ -69,6 +68,7 @@
 
     # development
     # ciscoPacketTracer8 # https://nixos.wiki/wiki/Packettracer
+    devcontainer
     devtoolbox
     ghostty
     gns3-gui
