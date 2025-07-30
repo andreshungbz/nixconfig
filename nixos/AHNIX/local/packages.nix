@@ -69,7 +69,7 @@
 
     # development
     # ciscoPacketTracer8 # https://nixos.wiki/wiki/Packettracer
-    devcontainer
+    # devcontainer
     devtoolbox
     ghostty
     gns3-gui

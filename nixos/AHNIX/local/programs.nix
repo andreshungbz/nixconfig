@@ -6,10 +6,10 @@
   # https://nixos.wiki/wiki/Docker
   virtualisation.docker = {
     enable = true;
-    rootless = {
-      enable = false;
-      setSocketVariable = false;
-    };
+    # rootless = {
+    #   enable = false;
+    #   setSocketVariable = false;
+    # };
   };
 
   # GPG
