@@ -61,6 +61,7 @@
     readest
     rustdesk-flutter
     signal-desktop
+    spotify
     telegram-desktop
     thunderbird
     vlc
