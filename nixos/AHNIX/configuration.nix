@@ -68,7 +68,6 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   programs.kdeconnect.enable = true;
-  environment.enableDebugInfo = true; # crash handling
 
   boot.initrd.kernelModules = [ "amdgpu" ]; # AMD GPU resolution
   boot.loader.grub.gfxmodeEfi = "2560x1440"; # Grub resolution
