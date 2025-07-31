@@ -69,8 +69,8 @@
     zoom-us
 
     # development
-    # ciscoPacketTracer8 # https://nixos.wiki/wiki/Packettracer
-    # devcontainer
+    # ciscoPacketTracer8 # https://wiki.nixos.org/wiki/Packettracer
+    devcontainer
     devtoolbox
     ghostty
     gns3-gui
