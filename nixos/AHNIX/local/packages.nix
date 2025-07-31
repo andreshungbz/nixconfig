@@ -8,7 +8,7 @@
     kdePackages.alligator
     kdePackages.drkonqi
     kdePackages.filelight
-    kdePackages.kamera
+    # kdePackages.kamoso
     kdePackages.kcalc
     kdePackages.kcharselect
     kdePackages.kcolorchooser
