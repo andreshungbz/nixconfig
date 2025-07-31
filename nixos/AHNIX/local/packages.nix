@@ -77,6 +77,7 @@
     gns3-server
     helix
     postman
+    quickemu
     termius
     warp-terminal
     wireshark
