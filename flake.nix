@@ -52,16 +52,16 @@
             ./nixos/AHNIX/configuration.nix
 
             # overlays
-            (
-              { config, pkgs, ... }:
-              {
-                nixpkgs.overlays = [
-                  (final: prev: {
-                    docker = inputs.nixpkgs-stable.legacyPackages.${final.system}.docker;
-                  })
-                ];
-              }
-            )
+            # (
+            #   { config, pkgs, ... }:
+            #   {
+            #     nixpkgs.overlays = [
+            #       (final: prev: {
+            #         docker = inputs.nixpkgs-stable.legacyPackages.${final.system}.docker;
+            #       })
+            #     ];
+            #   }
+            # )
           ];
         };
       };
