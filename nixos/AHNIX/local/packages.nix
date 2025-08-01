@@ -65,6 +65,7 @@
     spotify
     telegram-desktop
     thunderbird
+    veracrypt
     vlc
     zoom-us
 
