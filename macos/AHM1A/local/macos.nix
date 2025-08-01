@@ -12,6 +12,7 @@
           { app = "/System/Applications/Notes.app"; }
           { app = "/System/Applications/News.app"; }
           { app = "/System/Applications/Photos.app"; }
+          { app = "/Applications/Eagle.app"; }
           { app = "/System/Applications/Books.app"; }
           { app = "/System/Applications/Music.app"; }
           { app = "/System/Applications/Messages.app"; }
