@@ -27,7 +27,7 @@
     "arc"
     "firefox"
     "zen"
-    # "google-chrome"
+    "google-chrome"
     "microsoft-edge"
 
     # applications
