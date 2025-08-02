@@ -15,6 +15,7 @@
     "powershell"
     "tailscale-app"
     "termius"
+    "ti-connect-ce"
     "utm"
     "wireshark"
 
