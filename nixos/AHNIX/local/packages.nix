@@ -80,6 +80,7 @@
     helix
     postman
     quickemu
+    swtpm # for virt-manager TPM 2.0
     termius
     warp-terminal
     wireshark
