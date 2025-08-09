@@ -70,6 +70,7 @@
   programs.kdeconnect.enable = true;
 
   boot.initrd.kernelModules = [ "amdgpu" ]; # AMD GPU resolution
+  boot.kernelPackages = pkgs.linuxPackages_latest; # use latest Linux kernel
   boot.loader.grub.gfxmodeEfi = "2560x1440"; # Grub resolution
   hardware.openrazer.enable = true; # OpenRazer
   services.flatpak.enable = true; # Flatpak
