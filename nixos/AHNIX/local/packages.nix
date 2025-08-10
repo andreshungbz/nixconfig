@@ -81,6 +81,7 @@
     wireshark
 
     # sensors
+    fwupd
     inxi
     mesa-demos
     lm_sensors
