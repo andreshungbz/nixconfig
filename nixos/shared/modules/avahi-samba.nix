@@ -22,6 +22,14 @@
   networking.firewall.enable = true;
   networking.firewall.allowPing = true;
 
+  services.resolved = {
+    enable = true;
+    extraConfig = ''
+      [Resolve]
+      MulticastDNS=no
+    '';
+  };
+
   services.samba = {
     enable = true;
     openFirewall = true;
