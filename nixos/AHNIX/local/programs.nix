@@ -85,11 +85,16 @@
 
   # Virt-manager
   # https://wiki.nixos.org/wiki/Virt-manager
+  # https://wiki.nixos.org/wiki/Libvirt
   programs.virt-manager.enable = true;
   virtualisation = {
     spiceUSBRedirection.enable = true;
     libvirtd = {
       enable = true;
+      qemu = {
+        swtpm.enable = true;
+        ovmf.packages = [ pkgs.OVMFFull.fd ];
+      };
     };
   };
 

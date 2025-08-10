@@ -70,6 +70,7 @@
     # ciscoPacketTracer8 # https://wiki.nixos.org/wiki/Packettracer
     devcontainer
     devtoolbox
+    dnsmasq
     dnsutils
     ghostty
     gns3-gui
