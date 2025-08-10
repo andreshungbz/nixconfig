@@ -32,14 +32,11 @@
     exfatprogs # exFAT formatting
     ffmpeg
     ffmpegthumbnailer
-    gdb # debugging
     gnupg
-    lsof # checking used ports
     ookla-speedtest
     powershell
     tldr
     tree
-    valgrind
     wget
     yt-dlp
     wl-clipboard
