@@ -24,6 +24,9 @@
   # Nix-ld
   programs.nix-ld.enable = true;
 
+  # https://wiki.nixos.org/wiki/Fwupd
+  services.fwupd.enable = true;
+
   # PostgreSQL 17
   # https://wiki.nixos.org/wiki/PostgreSQL
   services.postgresql = {
