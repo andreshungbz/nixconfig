@@ -3,13 +3,9 @@
 { pkgs, lib, ... }:
 {
   # Docker
-  # https://nixos.wiki/wiki/Docker
+  # https://wiki.nixos.org/wiki/Docker/en
   virtualisation.docker = {
     enable = true;
-    # rootless = {
-    #   enable = false;
-    #   setSocketVariable = false;
-    # };
   };
 
   # GPG
@@ -29,7 +25,7 @@
   programs.nix-ld.enable = true;
 
   # PostgreSQL 17
-  # https://nixos.wiki/wiki/PostgreSQL
+  # https://wiki.nixos.org/wiki/PostgreSQL
   services.postgresql = {
     enable = true;
     enableTCPIP = true;
@@ -68,7 +64,7 @@
   # };
 
   # Steam
-  # https://nixos.wiki/wiki/Steam
+  # https://wiki.nixos.org/wiki/Steam
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
@@ -78,14 +74,14 @@
   };
 
   # Tailscale
-  # https://nixos.wiki/wiki/Tailscale
+  # https://wiki.nixos.org/wiki/Tailscale
   services.resolved.enable = true;
   services.tailscale = {
     enable = true;
   };
 
   # Virt-manager
-  # https://nixos.wiki/wiki/Virt-manager
+  # https://wiki.nixos.org/wiki/Virt-manager
   programs.virt-manager.enable = true;
   virtualisation = {
     spiceUSBRedirection.enable = true;
