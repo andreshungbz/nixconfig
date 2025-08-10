@@ -3,7 +3,7 @@
 {
   imports = [
     ./audio.nix
-    ./avahi.nix
+    ./avahi-samba.nix
     ./bluetooth.nix
     ./font.nix
     ./international.nix
