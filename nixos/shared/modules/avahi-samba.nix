@@ -2,6 +2,22 @@
 # https://wiki.nixos.org/wiki/Samba
 
 {
+  services.avahi = {
+    nssmdns4 = true;
+    enable = true;
+    ipv4 = true;
+    ipv6 = true;
+    publish = {
+      enable = true;
+      addresses = true;
+      userServices = true;
+      workstation = true;
+    };
+  };
+
+  networking.firewall.enable = true;
+  networking.firewall.allowPing = true;
+
   services.samba = {
     enable = true;
     openFirewall = true;
@@ -13,14 +29,13 @@
         "security" = "user";
         # "use sendfile" = "yes";
         # "max protocol" = "smb2";
-        # note: localhost is the ipv6 localhost ::1
         "hosts allow" = "192.168.0.0/16 127.0.0.1 localhost";
         "hosts deny" = "0.0.0.0/0";
         "guest account" = "nobody";
         "map to guest" = "bad user";
       };
       "public" = {
-        "path" = "/mnt/Shares/Public";
+        "path" = "/srv/samba/public";
         "browseable" = "yes";
         "read only" = "yes";
         "guest ok" = "yes";
@@ -28,7 +43,7 @@
         "directory mask" = "0555";
       };
       "private" = {
-        "path" = "/mnt/Shares/Private";
+        "path" = "/srv/samba/private";
         "browseable" = "yes";
         "read only" = "no";
         "guest ok" = "no";
@@ -41,21 +56,5 @@
   services.samba-wsdd = {
     enable = true;
     openFirewall = true;
-  };
-
-  networking.firewall.enable = true;
-  networking.firewall.allowPing = true;
-
-  services.avahi = {
-    nssmdns4 = true;
-    enable = true;
-    ipv4 = true;
-    ipv6 = true;
-    publish = {
-      enable = true;
-      addresses = true;
-      userServices = true;
-      workstation = true;
-    };
   };
 }
