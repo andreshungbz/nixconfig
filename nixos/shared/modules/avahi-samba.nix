@@ -13,6 +13,10 @@
       userServices = true;
       workstation = true;
     };
+    extraConfig = ''
+      [server]
+      deny-interfaces=virbr0,mpqemubr0,docker0,veth*
+    '';
   };
 
   networking.firewall.enable = true;
@@ -24,8 +28,8 @@
     settings = {
       global = {
         "workgroup" = "WORKGROUP";
-        "server string" = "smbnix";
-        "netbios name" = "smbnix";
+        "server string" = "AHNIX Samba";
+        "netbios name" = "AHNIX";
         "security" = "user";
         # "use sendfile" = "yes";
         # # "max protocol" = "smb2";
