@@ -77,6 +77,7 @@
     gns3-server
     helix
     postman
+    rpi-imager
     termius
     warp-terminal
     wireshark
