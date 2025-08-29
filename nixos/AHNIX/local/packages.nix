@@ -69,16 +69,16 @@
     # development
     # ciscoPacketTracer8 # https://wiki.nixos.org/wiki/Packettracer
     devcontainer
-    devtoolbox
+    # devtoolbox
     dnsmasq
     dnsutils
     ghostty
-    gns3-gui
-    gns3-server
+    # gns3-gui
+    # gns3-server
     helix
     postman
     rpi-imager
-    termius
+    # termius
     warp-terminal
     wireshark
 
