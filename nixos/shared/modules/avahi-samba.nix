@@ -7,6 +7,7 @@
     enable = true;
     ipv4 = true;
     ipv6 = true;
+    openFirewall = true;
     publish = {
       enable = true;
       addresses = true;
@@ -26,7 +27,8 @@
     enable = true;
     extraConfig = ''
       [Resolve]
-      MulticastDNS=no
+      MulticastDNS=yes
+      LLMNR=no
     '';
   };
 
