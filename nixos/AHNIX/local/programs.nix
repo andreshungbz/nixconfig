@@ -17,9 +17,9 @@
   };
 
   # Multipass
-  virtualisation.multipass = {
-    enable = true;
-  };
+  # virtualisation.multipass = {
+  #   enable = true;
+  # };
 
   # Nix-ld
   programs.nix-ld.enable = true;
