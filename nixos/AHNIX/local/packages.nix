@@ -46,7 +46,7 @@
     blender
     discord
     davinci-resolve
-    dolphin-emu
+    # dolphin-emu
     firefox
     krita
     libreoffice-qt6-fresh
