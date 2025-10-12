@@ -72,6 +72,7 @@
     # devtoolbox
     dnsmasq
     dnsutils
+    eclipses.eclipse-java
     ghostty
     # gns3-gui
     # gns3-server
