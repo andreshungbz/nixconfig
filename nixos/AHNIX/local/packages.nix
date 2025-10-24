@@ -15,7 +15,7 @@
     kdePackages.khelpcenter
     kdePackages.kjournald
     kdePackages.kleopatra
-    kdePackages.koi
+    # kdePackages.koi
     kdePackages.isoimagewriter
     kdePackages.partitionmanager
     kdePackages.sddm-kcm
@@ -78,7 +78,7 @@
     # gns3-server
     helix
     postman
-    rpi-imager
+    # rpi-imager
     # termius
     warp-terminal
     wireshark
