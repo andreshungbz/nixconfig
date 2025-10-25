@@ -60,7 +60,10 @@ in
     enable = true;
     casks = sharedPkgs.casks ++ localPkgs.casks;
     masApps = sharedPkgs.mas // localPkgs.mas;
-    brews = [ "postgresql@17" ];
+    brews = [
+      "postgresql@17"
+      "openjdk"
+    ];
   };
 
   # environment variables
