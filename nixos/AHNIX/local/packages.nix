@@ -57,7 +57,7 @@
     prismlauncher
     qbittorrent
     readest
-    rustdesk-flutter
+    # rustdesk-flutter
     signal-desktop
     spotify
     telegram-desktop
