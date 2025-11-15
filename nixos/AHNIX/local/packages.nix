@@ -80,6 +80,7 @@
     postman
     # rpi-imager
     # termius
+    unityhub
     warp-terminal
     wireshark
 
