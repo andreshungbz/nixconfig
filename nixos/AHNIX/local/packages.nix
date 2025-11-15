@@ -78,6 +78,7 @@
     # gns3-server
     helix
     postman
+    python315
     # rpi-imager
     # termius
     unityhub
