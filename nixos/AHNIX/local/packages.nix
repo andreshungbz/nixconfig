@@ -80,6 +80,7 @@
     postman
     python315
     # rpi-imager
+    sqlite
     # termius
     unityhub
     warp-terminal
