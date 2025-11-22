@@ -43,7 +43,7 @@
     "qbittorrent"
     "raycast"
     "rustdesk"
-    # "steam"
+    "steam"
   ];
 
   # app store applications
