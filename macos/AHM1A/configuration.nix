@@ -63,6 +63,7 @@ in
     brews = [
       "postgresql@17"
       "openjdk"
+      "telnet"
     ];
   };
 
