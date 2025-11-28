@@ -50,7 +50,7 @@
     firefox
     krita
     libreoffice-qt6-fresh
-    librewolf
+    # librewolf
     microsoft-edge
     obsidian
     obs-studio
