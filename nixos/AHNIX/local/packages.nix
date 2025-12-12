@@ -26,6 +26,7 @@
 
     # command-line
     btop
+    cava
     cloc # source code stats
     cryptsetup # LUKS encryption
     exiftool
