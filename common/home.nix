@@ -18,9 +18,12 @@ in
 {
   git = {
     enable = true;
-    userName = user.name;
-    userEmail = user.email;
-    extraConfig = {
+    settings = {
+      user = {
+        name = user.name;
+        email = user.email;
+      };
+
       init.defaultBranch = "main";
       pull.rebase = true;
       rebase.autoStash = true;
