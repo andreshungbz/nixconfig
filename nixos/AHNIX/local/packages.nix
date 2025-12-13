@@ -15,7 +15,6 @@
     kdePackages.khelpcenter
     kdePackages.kjournald
     kdePackages.kleopatra
-    # kdePackages.koi
     kdePackages.isoimagewriter
     kdePackages.partitionmanager
     kdePackages.sddm-kcm
@@ -26,7 +25,6 @@
 
     # command-line
     btop
-    cava
     cloc # source code stats
     cryptsetup # LUKS encryption
     exiftool
@@ -51,7 +49,6 @@
     firefox
     krita
     libreoffice-qt6-fresh
-    # librewolf
     microsoft-edge
     obsidian
     obs-studio
@@ -70,20 +67,16 @@
     # development
     # ciscoPacketTracer8 # https://wiki.nixos.org/wiki/Packettracer
     devcontainer
-    # devtoolbox
+    devtoolbox
     dnsmasq
     dnsutils
-    eclipses.eclipse-java
     ghostty
     # gns3-gui
     # gns3-server
     helix
     postman
-    python315
     rpi-imager
-    sqlite
     termius
-    unityhub
     warp-terminal
     wireshark
 
