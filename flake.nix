@@ -50,18 +50,16 @@
           modules = [
             home-manager.nixosModules.home-manager
             ./nixos/AHNIX/configuration.nix
+          ];
+        };
+      };
 
-            # overlays
-            # (
-            #   { config, pkgs, ... }:
-            #   {
-            #     nixpkgs.overlays = [
-            #       (final: prev: {
-            #         docker = inputs.nixpkgs-stable.legacyPackages.${final.system}.docker;
-            #       })
-            #     ];
-            #   }
-            # )
+      homeConfigurations = {
+        "AHRP5" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.aarch64-linux;
+          extraSpecialArgs = { inherit user; };
+          modules = [
+            ./pi/AHRP5/home.nix
           ];
         };
       };
