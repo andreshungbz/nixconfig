@@ -82,7 +82,7 @@
     python315
     rpi-imager
     sqlite
-    # termius
+    termius
     unityhub
     warp-terminal
     wireshark
