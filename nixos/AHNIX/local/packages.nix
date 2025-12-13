@@ -80,7 +80,7 @@
     helix
     postman
     python315
-    # rpi-imager
+    rpi-imager
     sqlite
     # termius
     unityhub
