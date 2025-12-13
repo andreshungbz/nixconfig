@@ -34,12 +34,13 @@
     syntaxHighlighting.enable = true;
 
     history = {
-      size = 2000;
-      save = 2000;
+      size = 5000;
+      save = 5000;
+      ignoreAllDups = true;
     };
 
     shellAliases = {
-      ls = "eza --color=always --icons=always";
+      ls = "eza --icons=always --color=always";
     };
 
     plugins = [
@@ -49,13 +50,26 @@
       }
     ];
 
-    initExtra = ''
+    initContent = lib.mkBefore ''
       eval "$(starship init zsh)"
       source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
+
+      # fzf-tab preview using bat
+      zstyle ':fzf-tab:complete:*:*' fzf-preview '
+        if [ -d "$realpath" ]; then
+          eza --color=always --tree "$realpath"
+        else
+          bat --style=numbers --color=always --line-range=:500 "$realpath"
+        fi 2>/dev/null
+      '
+      zstyle ':fzf-tab:*' fzf-flags --preview-window=right:60%:wrap
     '';
   };
 
-  programs.starship.enable = true;
+  programs.starship = {
+    enable = true;
+    settings = builtins.fromTOML (builtins.readFile ../../common/dotfiles/starship.toml);
+  };
 
   # ----------------------
   # User packages
