@@ -66,7 +66,6 @@
 
     # development
     # ciscoPacketTracer8 # https://wiki.nixos.org/wiki/Packettracer
-    devcontainer
     devtoolbox
     dnsmasq
     dnsutils
