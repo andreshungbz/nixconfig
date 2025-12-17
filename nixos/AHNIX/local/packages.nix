@@ -4,9 +4,9 @@
 {
   environment.systemPackages = with pkgs; [
     # KDE packages
-    karp
-    kdePackages.alligator
-    kdePackages.drkonqi
+    # karp
+    # kdePackages.alligator
+    # kdePackages.drkonqi
     kdePackages.filelight
     # kdePackages.kamoso
     kdePackages.kcalc
@@ -25,7 +25,7 @@
 
     # command-line
     btop
-    cloc # source code stats
+    # cloc # source code stats
     cryptsetup # LUKS encryption
     exiftool
     exfatprogs # exFAT formatting
@@ -37,24 +37,24 @@
     tldr
     tree
     wget
-    yt-dlp
+    # yt-dlp
     wl-clipboard
 
     # desktop
-    bitwarden-desktop
+    # bitwarden-desktop
     blender
     discord
-    davinci-resolve
+    # davinci-resolve
     # dolphin-emu
     firefox
     krita
     libreoffice-qt6-fresh
     microsoft-edge
-    obsidian
+    # obsidian
     obs-studio
     prismlauncher
     qbittorrent
-    readest
+    # readest
     # rustdesk-flutter
     signal-desktop
     spotify
@@ -66,18 +66,17 @@
 
     # development
     # ciscoPacketTracer8 # https://wiki.nixos.org/wiki/Packettracer
-    devtoolbox
+    # devtoolbox
     dnsmasq
     dnsutils
-    ghostty
+    # ghostty
     # gns3-gui
     # gns3-server
-    helix
-    postman
-    rpi-imager
+    # helix
+    # postman
+    # rpi-imager
     termius
     warp-terminal
-    wireshark
 
     # sensors
     inxi
