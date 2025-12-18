@@ -76,13 +76,19 @@ sudo mv /etc/nixos /etc/nixos.bak
 sudo ln -s ~/Projects/nixconfig /etc/nixos
 ```
 
-8. Install the selected flake configuration for the first time.
+8. Copy the hardware configuration file (may need to backup configuration in repository).
+
+```
+sudo cp /etc/nixos.bak/hardware-configuration.nix ./nixos/AHNIX/
+```
+
+9. Install the selected flake configuration for the first time.
 
 ```
 sudo nixos-rebuild switch --flake .#AHNIX
 ```
 
-9. Restart the computer.
+10. Restart the computer.
 
 </details>
 
