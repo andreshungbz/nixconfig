@@ -4,11 +4,7 @@
 {
   environment.systemPackages = with pkgs; [
     # KDE packages
-    # karp
-    # kdePackages.alligator
-    # kdePackages.drkonqi
     kdePackages.filelight
-    # kdePackages.kamoso
     kdePackages.kcalc
     kdePackages.kcharselect
     kdePackages.kcolorchooser
@@ -37,15 +33,12 @@
     tldr
     tree
     wget
-    # yt-dlp
     wl-clipboard
 
     # desktop
-    # bitwarden-desktop
     blender
     discord
-    # davinci-resolve
-    # dolphin-emu
+    davinci-resolve
     firefox
     krita
     libreoffice-qt6-fresh
@@ -73,8 +66,8 @@
     # gns3-gui
     # gns3-server
     # helix
-    # postman
-    # rpi-imager
+    postman
+    rpi-imager
     termius
     warp-terminal
 
