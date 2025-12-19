@@ -38,7 +38,8 @@
     # desktop
     blender
     discord
-    davinci-resolve
+    cider-2
+    # davinci-resolve
     firefox
     krita
     libreoffice-qt6-fresh
