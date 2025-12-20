@@ -62,7 +62,6 @@ in
     masApps = sharedPkgs.mas // localPkgs.mas;
     brews = [
       "postgresql@17"
-      "openjdk"
       "telnet"
     ];
   };

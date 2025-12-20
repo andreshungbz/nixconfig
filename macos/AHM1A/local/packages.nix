@@ -8,7 +8,6 @@
   # homebrew casks
   casks = [
     # development tools
-    "eclipse-java"
     "gpg-suite"
     "homebrew/cask/docker"
     "jetbrains-toolbox"
