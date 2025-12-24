@@ -1,5 +1,6 @@
 # Services Configuration
 
+{ lib, pkgs, ... }:
 {
   services = {
     # Flatpak
