@@ -33,64 +33,6 @@ sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#AHM1A
 
 </details>
 
-<details>
-<summary>NixOS</summary>
-
-### NixOS
-
-1. Install [NixOS](https://nixos.org/) on the computer using the official images and boot into the system.
-2. In the terminal, edit the configuration file using `sudo nano etc/nixos/configuration.nix` and add the following.
-
-```nix
-nix.settings.experimental-features = [ "nix-command" "flakes" ];
-# add git package
-```
-
-3. Switch to the configuration.
-
-```
-sudo nixos-rebuild switch
-```
-
-4. Create a `Projects` directory and change into the home directory.
-
-```
-mkdir ~/Projects && cd ~/Projects
-```
-
-5.  Clone the repository and change into the directory.
-
-```
-git clone https://github.com/andreshungbz/nixconfig.git && cd nixconfig
-```
-
-6. Back up the initial configuration.
-
-```
-sudo mv /etc/nixos /etc/nixos.bak
-```
-
-7. Create a symbolic link to the new configuration.
-
-```
-sudo ln -s ~/Projects/nixconfig /etc/nixos
-```
-
-8. Copy the hardware configuration file (may need to backup configuration in repository).
-
-```
-sudo cp /etc/nixos.bak/hardware-configuration.nix ./nixos/AHNIX/
-```
-
-9. Install the selected flake configuration for the first time.
-
-```
-sudo nixos-rebuild switch --flake .#AHNIX
-```
-
-10. Restart the computer.
-
-</details>
 
 ## Management
 
