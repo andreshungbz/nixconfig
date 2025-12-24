@@ -41,6 +41,7 @@
     cider-2
     # davinci-resolve
     firefox
+    firefox-devedition
     krita
     libreoffice-qt6-fresh
     microsoft-edge
@@ -70,6 +71,7 @@
     postman
     rpi-imager
     termius
+    vscode
     warp-terminal
 
     # sensors
