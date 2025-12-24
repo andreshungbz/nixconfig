@@ -21,8 +21,7 @@
     ./modules
 
     # shared settings
-    ../shared/modules
-    ../shared/packages.nix
+    ../shared
     ../../common/font.nix
   ];
 }
