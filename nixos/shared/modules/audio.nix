@@ -1,4 +1,4 @@
-# NixOS Audio Configuration
+# Audio Configuration
 
 {
   security.rtkit.enable = true;

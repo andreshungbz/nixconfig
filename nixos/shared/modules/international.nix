@@ -1,4 +1,4 @@
-# NixOS Internationalization Configuration
+# Internationalization Configuration
 
 {
   i18n.defaultLocale = "en_US.UTF-8";

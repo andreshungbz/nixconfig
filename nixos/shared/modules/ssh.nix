@@ -1,4 +1,4 @@
-# NixOS SSH Configuration
+# SSH Configuration
 
 {
   services.openssh = {

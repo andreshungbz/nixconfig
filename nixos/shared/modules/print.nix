@@ -1,4 +1,4 @@
-# NixOS Print Configuration
+# Print Configuration
 
 {
   services.printing.enable = true;

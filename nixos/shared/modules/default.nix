@@ -1,4 +1,4 @@
-# Shared NixOS Configuration Bundle
+# Shared Configuration Bundle
 
 {
   imports = [

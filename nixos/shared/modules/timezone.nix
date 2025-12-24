@@ -1,4 +1,4 @@
-# NixOS Timezone Configuration
+# Timezone Configuration
 
 {
   time.timeZone = "America/Belize";

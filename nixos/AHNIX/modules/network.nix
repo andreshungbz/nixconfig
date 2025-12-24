@@ -1,4 +1,4 @@
-# NixOS Network Configuration
+# Network Configuration
 
 {
   networking.hostName = "AHNIX";

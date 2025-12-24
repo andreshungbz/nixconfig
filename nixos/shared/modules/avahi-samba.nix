@@ -1,4 +1,4 @@
-# NixOS mDNS & Samba Configuration
+# mDNS & Samba Configuration
 # https://wiki.nixos.org/wiki/Samba
 
 {

@@ -1,4 +1,4 @@
-# NixOS Bluetooth Configuration
+# Bluetooth Configuration
 
 {
   hardware.bluetooth.enable = true;
