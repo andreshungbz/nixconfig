@@ -65,6 +65,14 @@
             ./home/MAIN/home.nix
           ];
         };
+
+        MAIN-X86 = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit user; };
+          modules = [
+            ./home/MAIN/home.nix
+          ];
+        };
       };
     };
 }
