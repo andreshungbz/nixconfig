@@ -1,17 +1,17 @@
 {
-  description = "Andres' Nix Configurations for MacOS & NixOS";
+  description = "Andres' Nix Configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
+    darwin = {
+      url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    darwin = {
-      url = "github:LnL7/nix-darwin/master";
+    home-manager = {
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -32,6 +32,7 @@
       };
     in
     {
+      # MacOS Configurations
       darwinConfigurations = {
         "AHM1A" = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
@@ -43,6 +44,7 @@
         };
       };
 
+      # NixOS Configurations
       nixosConfigurations = {
         "AHNIX" = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
@@ -54,12 +56,13 @@
         };
       };
 
+      # Home Manager Standalone Configurations
       homeConfigurations = {
-        "AHRP5" = home-manager.lib.homeManagerConfiguration {
+        "MAIN-ARM" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.aarch64-linux;
           extraSpecialArgs = { inherit user; };
           modules = [
-            ./pi/AHRP5/home.nix
+            ./home/MAIN/home.nix
           ];
         };
       };
