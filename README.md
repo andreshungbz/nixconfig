@@ -1,8 +1,13 @@
 # Nix Configuration
 
-Welcome to my Nix configuration for both macOS and NixOS. This repository contains configuration files and package setup for each host of a respective system. Some configurations are shared between the two systems and between different hosts.
+This repository contains the nix configurations for a variety of my devices. It also has configurations for some miscellaneous programs. Feel free to explore the repository and take ideas for your Nix configuration.
 
-Feel free to explore the repository and take ideas for your Nix configuration!
+## Structure
+
+- `/common`: dotfiles and Home Manager modules.
+- `/home`: Home Manager configurations.
+- `/macos`: nix-darwin configurations.
+- `/nixos`: NixOS configurations.
 
 ## Attributions
 
