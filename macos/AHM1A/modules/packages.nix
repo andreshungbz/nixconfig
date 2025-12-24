@@ -1,9 +1,8 @@
-# Shared Nix System Packages
+# Local Nix System Packages
 
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    helix
-    nixfmt-rfc-style
+    ookla-speedtest
   ];
 }
