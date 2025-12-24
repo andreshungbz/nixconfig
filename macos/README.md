@@ -16,7 +16,7 @@ mkdir ~/Projects && cd ~/Projects
 git clone https://github.com/andreshungbz/nixconfig.git && cd nixconfig
 ```
 
-5. Reguild the configuration with the flake.
+5. Rebuild the configuration with the flake.
 
 ```
 sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#AHM1A
