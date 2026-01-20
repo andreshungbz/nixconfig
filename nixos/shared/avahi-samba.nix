@@ -25,11 +25,12 @@
 
   services.resolved = {
     enable = true;
-    extraConfig = ''
-      [Resolve]
-      MulticastDNS=yes
-      LLMNR=no
-    '';
+    settings = {
+      Resolve = {
+        MulticastDNS = "yes";
+        LLMNR = "no";
+      };
+    };
   };
 
   services.samba = {
