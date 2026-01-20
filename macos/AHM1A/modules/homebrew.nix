@@ -16,7 +16,7 @@ in
     casks = shared.casks ++ [
       # development tools
       "gpg-suite"
-      "homebrew/cask/docker"
+      "homebrew/cask/docker-desktop"
       "jetbrains-toolbox"
       "netspot"
       "powershell"
@@ -26,7 +26,7 @@ in
       "utm"
       "visual-studio-code"
       "warp"
-      "wireshark"
+      "wireshark-app"
 
       # communication tools
       "discord"
