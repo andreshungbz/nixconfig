@@ -13,7 +13,7 @@
     users.${user.username} = {
       home.stateVersion = "25.05";
       home.sessionPath =
-        if pkgs.stdenv.hostPlatform.isDarwin then [ "/opt/homebrew/opt/postgresql@17/bin" ] else [ ];
+        if pkgs.stdenv.hostPlatform.isDarwin then [ "/opt/homebrew/opt/postgresql@18/bin" ] else [ ];
 
       imports = [
         (import ../../../common/home-manager {
