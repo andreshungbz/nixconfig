@@ -9,7 +9,7 @@ in
     enable = true;
 
     brews = shared.brews ++ [
-      "postgresql@17"
+      "postgresql@18"
       "telnet"
     ];
 
