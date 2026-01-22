@@ -7,7 +7,7 @@
     settings = {
       user = {
         name = user.name;
-        email = user.email;
+        email = "2018118240@ub.edu.bz"; # user.email
       };
 
       init.defaultBranch = "main";
@@ -17,6 +17,10 @@
       commit.gpgSign = false;
       user.signingKey = "532A3106F50E419F";
       gpg.format = "openpgp";
+
+      # for the school semester
+      core.editor = "nano";
+      color.ui = "auto";
     };
   };
 }
