@@ -9,6 +9,7 @@ in
     enable = true;
 
     brews = shared.brews ++ [
+      "golang-migrate"
       "postgresql@18"
       "telnet"
     ];
