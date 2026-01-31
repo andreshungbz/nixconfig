@@ -38,5 +38,9 @@
       '
       zstyle ':fzf-tab:*' fzf-flags --preview-window=right:60%:wrap
     '';
+
+    sessionVariables = {
+      PSQLRC = "$HOME/Projects/nixconfig/common/dotfiles/.psqlrc";
+    };
   };
 }
