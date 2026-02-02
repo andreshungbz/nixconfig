@@ -20,6 +20,7 @@ in
       "homebrew/cask/docker-desktop"
       "jetbrains-toolbox"
       "netspot"
+      "pgadmin4"
       "powershell"
       "tailscale-app"
       "termius"
