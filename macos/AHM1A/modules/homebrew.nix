@@ -48,6 +48,7 @@ in
       "google-drive"
       "iina"
       "krita"
+      "mediamate"
       "microsoft-office"
       "obs"
       "obsidian"
