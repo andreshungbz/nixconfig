@@ -12,6 +12,7 @@ in
       "golang-migrate"
       "hey"
       "postgresql@18"
+      "python@3.14"
       "telnet"
     ];
 
