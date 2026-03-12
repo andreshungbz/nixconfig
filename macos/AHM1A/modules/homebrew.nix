@@ -9,6 +9,7 @@ in
     enable = true;
 
     brews = shared.brews ++ [
+      "arduino-cli"
       "golang-migrate"
       "hey"
       "postgresql@18"
@@ -18,6 +19,7 @@ in
 
     casks = shared.casks ++ [
       # development tools
+      "arduino-ide"
       "gpg-suite"
       "homebrew/cask/docker-desktop"
       "jetbrains-toolbox"
