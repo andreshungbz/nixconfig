@@ -20,6 +20,7 @@ in
     casks = shared.casks ++ [
       # development tools
       "arduino-ide"
+      "bruno"
       "gpg-suite"
       "homebrew/cask/docker-desktop"
       "jetbrains-toolbox"
