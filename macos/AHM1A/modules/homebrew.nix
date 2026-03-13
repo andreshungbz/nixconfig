@@ -26,6 +26,7 @@ in
       "netspot"
       "pgadmin4"
       "postman"
+      "postman-cli"
       "powershell"
       "tailscale-app"
       "termius"
