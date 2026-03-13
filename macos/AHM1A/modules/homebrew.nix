@@ -25,6 +25,7 @@ in
       "jetbrains-toolbox"
       "netspot"
       "pgadmin4"
+      "postman"
       "powershell"
       "tailscale-app"
       "termius"
