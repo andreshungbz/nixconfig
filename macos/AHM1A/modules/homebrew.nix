@@ -12,6 +12,8 @@ in
       "arduino-cli"
       "golang-migrate"
       "hey"
+      "opencv"
+      "pkgconfig"
       "postgresql@18"
       "python@3.12"
       "telnet"
