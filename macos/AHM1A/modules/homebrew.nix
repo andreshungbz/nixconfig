@@ -17,6 +17,7 @@ in
       "postgresql@18"
       "python@3.12"
       "telnet"
+      "uv"
     ];
 
     casks = shared.casks ++ [
