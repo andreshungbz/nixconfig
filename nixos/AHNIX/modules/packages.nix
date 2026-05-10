@@ -36,6 +36,7 @@
     wl-clipboard
 
     # desktop
+    bitwarden-desktop
     blender
     discord
     cider-2
