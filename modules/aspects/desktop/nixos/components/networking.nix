@@ -18,6 +18,8 @@
             allowedTCPPorts = lib.concatMap (f: f.ports or [ ]) firewall;
           };
         };
+
+        services.resolved.enable = true;
       };
   };
 }
