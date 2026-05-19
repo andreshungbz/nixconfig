@@ -1,78 +1,26 @@
+# DO-NOT-EDIT. This file was auto-generated using github:vic/flake-file.
+# Use `nix run .#write-flake` to regenerate it.
 {
-  description = "Andres' Nix Configuration";
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
-
     darwin = {
-      url = "github:LnL7/nix-darwin/master";
+      url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    den.url = "github:denful/den";
+    flake-file.url = "github:vic/flake-file";
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    import-tree.url = "github:vic/import-tree";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    pixie-sddm.url = "github:xCaptaiN09/pixie-sddm";
   };
-
-  outputs =
-    inputs@{
-      self,
-      nixpkgs,
-      nixpkgs-stable,
-      home-manager,
-      darwin,
-    }:
-    let
-      user = {
-        username = "andreshung";
-        name = "Andres Hung";
-        email = "andres.hung@outlook.com";
-      };
-    in
-    {
-      # MacOS Configurations
-      darwinConfigurations = {
-        "AHM1A" = darwin.lib.darwinSystem {
-          system = "aarch64-darwin";
-          specialArgs = { inherit user; };
-          modules = [
-            home-manager.darwinModules.home-manager
-            ./macos/AHM1A/configuration.nix
-          ];
-        };
-      };
-
-      # NixOS Configurations
-      nixosConfigurations = {
-        "AHNIX" = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit inputs user; };
-          modules = [
-            home-manager.nixosModules.home-manager
-            ./nixos/AHNIX/configuration.nix
-          ];
-        };
-      };
-
-      # Home Manager Standalone Configurations
-      homeConfigurations = {
-        "MAIN-ARM" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.aarch64-linux;
-          extraSpecialArgs = { inherit user; };
-          modules = [
-            ./home/MAIN/home.nix
-          ];
-        };
-
-        MAIN-X86 = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit user; };
-          modules = [
-            ./home/MAIN/home.nix
-          ];
-        };
-      };
-    };
 }
