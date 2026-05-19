@@ -4,7 +4,6 @@
     includes = [
       <den/primary-user>
       (<den/user-shell> "fish")
-      <pkt/terminal>
     ];
 
     nixos = {

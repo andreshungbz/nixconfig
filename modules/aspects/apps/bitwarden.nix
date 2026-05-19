@@ -1,17 +1,20 @@
 {
-  pkt.bitwarden =
-    { user }:
-    {
-      nixos =
-        { pkgs, ... }:
-        {
-          users.users.${user.userName}.packages = with pkgs; [
-            bitwarden-desktop
-          ];
+  # https://bitwarden.com/
+  pkt.bitwarden = {
+    nixos =
+      { pkgs, user, ... }:
+      {
+        users.users.${user.userName}.packages = with pkgs; [
+          bitwarden-desktop
+        ];
 
-          environment.variables = rec {
-            SSH_AUTH_SOCK = "$HOME/.bitwarden-ssh-agent.sock";
-          };
+        environment.variables = rec {
+          SSH_AUTH_SOCK = "$HOME/.bitwarden-ssh-agent.sock";
         };
+      };
+
+    darwin = {
+      # TODO
     };
+  };
 }

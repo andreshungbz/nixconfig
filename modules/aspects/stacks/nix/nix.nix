@@ -9,12 +9,11 @@
       { pkgs, ... }:
       {
         environment.systemPackages = with pkgs; [
-          nixfmt # https://github.com/NixOS/nixfmt
-          nvd # https://sr.ht/~khumba/nvd/
+          nixfmt
+          nvd
         ];
 
         programs = {
-          # https://wiki.nixos.org/wiki/Nix-ld
           nix-ld.enable = true;
         };
       };
@@ -22,11 +21,6 @@
     homeManager =
       { config, pkgs, ... }:
       {
-        home.packages = with pkgs; [
-          nixfmt
-          nvd
-        ];
-
         programs.nh = {
           enable = true;
           flake = "${config.home.homeDirectory}/Projects/nixconfig";

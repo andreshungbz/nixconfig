@@ -1,4 +1,5 @@
 {
+  # https://openrazer.github.io/
   pkt.openrazer =
     { user }:
     {

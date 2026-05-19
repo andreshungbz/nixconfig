@@ -27,7 +27,10 @@
 
     provides.packet = {
       includes = [
+        <pkt/git>
         <pkt/kitty>
+        <pkt/ssh>
+        <pkt/terminal>
       ];
     };
 

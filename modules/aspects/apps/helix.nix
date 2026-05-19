@@ -1,4 +1,5 @@
 {
+  # https://helix-editor.com/
   pkt.helix = {
     homeManager = {
       programs.helix = {
