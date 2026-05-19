@@ -1,13 +1,14 @@
 { den, __findFile, ... }:
 {
-  den.aspects.packet = {
+  den.aspects.andreshung = {
     includes = [
       <den/primary-user>
       (<den/user-shell> "fish")
     ];
 
     nixos = {
-      users.users.packet = {
+      users.users.andreshung = {
+        isNormalUser = true;
         description = "Andres Hung";
       };
     };

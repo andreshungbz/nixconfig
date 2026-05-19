@@ -2,8 +2,6 @@
 {
   den.aspects.kangaroo = {
     includes = [
-      <test/autologin>
-      <test/boot>
       <test/vmvariant>
     ];
   };

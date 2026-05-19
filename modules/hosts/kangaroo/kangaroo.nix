@@ -8,7 +8,7 @@
   # ASUS Gaming Desktop Workstation
   den.hosts.x86_64-linux.kangaroo = {
     users = {
-      packet = {
+      andreshung = {
         classes = [ "homeManager" ];
       };
     };
@@ -25,7 +25,7 @@
       <pkt/nixos-base>
     ];
 
-    provides.packet = {
+    provides.andreshung = {
       includes = [
         <pkt/git>
         <pkt/kitty>
