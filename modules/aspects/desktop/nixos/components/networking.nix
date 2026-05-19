@@ -4,10 +4,10 @@
     description = "Firewall port declarations";
   };
 
-  pkt.networking =
-    { firewall }:
-    {
-      nixos = {
+  pkt.networking = {
+    nixos =
+      { firewall }:
+      {
         networking = {
           networkmanager.enable = true;
 
@@ -19,5 +19,5 @@
           };
         };
       };
-    };
+  };
 }
