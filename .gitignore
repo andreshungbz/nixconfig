@@ -1,5 +1,5 @@
 \#*
+*.qcow2
 *.swp
 result
 .DS_Store
-*.qcow2
