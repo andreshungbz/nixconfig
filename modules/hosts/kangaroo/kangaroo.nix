@@ -17,6 +17,7 @@
   den.aspects.kangaroo = {
     includes = [
       den.aspects.kangaroo-computer
+      # den.aspects.kangaroo-disk
       <pkt/desktop-apps>
       <pkt/dev-tools>
       <pkt/extra>
