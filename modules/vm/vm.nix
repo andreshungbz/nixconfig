@@ -7,14 +7,20 @@
   };
 
   perSystem =
-    { pkgs, ... }:
+    { pkgs, system, ... }:
     {
       # nix run .#vm-kangaroo
-      packages.vm-kangaroo = pkgs.writeShellApplication {
-        name = "vm-kangaroo";
-        text = ''
-          ${inputs.self.nixosConfigurations.kangaroo.config.system.build.vm}/bin/run-kangaroo-vm "$@"
-        '';
-      };
+      packages =
+        if system != "x86_64-linux" then
+          { }
+        else
+          {
+            vm-kangaroo = pkgs.writeShellApplication {
+              name = "vm-kangaroo";
+              text = ''
+                ${inputs.self.nixosConfigurations.kangaroo.config.system.build.vm}/bin/run-kangaroo-vm "$@"
+              '';
+            };
+          };
     };
 }
