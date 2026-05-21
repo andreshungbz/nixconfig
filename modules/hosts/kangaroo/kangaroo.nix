@@ -36,7 +36,7 @@
 
     # Impromptu Configurations
     nixos =
-      { pkgs, ... }:
+      { pkgs, lib, ... }:
       {
         environment = {
           systemPackages = with pkgs; [
@@ -47,6 +47,8 @@
 
           };
         };
+
+        users.users.root.initialHashedPassword = lib.mkForce "$2b$05$8XN4POkJCMRkxqd//Vw0VuQWdeM9oL5vBr8qMcXcfS7mQeZrXmRCG";
       };
   };
 }

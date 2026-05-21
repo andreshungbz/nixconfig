@@ -26,8 +26,6 @@
               enable = true;
               user = user.userName;
             };
-
-            users.users.${user.userName}.initialPassword = "password";
           };
         };
     };
