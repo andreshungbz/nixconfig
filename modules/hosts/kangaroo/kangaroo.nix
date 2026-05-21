@@ -28,9 +28,10 @@
 
     provides.andreshung = {
       includes = [
-        <pkt/breeze-cursor>
+        <pkt/breeze-cursors>
         <pkt/git>
         <pkt/kitty>
+        <pkt/papirus-icons>
         <pkt/ssh>
         <pkt/terminal>
       ];
