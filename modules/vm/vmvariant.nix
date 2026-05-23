@@ -23,7 +23,7 @@
             boot.zfs.forceImportRoot = false;
 
             services.displayManager.autoLogin = {
-              enable = true;
+              enable = false;
               user = user.userName;
             };
           };
