@@ -1,17 +1,22 @@
 {
   pkt.breeze-cursors = {
-    nixos =
+    homeManager =
       { pkgs, ... }:
       {
-        environment = {
-          systemPackages = with pkgs; [
-            kdePackages.breeze-icons
-          ];
+        home.pointerCursor = {
+          package = pkgs.kdePackages.breeze;
+          name = "Breeze_Light";
+          size = 24;
+          gtk.enable = true;
+          x11.enable = true;
+        };
 
-          sessionVariables = {
-            XDG_DATA_DIRS = [ "${pkgs.kdePackages.breeze-icons}/share" ];
-            XCURSOR_THEME = "breeze_cursors";
-            XCURSOR_SIZE = "24";
+        gtk = {
+          enable = true;
+          cursorTheme = {
+            package = pkgs.kdePackages.breeze;
+            name = "Breeze_Light";
+            size = 24;
           };
         };
       };
