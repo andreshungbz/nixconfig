@@ -1,10 +1,5 @@
-{ __findFile, ... }:
 {
   pkt.kde = {
-    includes = [
-      <pkt/sddm>
-    ];
-
     nixos =
       { pkgs, lib, ... }:
       {

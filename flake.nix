@@ -23,8 +23,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     import-tree.url = "github:vic/import-tree";
+    niri.url = "github:sodiboo/niri-flake?shallow=true";
     nix-flatpak.url = "github:gmodena/nix-flatpak/";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    noctalia.url = "github:noctalia-dev/noctalia-shell/v5";
     pixie-sddm.url = "github:xCaptaiN09/pixie-sddm";
   };
 }
