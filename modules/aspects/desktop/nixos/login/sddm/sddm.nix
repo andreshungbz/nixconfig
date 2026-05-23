@@ -5,11 +5,23 @@
       <pkt/sddm-pixie>
     ];
 
-    nixos = {
-      services.displayManager.sddm = {
-        enable = true;
-        wayland.enable = true;
+    nixos =
+      { pkgs, ... }:
+      {
+        environment.systemPackages = with pkgs; [
+          kdePackages.breeze
+        ];
+
+        services.displayManager.sddm = {
+          enable = true;
+          wayland.enable = true;
+
+          settings = {
+            Theme = {
+              CursorTheme = "Breeze_Light";
+            };
+          };
+        };
       };
-    };
   };
 }
