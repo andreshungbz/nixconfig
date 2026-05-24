@@ -8,6 +8,15 @@
     homeManager = {
       programs.niri.settings = {
         window-rules = [
+          # Global Blur (waiting for https://github.com/sodiboo/niri-flake/issues/1721)
+          # {
+          #   matches = [ { } ];
+
+          #   background-effect = {
+          #     blur = true;
+          #     xray = true;
+          #   };
+          # }
           # Discord Monitor 2
           {
             matches = [ { app-id = "^discord$"; } ];
