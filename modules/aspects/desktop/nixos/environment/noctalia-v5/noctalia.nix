@@ -6,27 +6,24 @@
     };
   };
 
+  # https://docs.noctalia.dev/v5/
   pkt.noctalia = {
     nixos =
       { pkgs, ... }:
       {
-        # binary cache
-        nix.settings = {
-          substituters = [ "https://noctalia.cachix.org" ];
-          trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
-        };
-
         environment.systemPackages = [
           inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
         ];
 
-        environment.variables = {
-          QS_ICON_THEME = "Papirus";
+        services = {
+          power-profiles-daemon.enable = true; # power profiles
+          upower.enable = true; # battery
         };
 
-        services = {
-          power-profiles-daemon.enable = true;
-          upower.enable = true;
+        # binary cache
+        nix.settings = {
+          substituters = [ "https://noctalia.cachix.org" ];
+          trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
         };
       };
 
@@ -35,7 +32,8 @@
         (inputs.noctalia.homeModules.default or { })
       ];
 
-      home.file."Pictures/Wallpapers/default-wallpapers".source = ./default-wallpapers;
+      # repository wallpapers
+      home.file."Pictures/Wallpapers/nixconfig-wallpapers".source = ./nixconfig-wallpapers;
 
       programs.noctalia = {
         enable = true;

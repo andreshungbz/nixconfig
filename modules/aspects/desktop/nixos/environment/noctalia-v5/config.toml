@@ -367,7 +367,7 @@ transition_duration = 1500.0
     recursive = true
 
 [wallpaper.default]
-path = "~/Pictures/Wallpapers/default-wallpapers/background.jpg"
+path = "~/Pictures/Wallpapers/nixconfig-wallpapers/background.jpg"
 
 [weather]
 address = "Belmopan"
