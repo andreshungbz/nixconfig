@@ -6,39 +6,92 @@
         enable = true;
         settings = {
           "$schema" = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
+
+          # Logo
           logo = {
+            type = "small";
             padding = {
               top = 1;
               left = 2;
               right = 0;
             };
           };
+
+          # Display
           display = {
-            separator = "| ";
+            separator = " | ";
           };
+
+          # Modules
           modules = [
+            # Top Section
             "break"
             {
               type = "title";
-              key = "           Identity ";
+              key = "            Identity";
             }
+            {
+              type = "disk";
+              key = "          System Age";
+              folders = "/";
+              format = "{days} days ({create-time:10})";
+            }
+            {
+              type = "uptime";
+              key = "              Uptime";
+            }
+
+            # Section 1
+            "break"
+            {
+              type = "os";
+              key = "    Operating System";
+            }
+            {
+              type = "kernel";
+              key = "              Kernel";
+            }
+            {
+              type = "lm";
+              key = "       Login Manager";
+              format = "{2}";
+            }
+            {
+              type = "de";
+              key = "Desktop Environment";
+            }
+            {
+              type = "wm";
+              key = "      Window Manager";
+            }
+            {
+              type = "shell";
+              key = "               Shell";
+            }
+            {
+              type = "terminal";
+              key = "            Terminal";
+            }
+
+            # Section 2
             "break"
             {
               type = "host";
-              key = "               Host ";
+              key = "                Host";
               format = "{2} ({4})";
             }
             {
               type = "cpu";
-              key = "                CPU ";
+              key = "                 CPU";
             }
+
             {
               type = "gpu";
-              key = "                GPU ";
+              key = "                 GPU";
             }
             {
               type = "memory";
-              key = "             Memory ";
+              key = "              Memory";
               format = "{used} / {total} ({percentage})";
               percent = {
                 type = [
@@ -48,7 +101,7 @@
             }
             {
               type = "disk";
-              key = "               Disk ";
+              key = "                Disk";
               format = "{size-used} / {size-total} ({size-percentage}) - ({filesystem})";
               folders = "/";
               percent = {
@@ -57,103 +110,16 @@
                 ];
               };
             }
-            {
-              type = "swap";
-              key = "               Swap ";
-              format = "{used} / {total} ({percentage})";
-              percent = {
-                type = [
-                  "num"
-                ];
-              };
-            }
-            {
-              type = "monitor";
-              key = "            Display ";
-            }
-            {
-              type = "loadavg";
-              key = "               Load ";
-            }
-            {
-              type = "processes";
-              key = "          Processes ";
-            }
-            "break"
-            {
-              type = "os";
-              key = "   Operating System ";
-            }
-            {
-              type = "kernel";
-              key = "             Kernel ";
-            }
-            {
-              type = "disk";
-              key = "          Birthdate ";
-              folders = "/";
-              format = "{create-time:10} ({days} days)";
-            }
-            {
-              type = "uptime";
-              key = "             Uptime ";
-            }
-            {
-              type = "packages";
-              key = "           Packages ";
-            }
-            {
-              type = "lm";
-              key = "      Login Manager ";
-              format = "{2}";
-            }
-            {
-              type = "de";
-              key = "Desktop Environment ";
-            }
-            {
-              type = "wm";
-              key = "     Window Manager ";
-            }
-            {
-              type = "wmtheme";
-              key = "           WM Theme ";
-            }
-            {
-              type = "shell";
-              key = "              Shell ";
-            }
-            {
-              type = "terminal";
-              key = "           Terminal ";
-            }
-            {
-              type = "terminalfont";
-              key = "      Terminal Font ";
-              format = "{1}";
-            }
+
+            # Media Player
             "break"
             {
               type = "player";
-              key = "       Media Player ";
+              key = "        Media Player";
             }
             {
               type = "media";
-              key = "            Playing ";
-            }
-            {
-              type = "version";
-              key = "               Info ";
-              format = "{1} {2}";
-            }
-            "break"
-            {
-              type = "colors";
-              paddingLeft = 22;
-              symbol = "";
-            }
-            "break"
-            {
+              key = "             Playing";
             }
           ];
         };
