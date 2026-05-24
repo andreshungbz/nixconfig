@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  pkt.niri-binds-window = {
+  pkt.niri-binds-columns = {
     imports = [
       (inputs.niri.homeModules.niri or { })
     ];
@@ -31,7 +31,9 @@
 
         # Resize Columns
         "Mod+F".action.maximize-column = [ ];
+        "Mod+M".action.maximize-window-to-edges = [ ];
         "Mod+Shift+F".action.fullscreen-window = [ ];
+        "Mod+Ctrl+Shift+F".action.toggle-windowed-fullscreen = [ ];
         "Mod+Minus".action.set-column-width = "-10%";
         "Mod+Equal".action.set-column-width = "+10%";
         "Mod+Shift+Minus".action.set-window-height = "-10%";

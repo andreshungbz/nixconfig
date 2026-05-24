@@ -7,10 +7,10 @@
 
     homeManager = {
       programs.niri.settings.binds = {
+        # Screenshot
         "Print".action.screenshot = [ ];
         "Ctrl+Print".action.screenshot-screen = [ ];
         "Alt+Print".action.screenshot-window = [ ];
-        "Mod+Shift+P".action.power-off-monitors = [ ];
       };
     };
   };

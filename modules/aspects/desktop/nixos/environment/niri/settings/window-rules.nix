@@ -8,6 +8,7 @@
     homeManager = {
       programs.niri.settings = {
         window-rules = [
+          # Discord Monitor 2
           {
             matches = [ { app-id = "^discord$"; } ];
             open-on-output = "DP-2";
@@ -19,7 +20,7 @@
               proportion = 0.5;
             };
           }
-
+          # Telegram Monitor 2
           {
             matches = [ { app-id = "^org.telegram.desktop$"; } ];
             open-on-output = "DP-2";
@@ -31,7 +32,7 @@
               proportion = 0.5;
             };
           }
-
+          # Firefox PIP
           {
             matches = [
               {
