@@ -17,7 +17,6 @@
           mouse = {
             accel-speed = -0.6;
           };
-
           focus-follows-mouse = {
             enable = true;
             max-scroll-amount = "0%";

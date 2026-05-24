@@ -11,6 +11,7 @@
     };
   };
 
+  # https://niri-wm.github.io/niri/index.html
   pkt.niri = {
     includes = [
       <pkt/niri-binds-columns>
@@ -28,15 +29,25 @@
     nixos =
       { pkgs, ... }:
       {
-        nixpkgs.overlays = [ inputs.niri.overlays.niri ];
-        environment.systemPackages = with pkgs; [ xwayland-satellite ]; # flake should automatically provide gnome-keyring
+        # binary cache
+        nix.settings = {
+          substituters = [ "https://niri.cachix.org" ];
+          trusted-public-keys = [ "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964=" ];
+        };
 
+        # Niri package
+        nixpkgs.overlays = [ inputs.niri.overlays.niri ];
         programs.niri = {
           enable = true;
           package = pkgs.niri-unstable;
         };
 
+        environment.systemPackages = with pkgs; [
+          xwayland-satellite # for X11 apps (e.g., Steam, Discord)
+        ];
+
         xdg = {
+          # VM mkForce
           autostart.enable = lib.mkForce true;
           icons.enable = lib.mkForce true;
           mime.enable = lib.mkForce true;
@@ -50,7 +61,7 @@
           };
         };
 
-        # enable 3D acceleration
+        # VM 3D acceleration
         virtualisation.vmVariant = {
           virtualisation.qemu.options = [
             "-device"
@@ -73,10 +84,6 @@
           package = pkgs.niri-unstable;
 
           settings = {
-            hotkey-overlay.skip-at-startup = true;
-            prefer-no-csd = true;
-            screenshot-path = "~/Pictures/Screenshots/screenshot-%Y-%m-%d %H-%M-%S.png";
-
             environment = {
               "ELECTRON_OZONE_PLATFORM_HINT" = "auto";
               "NIXOS_OZONE_WL" = "1";

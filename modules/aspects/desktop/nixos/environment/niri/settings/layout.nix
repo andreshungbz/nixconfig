@@ -7,6 +7,8 @@
 
     homeManager = {
       programs.niri.settings = {
+        prefer-no-csd = true;
+
         layout = {
           # General
           background-color = "transparent";
