@@ -17,6 +17,12 @@
           #     xray = true;
           #   };
           # }
+          # Steam Monitor 1
+          {
+            matches = [ { app-id = "^steam$"; } ];
+            open-on-output = "DP-1";
+            open-maximized = true;
+          }
           # Discord Monitor 2
           {
             matches = [ { app-id = "^discord$"; } ];
