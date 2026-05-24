@@ -14,7 +14,6 @@
   pkt.niri = {
     includes = [
       <pkt/niri-binds-media>
-      <pkt/niri-binds-monitor>
       <pkt/niri-binds-system>
       <pkt/niri-binds-utilities>
       <pkt/niri-binds-window>
