@@ -31,7 +31,7 @@
           focus-ring = {
             enable = true;
             width = 2;
-            urgent.color = "#f08d94";
+            urgent.color = "#fdb00b";
 
             active.gradient = {
               from = "#5fb8f2";

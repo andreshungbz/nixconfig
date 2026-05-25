@@ -3,11 +3,11 @@
 add_newline = false
 
 format = "$character"
-right_format = "[ $directory $git_branch](bg:#38528a fg:white)"
+right_format = "[ $directory $git_branch](bg:#38528a fg:#fdb00b)"
 
 [character]
 success_symbol = "[󰘧](fg:#4d6fb7)"
-error_symbol = "[󰘧](fg:#f08d94)"
+error_symbol = "[󰘧](fg:#fdb00b)"
 format = "$symbol "
 
 [directory]
