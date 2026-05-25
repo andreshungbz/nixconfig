@@ -17,6 +17,7 @@
     provides.andreshung = {
       includes = [
         <pkt/darwin-base>
+        <pkt/desktop-apps>
         <pkt/dev-tools>
         <pkt/gaming>
         <pkt/git>
