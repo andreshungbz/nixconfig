@@ -4,6 +4,7 @@
     { user }:
     {
       includes = [
+        <pkt/devenv>
         <pkt/gpg>
         <pkt/wireshark>
       ];

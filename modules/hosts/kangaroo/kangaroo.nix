@@ -19,7 +19,6 @@
       den.aspects.kangaroo-computer
       # den.aspects.kangaroo-disk
       <pkt/desktop-apps>
-      <pkt/dev-tools>
       <pkt/extra>
       <pkt/gaming>
       # <pkt/kde>
@@ -31,6 +30,7 @@
     provides.andreshung = {
       includes = [
         <pkt/breeze-cursors>
+        <pkt/dev-tools>
         <pkt/git>
         <pkt/kitty>
         <pkt/niri>
