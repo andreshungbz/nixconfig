@@ -66,7 +66,7 @@
             default-window-height.proportion = 0.6;
             default-floating-position = {
               x = 410;
-              y = 230;
+              y = 222;
               relative-to = "top-left";
             };
           }
