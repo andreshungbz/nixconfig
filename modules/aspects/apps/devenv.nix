@@ -20,5 +20,9 @@
           eval "$(devenv hook bash)"
         '';
       };
+
+      darwin = {
+        users.users.${user.userName}.packages = with pkgs; [ devenv ];
+      };
     };
 }
