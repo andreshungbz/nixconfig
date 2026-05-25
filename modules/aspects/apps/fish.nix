@@ -19,10 +19,8 @@
         };
       };
 
-    darwin =
-      { pkgs, user, ... }:
-      {
-        users.users.${user.userName}.shell = lib.mkForce pkgs.fish;
-      };
+    darwin = {
+      programs.fish.enable = true;
+    };
   };
 }
