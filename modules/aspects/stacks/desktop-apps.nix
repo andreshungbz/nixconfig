@@ -44,8 +44,39 @@
           ];
         };
 
-      darwin = {
-        # TODO
-      };
+      darwin =
+        { pkgs, ... }:
+        {
+          homebrew = {
+            casks = [
+              "alt-tab"
+              "discord"
+              "firefox"
+              "google-drive"
+              "iina"
+              "microsoft-edge"
+              "microsoft-office"
+              "obs"
+              "obsidian"
+              "protonvpn"
+              "qbittorrent"
+              "raycast"
+              "stats"
+              "ti-connect-ce"
+              "zoom"
+            ];
+
+            masApps = {
+              "Affinity Designer 2" = 1616831348;
+              "Affinity Photo 2: Image Editor" = 1616822987;
+              "Affinity Publisher 2" = 1606941598;
+              "Goodnotes 6: AI Notes & Docs" = 1444383602;
+              "Hidden Bar" = 1452453066;
+              "Pixelmator Pro" = 1289583905;
+              "Telegram" = 747648890;
+              "WhatsApp Messenger" = 310633997;
+            };
+          };
+        };
     };
 }

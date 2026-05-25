@@ -11,7 +11,6 @@
       system.stateVersion = "25.11";
 
       nixpkgs.config.allowUnfree = true;
-
       nix.settings.experimental-features = [
         "nix-command"
         "flakes"
@@ -31,14 +30,22 @@
     };
 
     darwin = {
-      system.stateVersion = 6;
+      system = {
+        checks.verifyNixPath = false;
+        stateVersion = 6;
+      };
 
       nixpkgs.config.allowUnfree = true;
-
       nix.settings.experimental-features = [
         "nix-command"
         "flakes"
       ];
+
+      home-manager = {
+        backupFileExtension = "backup";
+        useUserPackages = true;
+        useGlobalPkgs = true;
+      };
     };
   };
 }

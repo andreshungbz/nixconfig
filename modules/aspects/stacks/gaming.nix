@@ -30,5 +30,13 @@
             ];
           };
         };
+
+      darwin = {
+        homebrew = {
+          casks = [
+            "steam"
+          ];
+        };
+      };
     };
 }

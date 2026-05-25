@@ -14,7 +14,11 @@
       };
 
     darwin = {
-      # TODO
+      homebrew.casks = [ "bitwarden" ];
+
+      environment.variables = rec {
+        SSH_AUTH_SOCK = "$HOME/.bitwarden-ssh-agent.sock";
+      };
     };
   };
 }

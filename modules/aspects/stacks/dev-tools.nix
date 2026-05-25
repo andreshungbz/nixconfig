@@ -6,6 +6,7 @@
       includes = [
         <pkt/devenv>
         <pkt/gpg>
+        <pkt/postgresql>
         <pkt/wireshark>
       ];
 
@@ -34,8 +35,43 @@
           ];
         };
 
-      darwin = {
-        # TODO
-      };
+      darwin =
+        { pkgs, ... }:
+        {
+          users.users.${user.userName}.packages = with pkgs; [
+            # cmdline
+            cloc
+            exiftool
+            dnsmasq
+            dnsutils
+            jq
+            ookla-speedtest
+            powershell
+            tldr
+            tree
+            wget
+          ];
+
+          homebrew = {
+            brews = [
+              "telnet"
+            ];
+
+            casks = [
+              "homebrew/cask/docker-desktop"
+              "jetbrains-toolbox"
+              "netspot"
+              "postman"
+              "postman-cli"
+              "termius"
+              "utm"
+              "visual-studio-code"
+            ];
+
+            masApps = {
+
+            };
+          };
+        };
     };
 }

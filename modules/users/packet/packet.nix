@@ -18,5 +18,13 @@
       # useful for setting an icon when testing, but probably conflicts in real setups.
       # home.file.".face.icon".source = ./avatar.png;
     };
+
+    darwin = {
+      users.users.andreshung = {
+        name = "Andres Hung";
+        home = "/Users/andreshung";
+        isHidden = false;
+      };
+    };
   };
 }

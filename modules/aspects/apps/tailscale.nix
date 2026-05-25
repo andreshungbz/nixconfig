@@ -7,5 +7,9 @@
         openFirewall = true;
       };
     };
+
+    darwin = {
+      homebrew.casks = [ "tailscale-app" ];
+    };
   };
 }

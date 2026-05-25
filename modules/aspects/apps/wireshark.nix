@@ -22,5 +22,9 @@
             ];
           };
         };
+
+      darwin = {
+        homebrew.casks = [ "wireshark-app" ];
+      };
     };
 }
