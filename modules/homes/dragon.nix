@@ -1,7 +1,7 @@
 { den, __findFile, ... }:
 {
   # General Home Setup for Non-GUI Systems
-  den.homes.aarch64-linux.andresung = { };
+  den.homes.aarch64-linux.andreshung = { };
 
   den.aspects.andreshung = {
     includes = [
