@@ -26,6 +26,31 @@
         <pkt/ssh>
         <pkt/terminal>
       ];
+
+      darwin =
+        { user }:
+        {
+          system.defaults.dock.persistent-apps = [
+            { app = "/System/Applications/Mail.app"; }
+            { app = "/System/Applications/Calendar.app"; }
+            { app = "/System/Applications/Reminders.app"; }
+            { app = "/System/Applications/Notes.app"; }
+            { app = "/System/Applications/News.app"; }
+            { app = "/System/Applications/Photos.app"; }
+            # { app = "/Applications/Eagle.app"; }
+            { app = "/System/Applications/Books.app"; }
+            { app = "/System/Applications/Music.app"; }
+            { app = "/System/Applications/Messages.app"; }
+            { app = "/Applications/WhatsApp.app"; }
+            { app = "/Applications/Telegram.app"; }
+            { app = "/Applications/Discord.app"; }
+            { app = "/Applications/Firefox.app"; }
+            { app = "/Applications/Microsoft Edge.app"; }
+            { app = "/Applications/Visual Studio Code.app"; }
+            # { app = "/Applications/Obsidian.app"; }
+            { app = "/Users/${user.userName}/Applications/Home Manager Apps/kitty.app"; }
+          ];
+        };
     };
 
     # Impromptu Configurations
@@ -45,27 +70,6 @@
         system.defaults = {
           SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
           loginwindow.LoginwindowText = "andres.hung@outlook.com";
-
-          dock.persistent-apps = [
-            { app = "/System/Applications/Mail.app"; }
-            { app = "/System/Applications/Calendar.app"; }
-            { app = "/System/Applications/Reminders.app"; }
-            { app = "/System/Applications/Notes.app"; }
-            { app = "/System/Applications/News.app"; }
-            { app = "/System/Applications/Photos.app"; }
-            # { app = "/Applications/Eagle.app"; }
-            { app = "/System/Applications/Books.app"; }
-            { app = "/System/Applications/Music.app"; }
-            { app = "/System/Applications/Messages.app"; }
-            { app = "/Applications/WhatsApp.app"; }
-            { app = "/Applications/Telegram.app"; }
-            { app = "/Applications/Discord.app"; }
-            { app = "/Applications/Firefox.app"; }
-            { app = "/Applications/Microsoft Edge.app"; }
-            { app = "/Applications/Visual Studio Code.app"; }
-            # { app = "/Applications/Obsidian.app"; }
-            { app = "/Applications/Warp.app"; }
-          ];
         };
 
         homebrew = {
