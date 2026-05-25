@@ -21,8 +21,10 @@
         '';
       };
 
-      darwin = {
-        users.users.${user.userName}.packages = with pkgs; [ devenv ];
-      };
+      darwin =
+        { pkgs, ... }:
+        {
+          users.users.${user.userName}.packages = with pkgs; [ devenv ];
+        };
     };
 }
