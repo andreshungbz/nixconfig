@@ -5,7 +5,9 @@
 
   den.aspects.dragon = {
     includes = [
+      <pkt/git>
       <pkt/nix>
+      <pkt/ssh>
       <pkt/terminal>
     ];
   };
