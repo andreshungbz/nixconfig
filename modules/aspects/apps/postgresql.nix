@@ -1,19 +1,21 @@
 {
   pkt.postgresql = {
-    dawrin = {
-      home-manager.home.sessionPath = [
-        "/opt/homebrew/opt/postgresql@18/bin"
-      ];
-
-      homebrew = {
-        brews = [
-          "postgresql@18"
+    dawrin =
+      { user, ... }:
+      {
+        home-manager.users.${user.userName}.home.sessionPath = [
+          "/opt/homebrew/opt/postgresql@18/bin"
         ];
 
-        casks = [
-          "pgadmin4"
-        ];
+        homebrew = {
+          brews = [
+            "postgresql@18"
+          ];
+
+          casks = [
+            "pgadmin4"
+          ];
+        };
       };
-    };
   };
 }
