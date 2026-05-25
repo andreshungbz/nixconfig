@@ -1,0 +1,17 @@
+# adapted from https://github.com/antholeole/nixconfig
+
+add_newline = false
+
+format = "$character"
+right_format = "[ $directory $git_branch](bg:#38528a fg:white)"
+
+[character]
+success_symbol = "[󰘧](fg:#4d6fb7)"
+error_symbol = "[󰘧](fg:#f08d94)"
+format = "$symbol "
+
+[directory]
+format = "$path"
+
+[git_branch]
+format = "\\[$branch\\] "
