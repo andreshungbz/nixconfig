@@ -21,9 +21,9 @@
 
     darwin = {
       users.users.andreshung = {
-        name = "Andres Hung";
-        home = "/Users/andreshung";
         isHidden = false;
+        description = "Andres Hung";
+        home = "/Users/andreshung";
       };
     };
   };
