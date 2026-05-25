@@ -1,12 +1,15 @@
-{ __findFile, ... }:
+{ den, ... }:
 {
-  pkt.nix = {
-    includes = [
-      <pkt/nh>
-    ];
+  # nh exposition
+  perSystem =
+    { pkgs, ... }:
+    {
+      packages = den.lib.nh.denPackages { fromFlake = true; } pkgs;
+    };
 
+  pkt.nix = {
     nixos =
-      { pkgs, ... }:
+      { pkgs, user, ... }:
       {
         environment.systemPackages = with pkgs; [
           nixfmt

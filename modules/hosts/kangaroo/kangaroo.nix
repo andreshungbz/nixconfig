@@ -18,7 +18,6 @@
     includes = [
       den.aspects.kangaroo-computer
       # den.aspects.kangaroo-disk
-      <pkt/nixos-base>
     ];
 
     provides.andreshung = {
@@ -32,6 +31,7 @@
         <pkt/kitty>
         <pkt/nautilus>
         <pkt/niri>
+        <pkt/nixos-base>
         <pkt/noctalia>
         <pkt/papirus-icons>
         <pkt/sddm>
