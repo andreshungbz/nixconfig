@@ -17,6 +17,8 @@
             set fish_greeting
           '';
         };
+
+        programs.kitty.settings.shell = "fish";
       };
 
     darwin = {
