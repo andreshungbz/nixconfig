@@ -15,6 +15,7 @@
 
         # Noctalia
         "Alt+Space".action.spawn-sh = "noctalia msg panel-toggle launcher";
+        "Mod+A".action.spawn-sh = "noctalia msg panel-toggle control-center";
         "Mod+L".action.spawn-sh = "noctalia msg screen-lock";
 
         # Applications
