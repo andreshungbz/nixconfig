@@ -14,6 +14,19 @@
         { pkgs, ... }:
         {
           users.users.${user.userName}.packages = with pkgs; [
+            # GNOME Apps
+            baobab
+            eyedropper
+            gnome-calculator
+            gnome-characters
+            gnome-disk-utility
+            gnome-font-viewer
+            gnome-logs
+            impression
+            loupe
+            papers
+            snapshot
+
             discord
             cider-2
             firefox
