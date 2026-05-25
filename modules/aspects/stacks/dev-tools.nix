@@ -66,6 +66,7 @@
               "termius"
               "utm"
               "visual-studio-code"
+              "warp"
             ];
 
             masApps = {
