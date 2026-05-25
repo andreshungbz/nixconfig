@@ -1,9 +1,9 @@
 { den, __findFile, ... }:
 {
   # General Home Setup for Non-GUI Systems
-  den.homes.aarch64-linux.dragon = { };
+  den.homes.aarch64-linux.andresung = { };
 
-  den.aspects.dragon = {
+  den.aspects.andreshung = {
     includes = [
       <pkt/git>
       <pkt/nix>
