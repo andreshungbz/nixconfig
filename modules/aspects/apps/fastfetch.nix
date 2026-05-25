@@ -9,9 +9,9 @@
 
           # Logo
           logo = {
-            type = "small";
+            type = "auto";
             padding = {
-              top = 1;
+              top = 0;
               left = 2;
               right = 0;
             };
@@ -29,12 +29,6 @@
             {
               type = "title";
               key = "            Identity";
-            }
-            {
-              type = "disk";
-              key = "          System Age";
-              folders = "/";
-              format = "{days} days ({create-time:10})";
             }
             {
               type = "uptime";
