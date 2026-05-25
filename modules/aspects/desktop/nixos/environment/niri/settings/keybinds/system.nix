@@ -18,8 +18,13 @@
         "Mod+L".action.spawn-sh = "noctalia msg screen-lock";
 
         # Applications
-        "Mod+T".action.spawn = "kitty";
         "Mod+B".action.spawn = "firefox";
+        "Mod+T".action.spawn = "kitty";
+        "Mod+Shift+T".action.spawn = [
+          "kitty"
+          "--class"
+          "kitty-scratchpad"
+        ];
         "Mod+E".action.spawn = [
           "nautilus"
           "--new-window"

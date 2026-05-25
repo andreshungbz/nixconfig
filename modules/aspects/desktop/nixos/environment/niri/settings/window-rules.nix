@@ -57,6 +57,19 @@
             ];
             open-floating = true;
           }
+          # Terminal Scratchpad
+          {
+            matches = [ { app-id = "kitty-scratchpad"; } ];
+            open-on-output = "DP-1";
+            open-floating = true;
+            default-column-width.proportion = 0.6;
+            default-window-height.proportion = 0.6;
+            default-floating-position = {
+              x = 410;
+              y = 230;
+              relative-to = "top-left";
+            };
+          }
         ];
       };
     };
