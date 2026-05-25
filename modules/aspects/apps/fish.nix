@@ -5,7 +5,7 @@
       { pkgs, ... }:
       {
         home.packages = with pkgs.fishPlugins; [
-          fzf-fish # https://github.com/PatrickF1/fzf.fish
+          # fzf-fish # https://github.com/PatrickF1/fzf.fish
           colored-man-pages # https://github.com/PatrickF1/colored_man_pages.fish
         ];
 
