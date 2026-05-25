@@ -18,6 +18,7 @@
             dnsmasq
             dnsutils
             ffmpeg
+            jq
             ookla-speedtest
             powershell
             tldr
