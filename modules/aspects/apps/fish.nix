@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   # https://fishshell.com/
   pkt.fish = {
@@ -16,6 +17,12 @@
             set fish_greeting
           '';
         };
+      };
+
+    darwin =
+      { pkgs, user, ... }:
+      {
+        users.users.${user.userName}.shell = lib.mkForce pkgs.fish;
       };
   };
 }
