@@ -47,6 +47,7 @@
             {
               type = "media";
               key = "             Playing";
+              format = "{title} - {artist}";
             }
 
             # Section 1
