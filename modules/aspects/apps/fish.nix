@@ -17,11 +17,5 @@
           '';
         };
       };
-
-    darwin =
-      { pkgs, user, ... }:
-      {
-        users.users.${user.userName}.shell = pkgs.fish;
-      };
   };
 }
