@@ -23,22 +23,10 @@ order = [ "main" ]
     capsule_groups = []
     capsule_opacity = 1.0
     capsule_padding = 6.0
-    center = [ "date", "clock" ]
+    center = [ "date", "control-center", "clock" ]
     contact_shadow = false
     enabled = true
-    end = [
-        "media",
-        "tray",
-        "temp",
-        "notifications",
-        "clipboard",
-        "bluetooth",
-        "network",
-        "volume",
-        "brightness",
-        "control-center",
-        "session"
-    ]
+    end = [ "media", "tray", "notifications", "clipboard", "bluetooth", "network", "brightness", "volume", "temp" ]
     font_weight = 500
     margin_edge = 10.0
     margin_ends = 10.0
@@ -264,7 +252,7 @@ ui_scale = 1.0
     launcher_categories = false
     launcher_placement = "centered"
     open_near_click_clipboard = true
-    open_near_click_control_center = true
+    open_near_click_control_center = false
     open_near_click_launcher = false
     open_near_click_session = false
     open_near_click_wallpaper = false
@@ -369,16 +357,16 @@ transition_duration = 1500.0
     recursive = true
 
     [wallpaper.default]
-    path = "/home/andreshung/Pictures/Wallpapers/nixconfig-wallpapers/background.jpg"
+    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/bluey-mackenzie.jpg"
 
     [wallpaper.last]
-    path = "/home/andreshung/Pictures/Wallpapers/nixconfig-wallpapers/background.jpg"
+    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/bluey-mackenzie.jpg"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/andreshung/Pictures/Wallpapers/nixconfig-wallpapers/background.jpg"
+    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/bluey-mackenzie.jpg"
 
     [wallpaper.monitors.DP-2]
-    path = "/home/andreshung/Pictures/Wallpapers/nixconfig-wallpapers/background.jpg"
+    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/bluey-mackenzie.jpg"
 
 [weather]
 address = "Belmopan"
@@ -409,6 +397,7 @@ format = "{:%-I:%M %p}"
 type = "clock"
 
 [widget.control-center]
+anchor = true
 glyph = "paw-filled"
 type = "control-center"
 
