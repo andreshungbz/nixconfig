@@ -17,12 +17,5 @@
           flake = "/home/${user.userName}/Projects/nixconfig";
         };
       };
-
-      darwin = {
-        programs.nh = {
-          enable = true;
-          flake = "/Users/${user.userName}/Projects/nixconfig";
-        };
-      };
     };
 }
