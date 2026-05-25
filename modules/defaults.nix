@@ -32,7 +32,7 @@
     darwin = {
       system = {
         checks.verifyNixPath = false;
-        stateVersion = 6;
+        stateVersion = 4;
       };
 
       nixpkgs.config.allowUnfree = true;
