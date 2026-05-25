@@ -1,6 +1,6 @@
 {
   pkt.postgresql = {
-    dawrin =
+    darwin =
       { user, ... }:
       {
         home-manager.users.${user.userName}.home.sessionPath = [
