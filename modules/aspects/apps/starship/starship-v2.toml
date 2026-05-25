@@ -12,6 +12,7 @@ format = "$symbol "
 
 [directory]
 format = "$path"
+truncation_length = 1
 
 [git_branch]
 format = "\\[$branch\\] "
