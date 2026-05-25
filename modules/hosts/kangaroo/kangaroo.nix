@@ -18,24 +18,23 @@
     includes = [
       den.aspects.kangaroo-computer
       # den.aspects.kangaroo-disk
-      <pkt/desktop-apps>
-      <pkt/extra>
-      <pkt/gaming>
-      # <pkt/kde>
-      <pkt/nautilus>
-      <pkt/sddm>
       <pkt/nixos-base>
     ];
 
     provides.andreshung = {
       includes = [
         <pkt/breeze-cursors>
+        <pkt/desktop-apps>
         <pkt/dev-tools>
+        <pkt/extra>
+        <pkt/gaming>
         <pkt/git>
         <pkt/kitty>
+        <pkt/nautilus>
         <pkt/niri>
         <pkt/noctalia>
         <pkt/papirus-icons>
+        <pkt/sddm>
         <pkt/ssh>
         <pkt/terminal>
       ];
