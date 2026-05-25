@@ -40,6 +40,14 @@
               type = "uptime";
               key = "              Uptime";
             }
+            {
+              type = "player";
+              key = "        Media Player";
+            }
+            {
+              type = "media";
+              key = "             Playing";
+            }
 
             # Section 1
             "break"
@@ -94,9 +102,7 @@
               key = "              Memory";
               format = "{used} / {total} ({percentage})";
               percent = {
-                type = [
-                  "num"
-                ];
+                type = [ "num" ];
               };
             }
             {
@@ -105,22 +111,10 @@
               format = "{size-used} / {size-total} ({size-percentage}) - ({filesystem})";
               folders = "/";
               percent = {
-                type = [
-                  "num"
-                ];
+                type = [ "num" ];
               };
             }
-
-            # Media Player
             "break"
-            {
-              type = "player";
-              key = "        Media Player";
-            }
-            {
-              type = "media";
-              key = "             Playing";
-            }
           ];
         };
       };
