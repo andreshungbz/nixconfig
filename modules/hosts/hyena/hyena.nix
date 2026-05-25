@@ -41,10 +41,6 @@
           };
         };
 
-        home-manager.home.sessionPath = [
-
-        ];
-
         system.defaults = {
           SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
           loginwindow.LoginwindowText = "andres.hung@outlook.com";
