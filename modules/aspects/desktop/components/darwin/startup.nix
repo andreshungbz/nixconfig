@@ -4,7 +4,7 @@
       system = {
         startup.chime = false;
 
-        defaults.loginWindow = {
+        defaults.loginwindow = {
           GuestEnabled = false;
         };
       };
