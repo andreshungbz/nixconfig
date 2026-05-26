@@ -1,10 +1,10 @@
 {
+  # https://kde.org/
   pkt.kde = {
     nixos =
       { pkgs, ... }:
       {
         services.desktopManager.plasma6.enable = true;
-
         programs.kdeconnect.enable = true;
 
         environment = {
@@ -21,9 +21,7 @@
             kdePackages.sddm-kcm
           ];
 
-          variables = {
-            POWERDEVIL_NO_DDCUTIL = "1"; # disable auto brightness adjustment
-          };
+          variables.POWERDEVIL_NO_DDCUTIL = "1"; # disable auto brightness adjustment
         };
       };
   };

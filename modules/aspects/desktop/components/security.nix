@@ -2,7 +2,7 @@
   pkt.security = {
     nixos = {
       security = {
-        rtkit.enable = true;
+        rtkit.enable = true; # allows Pipewire to use the realtime scheduler for increased performance
       };
     };
 

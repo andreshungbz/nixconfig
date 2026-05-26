@@ -14,7 +14,6 @@
       <pkt/sensors>
       <pkt/ssh>
       <pkt/timezone>
-      <pkt/virtualisation>
     ];
   };
 }

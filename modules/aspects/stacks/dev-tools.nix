@@ -5,6 +5,7 @@
     {
       includes = [
         <pkt/devenv>
+        <pkt/docker>
         <pkt/gpg>
         <pkt/postgresql>
         <pkt/wireshark>

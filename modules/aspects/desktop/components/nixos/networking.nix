@@ -5,6 +5,8 @@
   };
 
   pkt.networking = {
+    # https://wiki.nixos.org/wiki/NetworkManager
+    # https://wiki.nixos.org/wiki/Networking
     nixos =
       { firewall }:
       {
@@ -14,7 +16,6 @@
           firewall = {
             enable = true;
             allowPing = true;
-
             allowedTCPPorts = lib.concatMap (f: f.ports or [ ]) firewall;
           };
         };
