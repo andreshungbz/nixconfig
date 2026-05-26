@@ -11,12 +11,6 @@
           {
             command = [ "noctalia" ];
           }
-          {
-            command = [ "Telegram" ];
-          }
-          {
-            command = [ "discord" ];
-          }
         ];
       };
     };
