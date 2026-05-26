@@ -90,6 +90,11 @@
             };
           };
         };
+
+        # avoid warnings for VS Code due to the environment variables set
+        programs.fish.shellAliases = {
+          code = "command code 2>/dev/null";
+        };
       };
   };
 }
