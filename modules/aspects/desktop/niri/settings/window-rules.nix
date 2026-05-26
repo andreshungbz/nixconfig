@@ -89,6 +89,21 @@
 
           open-floating = true;
         }
+
+        # Gnome Calculator
+        {
+          matches = [ { app-id = "org.gnome.Calculator"; } ];
+
+          open-floating = true;
+          default-column-width.fixed = 400;
+          default-window-height.fixed = 620;
+
+          default-floating-position = {
+            x = 10;
+            y = 10;
+            relative-to = "bottom-right";
+          };
+        }
       ];
     };
   };
