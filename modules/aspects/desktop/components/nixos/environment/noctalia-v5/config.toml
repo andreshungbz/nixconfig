@@ -210,8 +210,11 @@ position = "top_right"
 scale = 1.0
 
 [osd]
+background_opacity = 0.74999998323619366
 keyboard_layout = true
 lock_keys = true
+offset_x = 10.0
+offset_y = 10.0
 orientation = "horizontal"
 position = "top_right"
 scale = 1.0
