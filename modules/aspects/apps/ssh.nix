@@ -7,8 +7,8 @@
         settings = {
           UseDns = true;
           X11Forwarding = true;
-          PasswordAuthentication = false;
-          KbdInteractiveAuthentication = false;
+          PasswordAuthentication = true;
+          KbdInteractiveAuthentication = true;
           AllowAgentForwarding = "yes";
         };
       };
