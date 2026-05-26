@@ -32,7 +32,7 @@
         settings = {
           "*.ts.net" = {
             identitiesOnly = true;
-            identityFile = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJSHAzMVnHblW0xy4tdMxCZBpEsDRlh+khOMmYzJs5K/";
+            identityFile = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJSHAzMVnHblW0xy4tdMxCZBpEsDRlh+khOMmYzJs5K";
           };
         };
       };
