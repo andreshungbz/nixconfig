@@ -1,99 +1,95 @@
 { inputs, ... }:
 {
   pkt.niri-window-rules = {
-    imports = [
-      (inputs.niri.homeModules.niri or { })
-    ];
+    imports = [ inputs.niri.homeModules.niri ];
 
     homeManager = {
-      programs.niri.settings = {
-        window-rules = [
-          # Global Blur (waiting for https://github.com/sodiboo/niri-flake/issues/1721)
-          # {
-          #   matches = [ { } ];
+      programs.niri.settings.window-rules = [
+        # Global Blur (waiting for https://github.com/sodiboo/niri-flake/issues/1721)
+        # {
+        #   matches = [ { } ];
 
-          #   background-effect = {
-          #     blur = true;
-          #     xray = true;
-          #   };
-          # }
+        #   background-effect = {
+        #     blur = true;
+        #     xray = true;
+        #   };
+        # }
 
-          # Terminal Scratchpad
-          {
-            matches = [ { app-id = "kitty-scratchpad"; } ];
-            open-on-output = "DP-1";
-            open-floating = true;
-            default-column-width.proportion = 0.6;
-            default-window-height.proportion = 0.6;
-            default-floating-position = {
-              x = 410;
-              y = 222;
-              relative-to = "top-left";
-            };
-          }
+        # Terminal Scratchpad
+        {
+          matches = [ { app-id = "kitty-scratchpad"; } ];
 
-          # Steam Monitor 1
-          {
-            matches = [ { app-id = "^steam$"; } ];
-            open-on-output = "DP-1";
-            open-maximized = true;
-          }
+          open-on-output = "DP-1";
+          open-floating = true;
+          default-column-width.proportion = 0.6;
+          default-window-height.proportion = 0.6;
 
-          # Steam Notifications
-          {
-            matches = [
-              {
-                app-id = "^steam$";
-                title = "^notificationtoasts_\\d+_desktop$";
-              }
-            ];
-            open-floating = true;
-            open-focused = false;
-            default-floating-position = {
-              x = 10;
-              y = 10;
-              relative-to = "bottom-right";
-            };
-          }
+          default-floating-position = {
+            x = 410;
+            y = 222;
+            relative-to = "top-left";
+          };
+        }
 
-          # Discord Monitor 2
-          {
-            matches = [ { app-id = "^discord$"; } ];
-            open-on-output = "DP-2";
-            default-column-display = "normal";
-            default-column-width = {
-              proportion = 1.0;
-            };
-            default-window-height = {
-              proportion = 0.5;
-            };
-          }
+        # Steam Full Width - Main Monitor
+        {
+          matches = [ { app-id = "^steam$"; } ];
 
-          # Telegram Monitor 2
-          {
-            matches = [ { app-id = "^org.telegram.desktop$"; } ];
-            open-on-output = "DP-2";
-            default-column-display = "normal";
-            default-column-width = {
-              proportion = 1.0;
-            };
-            default-window-height = {
-              proportion = 0.5;
-            };
-          }
+          open-on-output = "DP-1";
+          open-maximized = true;
+        }
 
-          # Firefox PIP
-          {
-            matches = [
-              {
-                app-id = "firefox$";
-                title = "^Picture-in-Picture$";
-              }
-            ];
-            open-floating = true;
-          }
-        ];
-      };
+        # Steam Notifications Bottom Right Corner - Main Monitor
+        {
+          matches = [
+            {
+              app-id = "^steam$";
+              title = "^notificationtoasts_\\d+_desktop$";
+            }
+          ];
+
+          open-on-output = "DP-1";
+          open-floating = true;
+          open-focused = false;
+
+          default-floating-position = {
+            x = 10;
+            y = 10;
+            relative-to = "bottom-right";
+          };
+        }
+
+        # Discord Full Width Half Height - Secondary Monitor
+        {
+          matches = [ { app-id = "^discord$"; } ];
+
+          open-on-output = "DP-2";
+          default-column-display = "normal";
+          default-column-width.proportion = 1.0;
+          default-window-height.proportion = 0.5;
+        }
+
+        # Telegram Full Width Half Height - Secondary Monitor
+        {
+          matches = [ { app-id = "^org.telegram.desktop$"; } ];
+          open-on-output = "DP-2";
+          default-column-display = "normal";
+          default-column-width.proportion = 1.0;
+          default-window-height.proportion = 0.5;
+        }
+
+        # Firefox PIP
+        {
+          matches = [
+            {
+              app-id = "firefox$";
+              title = "^Picture-in-Picture$";
+            }
+          ];
+
+          open-floating = true;
+        }
+      ];
     };
   };
 }

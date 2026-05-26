@@ -1,20 +1,18 @@
 { inputs, ... }:
 {
   pkt.niri-layout = {
-    imports = [
-      (inputs.niri.homeModules.niri or { })
-    ];
+    imports = [ inputs.niri.homeModules.niri ];
 
     homeManager = {
       programs.niri.settings = {
-        prefer-no-csd = true;
+        prefer-no-csd = true; # no client-side decorations
 
         layout = {
           # General
           background-color = "transparent";
           gaps = 10;
 
-          # Widths & Heights
+          # Width/Height Defaults & Presets
           default-column-width.proportion = 0.5;
           preset-column-widths = [
             { proportion = 0.33; }
@@ -27,7 +25,7 @@
             { proportion = 1.0; }
           ];
 
-          # Focus Ring
+          # Window Focus Ring
           focus-ring = {
             enable = true;
             width = 2;
@@ -48,7 +46,7 @@
             };
           };
 
-          # Shadow
+          # Window Shadow
           shadow = {
             enable = true;
             color = "#0007";

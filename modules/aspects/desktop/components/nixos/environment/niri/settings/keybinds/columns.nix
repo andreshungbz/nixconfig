@@ -1,9 +1,7 @@
 { inputs, ... }:
 {
   pkt.niri-binds-columns = {
-    imports = [
-      (inputs.niri.homeModules.niri or { })
-    ];
+    imports = [ inputs.niri.homeModules.niri ];
 
     homeManager = {
       programs.niri.settings.binds = {

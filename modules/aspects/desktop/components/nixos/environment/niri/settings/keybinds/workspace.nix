@@ -1,13 +1,11 @@
 { inputs, ... }:
 {
   pkt.niri-binds-workspace = {
-    imports = [
-      (inputs.niri.homeModules.niri or { })
-    ];
+    imports = [ inputs.niri.homeModules.niri ];
 
     homeManager = {
       programs.niri.settings.binds = {
-        # Workspace Navigation + Column Movements
+        # Workspace Navigation & Column Movements
         "Mod+Page_Down".action.focus-workspace-down = [ ];
         "Mod+Page_Up".action.focus-workspace-up = [ ];
         "Mod+Shift+Page_Down".action.move-workspace-down = [ ];
@@ -15,7 +13,7 @@
         "Mod+Ctrl+Page_Down".action.move-column-to-workspace-down = [ ];
         "Mod+Ctrl+Page_Up".action.move-column-to-workspace-up = [ ];
 
-        # Workspace Number Navigation + Column Movements
+        # Workspace Number Navigation & Column Movements
         "Mod+1".action.focus-workspace = 1;
         "Mod+2".action.focus-workspace = 2;
         "Mod+3".action.focus-workspace = 3;
