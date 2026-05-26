@@ -1,7 +1,7 @@
 {
   pkt.kde = {
     nixos =
-      { pkgs, lib, ... }:
+      { pkgs, ... }:
       {
         services.desktopManager.plasma6.enable = true;
 
@@ -21,7 +21,7 @@
             kdePackages.sddm-kcm
           ];
 
-          variables = rec {
+          variables = {
             POWERDEVIL_NO_DDCUTIL = "1"; # disable auto brightness adjustment
           };
         };
