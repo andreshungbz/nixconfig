@@ -18,13 +18,10 @@
           };
 
           # Display
-          display = {
-            separator = " | ";
-          };
+          display.separator = " | ";
 
-          # Modules
           modules = [
-            # Top Section
+            # User/Media Section
             "break"
             {
               type = "title";
@@ -44,7 +41,7 @@
               format = "{title} - {artist}";
             }
 
-            # Section 1
+            # OS Section
             "break"
             {
               type = "os";
@@ -76,7 +73,7 @@
               key = "            Terminal";
             }
 
-            # Section 2
+            # Hardware Section
             "break"
             {
               type = "host";
@@ -96,35 +93,23 @@
               type = "memory";
               key = "              Memory";
               format = "{used} / {total} ({percentage})";
-              percent = {
-                type = [ "num" ];
-              };
+              percent.type = [ "num" ];
             }
             {
               type = "disk";
               key = "                Disk";
               format = "{size-used} / {size-total} ({size-percentage}) - ({filesystem})";
               folders = "/";
-              percent = {
-                type = [ "num" ];
-              };
+              percent.type = [ "num" ];
             }
             "break"
           ];
         };
       };
 
-      bash.shellAliases = {
-        ff = "fastfetch";
-      };
-
-      zsh.shellAliases = {
-        ff = "fastfetch";
-      };
-
-      fish.shellAliases = {
-        ff = "fastfetch";
-      };
+      bash.shellAliases.ff = "fastfetch";
+      zsh.shellAliases.ff = "fastfetch";
+      fish.shellAliases.ff = "fastfetch";
     };
   };
 }

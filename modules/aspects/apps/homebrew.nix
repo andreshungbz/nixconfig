@@ -1,4 +1,5 @@
 {
+  # https://brew.sh/
   pkt.homebrew = {
     darwin = {
       homebrew = {

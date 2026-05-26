@@ -1,6 +1,7 @@
 {
   # https://tailscale.com/
   pkt.tailscale = {
+    # https://wiki.nixos.org/wiki/Tailscale
     nixos = {
       services.tailscale = {
         enable = true;

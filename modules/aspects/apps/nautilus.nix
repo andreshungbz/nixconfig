@@ -1,5 +1,7 @@
 {
+  # https://apps.gnome.org/Nautilus/
   pkt.nautilus = {
+    # https://wiki.nixos.org/wiki/Nautilus
     nixos =
       { pkgs, ... }:
       {

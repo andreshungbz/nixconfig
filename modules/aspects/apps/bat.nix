@@ -9,17 +9,9 @@
         };
       };
 
-      bash.shellAliases = {
-        cat = "bat";
-      };
-
-      zsh.shellAliases = {
-        cat = "bat";
-      };
-
-      fish.shellAliases = {
-        cat = "bat";
-      };
+      bash.shellAliases.cat = "bat";
+      zsh.shellAliases.cat = "bat";
+      fish.shellAliases.cat = "bat";
     };
   };
 }

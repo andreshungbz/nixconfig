@@ -1,6 +1,6 @@
 {
+  # https://github.com/gmodena/nix-flatpak
   flake-file.inputs = {
-    # https://github.com/gmodena/nix-flatpak
     nix-flatpak.url = "github:gmodena/nix-flatpak/";
   };
 

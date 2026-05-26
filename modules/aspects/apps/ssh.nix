@@ -1,10 +1,12 @@
 { lib, ... }:
 {
   pkt.ssh = {
+    # https://wiki.nixos.org/wiki/SSH
     nixos = {
       services.openssh = {
         enable = true;
         ports = [ 22 ];
+
         settings = {
           UseDns = true;
           X11Forwarding = true;
@@ -20,7 +22,6 @@
         ".ssh/id_ed25519.pub".text = ''
           ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJSHAzMVnHblW0xy4tdMxCZBpEsDRlh+khOMmYzJs5K/
         '';
-
         ".ssh/authorized_keys".text = ''
           ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJSHAzMVnHblW0xy4tdMxCZBpEsDRlh+khOMmYzJs5K/
         '';

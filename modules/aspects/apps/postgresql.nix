@@ -1,20 +1,18 @@
 {
   pkt.postgresql = {
+    # https://wiki.nixos.org/wiki/PostgreSQL
+    nixos = {
+
+    };
+
     darwin =
       { user, ... }:
       {
-        home-manager.users.${user.userName}.home.sessionPath = [
-          "/opt/homebrew/opt/postgresql@18/bin"
-        ];
+        home-manager.users.${user.userName}.home.sessionPath = [ "/opt/homebrew/opt/postgresql@18/bin" ];
 
         homebrew = {
-          brews = [
-            "postgresql@18"
-          ];
-
-          casks = [
-            "pgadmin4"
-          ];
+          brews = [ "postgresql@18" ];
+          casks = [ "pgadmin4" ];
         };
       };
   };
