@@ -17,6 +17,7 @@
             # cmdline
             cloc
             exiftool
+            distrobox
             dnsmasq
             dnsutils
             ffmpeg
