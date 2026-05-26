@@ -81,6 +81,7 @@ ignore_mmids = []
 
 [control_center]
 compact = false
+sidebar = "full"
 
     [[control_center.shortcuts]]
     type = "wifi"
