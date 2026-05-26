@@ -60,7 +60,6 @@
             ];
 
             casks = [
-              "homebrew/cask/docker-desktop"
               "jetbrains-toolbox"
               "netspot"
               "postman"

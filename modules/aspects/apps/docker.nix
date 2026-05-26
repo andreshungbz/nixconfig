@@ -8,5 +8,11 @@
         virtualisation.docker.enable = true;
         users.users.${user.userName}.extraGroups = [ "docker" ];
       };
+
+    darwin = {
+      homebrew = {
+        casks = [ "homebrew/cask/docker-desktop" ];
+      };
+    };
   };
 }
