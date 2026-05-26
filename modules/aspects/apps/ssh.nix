@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   pkt.ssh = {
     nixos = {
@@ -28,13 +29,6 @@
       programs.ssh = {
         enable = true;
         enableDefaultConfig = false;
-
-        settings = {
-          "*.ts.net" = {
-            identitiesOnly = true;
-            identityFile = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJSHAzMVnHblW0xy4tdMxCZBpEsDRlh+khOMmYzJs5K";
-          };
-        };
       };
     };
   };
