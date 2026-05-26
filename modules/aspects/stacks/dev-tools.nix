@@ -1,79 +1,78 @@
 { __findFile, ... }:
 {
-  pkt.dev-tools =
-    { user }:
-    {
-      includes = [
-        <pkt/devenv>
-        <pkt/docker>
-        <pkt/gpg>
-        <pkt/postgresql>
-        <pkt/wireshark>
-      ];
+  pkt.dev-tools = {
+    includes = [
+      <pkt/devenv>
+      <pkt/docker>
+      <pkt/git>
+      <pkt/gpg>
+      <pkt/postgresql>
+      <pkt/wireshark>
+    ];
 
-      nixos =
-        { pkgs, ... }:
-        {
-          users.users.${user.userName}.packages = with pkgs; [
-            # cmdline
-            cloc
-            exiftool
-            distrobox
-            dnsmasq
-            dnsutils
-            ffmpeg
-            jq
-            ookla-speedtest
-            powershell
-            tldr
-            tree
-            wget
+    nixos =
+      { pkgs, user, ... }:
+      {
+        users.users.${user.userName}.packages = with pkgs; [
+          # cmdline
+          cloc
+          exiftool
+          distrobox
+          dnsmasq
+          dnsutils
+          ffmpeg
+          jq
+          ookla-speedtest
+          powershell
+          tldr
+          tree
+          wget
 
-            #gui
-            postman
-            rpi-imager
-            termius
-            vscode
+          #gui
+          postman
+          rpi-imager
+          termius
+          vscode
+        ];
+      };
+
+    darwin =
+      { pkgs, user, ... }:
+      {
+        users.users.${user.userName}.packages = with pkgs; [
+          # cmdline
+          cloc
+          exiftool
+          dnsmasq
+          dnsutils
+          jq
+          ookla-speedtest
+          powershell
+          tldr
+          tree
+          wget
+        ];
+
+        homebrew = {
+          brews = [
+            "telnet"
           ];
-        };
 
-      darwin =
-        { pkgs, ... }:
-        {
-          users.users.${user.userName}.packages = with pkgs; [
-            # cmdline
-            cloc
-            exiftool
-            dnsmasq
-            dnsutils
-            jq
-            ookla-speedtest
-            powershell
-            tldr
-            tree
-            wget
+          casks = [
+            "jetbrains-toolbox"
+            "netspot"
+            "postman"
+            "postman-cli"
+            "termius"
+            "utm"
+            "visual-studio-code"
+            "warp"
           ];
 
-          homebrew = {
-            brews = [
-              "telnet"
-            ];
+          masApps = {
 
-            casks = [
-              "jetbrains-toolbox"
-              "netspot"
-              "postman"
-              "postman-cli"
-              "termius"
-              "utm"
-              "visual-studio-code"
-              "warp"
-            ];
-
-            masApps = {
-
-            };
           };
         };
-    };
+      };
+  };
 }

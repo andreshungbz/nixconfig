@@ -2,34 +2,24 @@
 {
   # M1 MacBook Air
   den.hosts.aarch64-darwin.hyena = {
-    users = {
-      andreshung = {
-        classes = [ "homeManager" ];
-      };
-    };
+    users.andreshung.classes = [ "homeManager" ];
   };
 
   den.aspects.hyena = {
-    includes = [
-
-    ];
-
     provides.andreshung = {
       includes = [
         <pkt/darwin-base>
         <pkt/desktop-apps>
         <pkt/dev-tools>
         <pkt/gaming>
-        <pkt/git>
         <pkt/homebrew>
-        <pkt/kitty>
-        <pkt/ssh>
         <pkt/terminal>
       ];
 
       darwin =
         { user }:
         {
+          # Dock Apps
           system.defaults.dock.persistent-apps = [
             { app = "/System/Applications/Mail.app"; }
             { app = "/System/Applications/Calendar.app"; }
@@ -57,22 +47,22 @@
     darwin =
       { pkgs, ... }:
       {
-        environment = {
-          systemPackages = with pkgs; [
-
-          ];
-
-          variables = rec {
-
-          };
-        };
-
         system.defaults = {
           SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
 
           loginwindow = {
             LoginwindowText = "andres.hung@outlook.com";
             GuestEnabled = false;
+          };
+        };
+
+        environment = {
+          systemPackages = with pkgs; [
+
+          ];
+
+          variables = {
+
           };
         };
 

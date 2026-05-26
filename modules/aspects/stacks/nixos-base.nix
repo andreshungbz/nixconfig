@@ -4,6 +4,7 @@
     includes = [
       <pkt/bluetooth>
       <pkt/ddcutil>
+      <pkt/extra>
       <pkt/internationalization>
       <pkt/font>
       <pkt/networking>
@@ -12,8 +13,11 @@
       <pkt/printing>
       <pkt/security>
       <pkt/sensors>
-      <pkt/ssh>
       <pkt/timezone>
+
+      <pkt/breeze-cursors>
+      <pkt/papirus-icons>
+      <pkt/ssh>
     ];
   };
 }

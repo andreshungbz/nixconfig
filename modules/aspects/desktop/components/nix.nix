@@ -1,6 +1,7 @@
 { den, ... }:
 {
   # nh exposition
+  # https://den.denful.dev/reference/lib/#denlibnh
   perSystem =
     { pkgs, ... }:
     {
@@ -9,20 +10,19 @@
 
   pkt.nix = {
     nixos =
-      { pkgs, user, ... }:
+      { pkgs, ... }:
       {
         environment.systemPackages = with pkgs; [
           nixfmt
           nvd
         ];
 
-        programs = {
-          nix-ld.enable = true;
-        };
+        # https://wiki.nixos.org/wiki/Nix-ld
+        programs.nix-ld.enable = true;
       };
 
     homeManager =
-      { config, pkgs, ... }:
+      { config, ... }:
       {
         programs.nh = {
           enable = true;

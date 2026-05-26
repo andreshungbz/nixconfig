@@ -7,11 +7,7 @@
 {
   # ASUS Gaming Desktop Workstation
   den.hosts.x86_64-linux.kangaroo = {
-    users = {
-      andreshung = {
-        classes = [ "homeManager" ];
-      };
-    };
+    users.andreshung.classes = [ "homeManager" ];
   };
 
   den.aspects.kangaroo = {
@@ -22,20 +18,13 @@
 
     provides.andreshung = {
       includes = [
-        <pkt/breeze-cursors>
         <pkt/desktop-apps>
         <pkt/dev-tools>
-        <pkt/extra>
         <pkt/gaming>
-        <pkt/git>
-        <pkt/kitty>
-        <pkt/nautilus>
         <pkt/niri>
         <pkt/nixos-base>
         <pkt/noctalia>
-        <pkt/papirus-icons>
         <pkt/sddm>
-        <pkt/ssh>
         <pkt/terminal>
       ];
     };
@@ -44,17 +33,17 @@
     nixos =
       { pkgs, lib, ... }:
       {
+        users.users.root.initialHashedPassword = lib.mkForce "$2b$05$8XN4POkJCMRkxqd//Vw0VuQWdeM9oL5vBr8qMcXcfS7mQeZrXmRCG";
+
         environment = {
           systemPackages = with pkgs; [
 
           ];
 
-          variables = rec {
+          variables = {
 
           };
         };
-
-        users.users.root.initialHashedPassword = lib.mkForce "$2b$05$8XN4POkJCMRkxqd//Vw0VuQWdeM9oL5vBr8qMcXcfS7mQeZrXmRCG";
       };
   };
 }

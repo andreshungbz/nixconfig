@@ -1,5 +1,6 @@
 {
   pkt.font = {
+    # https://wiki.nixos.org/wiki/Fonts
     nixos =
       { pkgs, ... }:
       {

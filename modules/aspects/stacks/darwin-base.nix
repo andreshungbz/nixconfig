@@ -10,9 +10,10 @@
       <pkt/nix>
       <pkt/nsgd>
       <pkt/security>
-      <pkt/ssh>
       <pkt/startup>
       <pkt/trackpad>
+
+      <pkt/ssh>
     ];
   };
 }
