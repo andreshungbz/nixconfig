@@ -20,7 +20,7 @@
         # Applications
         "Mod+B".action.spawn = "firefox";
         "Mod+T".action.spawn = "kitty";
-        "Mod+Shift+T".action.spawn = [
+        "Mod+S".action.spawn = [
           "kitty"
           "--class"
           "kitty-scratchpad"
