@@ -17,7 +17,7 @@
   den.aspects.kangaroo = {
     includes = [
       den.aspects.kangaroo-computer
-      # den.aspects.kangaroo-disk
+      # den.aspects.kangaroo-disko
     ];
 
     provides.andreshung = {

@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  den.aspects.kangaroo-disk = {
+  den.aspects.kangaroo-disko = {
     nixos = {
       imports = [
         (inputs.disko.nixosModules.disko or { })
