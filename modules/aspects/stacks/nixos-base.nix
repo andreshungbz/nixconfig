@@ -3,6 +3,7 @@
   pkt.nixos-base = {
     includes = [
       <pkt/bluetooth>
+      <pkt/avahi>
       <pkt/ddcutil>
       <pkt/extra>
       <pkt/internationalization>
