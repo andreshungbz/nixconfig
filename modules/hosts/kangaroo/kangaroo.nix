@@ -5,7 +5,7 @@
   ...
 }:
 {
-  # ASUS Gaming Desktop Workstation
+  # ASUS AMD Gaming Desktop
   den.hosts.x86_64-linux.kangaroo = {
     users.andreshung.classes = [ "homeManager" ];
   };
