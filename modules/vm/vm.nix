@@ -1,9 +1,7 @@
 { inputs, __findFile, ... }:
 {
   den.aspects.kangaroo = {
-    includes = [
-      <test/vmvariant>
-    ];
+    includes = [ <test/vmvariant> ];
   };
 
   perSystem =
