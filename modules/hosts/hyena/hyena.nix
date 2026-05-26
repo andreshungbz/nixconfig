@@ -69,7 +69,11 @@
 
         system.defaults = {
           SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
-          loginwindow.LoginwindowText = "andres.hung@outlook.com";
+
+          loginwindow = {
+            LoginwindowText = "andres.hung@outlook.com";
+            GuestEnabled = false;
+          };
         };
 
         homebrew = {
