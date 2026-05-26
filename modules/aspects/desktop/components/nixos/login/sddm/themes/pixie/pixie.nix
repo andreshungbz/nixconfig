@@ -1,31 +1,24 @@
 { inputs, lib, ... }:
 {
+  # https://github.com/xCaptaiN09/pixie-sddm
   flake-file.inputs = {
-    # https://github.com/xCaptaiN09/pixie-sddm
     pixie-sddm.url = "github:xCaptaiN09/pixie-sddm";
-
-    # font fix branch
-    # pixie-sddm.url = "github:johnkferguson/pixie-sddm/fix/honor-config-keys";
+    # pixie-sddm.url = "github:johnkferguson/pixie-sddm/fix/honor-config-keys"; # font fix branch
   };
 
   pkt.sddm-pixie = {
     nixos =
       { pkgs, ... }:
       {
-        imports = [
-          (inputs.pixie.sddm.nixosModules.default or { })
-        ];
-
         services.displayManager.sddm = {
           package = lib.mkForce pkgs.kdePackages.sddm;
+          theme = "pixie";
 
           extraPackages = with pkgs; [
             kdePackages.qtsvg
             kdePackages.qtdeclarative
             kdePackages.qt5compat
           ];
-
-          theme = "pixie";
         };
 
         environment.systemPackages = [
