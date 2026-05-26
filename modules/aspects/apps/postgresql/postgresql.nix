@@ -8,6 +8,7 @@
     darwin =
       { user, ... }:
       {
+        environment.variables.PSQLRC = "${./.psqlrc}";
         home-manager.users.${user.userName}.home.sessionPath = [ "/opt/homebrew/opt/postgresql@18/bin" ];
 
         homebrew = {
