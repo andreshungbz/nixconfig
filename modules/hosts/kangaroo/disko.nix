@@ -2,9 +2,7 @@
 {
   den.aspects.kangaroo-disko = {
     nixos = {
-      imports = [
-        (inputs.disko.nixosModules.disko or { })
-      ];
+      imports = [ inputs.disko.nixosModules.disko ];
 
       disko.devices = {
         disk = {
