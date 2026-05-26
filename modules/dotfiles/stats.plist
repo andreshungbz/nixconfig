@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Battery_notifications_high</key>
+	<string></string>
+	<key>Battery_notifications_low</key>
+	<string>low</string>
 	<key>Battery_position</key>
 	<integer>6</integer>
 	<key>Battery_state</key>
@@ -19,7 +23,7 @@
 	<key>CombinedModules_popup</key>
 	<true/>
 	<key>CombinedModules_separator</key>
-	<true/>
+	<false/>
 	<key>CombinedModules_spacing</key>
 	<string>none</string>
 	<key>Disk_position</key>
@@ -28,10 +32,30 @@
 	<false/>
 	<key>GPU_position</key>
 	<integer>1</integer>
+	<key>LaunchAtLoginNext</key>
+	<true/>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
-	<string>{800, 448}</string>
+	<string>{880, 448}</string>
+	<key>NSOSPLastRootDirectory</key>
+	<data>
+	Ym9va+ACAAAAAAQQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuAEA
+	AAQAAAADAwAAAAQAAAUAAAABAQAAVXNlcnMAAAAKAAAAAQEAAGFuZHJlc2h1bmcAAAkA
+	AAABAQAARG9jdW1lbnRzAAAADAAAAAEGAAAQAAAAIAAAADQAAAAIAAAABAMAADVDAAAA
+	AAAACAAAAAQDAACqaAAAAAAAAAgAAAAEAwAA32gAAAAAAAAMAAAAAQYAAFwAAABsAAAA
+	fAAAAAgAAAAABAAAQcbjmoUAAAAYAAAAAQIAAAIAAAAAAAAAHwIAAAAAAAAfAgAAAAAA
+	AAAAAAABBQAACAAAAAQDAAABAAAAAAAAAAQAAAADAwAA9QEAAAgAAAABCQAAZmlsZTov
+	Ly8MAAAAAQEAAE1hY2ludG9zaCBIRAgAAAAEAwAAAFChG3MAAAAkAAAAAQEAAEUyNTVD
+	NTQ3LUEwMDEtNDI3Qy04QTFGLTFBRkE0M0E3MkQ5MBgAAAABAgAAgQAAAAEAAADvEwAA
+	AQAAAO8TAAABAAAAAQAAAAEBAAAvAAAAMAAAAAECAABkbmliAAAAAAEAAAAAAAAAAAAA
+	AAAAAAAAAAAAAAAAAAAAAABzY29kAgAAAAAAAADwAAAA/v///wEAAAAAAAAAEwAAAAQQ
+	AABIAAAAAAAAAAUQAACMAAAAAAAAABAQAACwAAAAAAAAAEAQAACgAAAAAAAAAAIgAAB0
+	AQAAAAAAAAUgAAD0AAAAAAAAABAgAAAEAQAAAAAAABEgAAAoAQAAAAAAABIgAAAYAQAA
+	AAAAABMgAACgAAAAAAAAACAgAABUAQAAAAAAADAgAADQAAAAAAAAAAHAAADYAAAAAAAA
+	ABHAAAAgAAAAAAAAABLAAADoAAAAAAAAAAHQAADQAAAAAAAAABDQAAAEAAAAAAAAABfw
+	AAA0AAAAAAAAACLwAACAAQAAAAAAAA==
+	</data>
 	<key>NSStatusItem Preferred Position CombinedModules</key>
-	<real>428</real>
+	<real>632</real>
 	<key>NSStatusItem Restore Position Battery_battery</key>
 	<integer>554</integer>
 	<key>NSStatusItem Restore Position CPU_mini</key>
@@ -48,16 +72,39 @@
 	<integer>428</integer>
 	<key>NSStatusItem Restore Position Sensors_sensors</key>
 	<integer>428</integer>
+	<key>NSToolbar Configuration eu.exelban.Stats.Settings.Toolbar</key>
+	<dict>
+		<key>TB Display Mode</key>
+		<integer>1</integer>
+		<key>TB Icon Size Mode</key>
+		<integer>1</integer>
+		<key>TB Is Shown</key>
+		<true/>
+		<key>TB Size Mode</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>320 320 800 448 0 0 1440 875 </string>
+	<key>NSWindow Frame eu.exelban.Stats.Settings.WindowFrame</key>
+	<string>360 240 728 480 0 0 1440 870 </string>
 	<key>Network_label_position</key>
 	<integer>1</integer>
 	<key>Network_networkChart_position</key>
 	<integer>3</integer>
 	<key>Network_position</key>
 	<integer>4</integer>
+	<key>Network_speed_downloadColor</key>
+	<string>secondGreen</string>
+	<key>Network_speed_icon</key>
+	<string>dots</string>
+	<key>Network_speed_iconAlignment</key>
+	<string>left</string>
+	<key>Network_speed_iconColor</key>
+	<string>default</string>
 	<key>Network_speed_position</key>
 	<integer>0</integer>
+	<key>Network_speed_uploadColor</key>
+	<string>pink</string>
 	<key>Network_state_position</key>
 	<integer>4</integer>
 	<key>Network_text_position</key>
@@ -94,6 +141,8 @@
 	<false/>
 	<key>Sensors_widget</key>
 	<string>mini</string>
+	<key>remote_tokens_migrated_to_keychain</key>
+	<true/>
 	<key>runAtLoginInitialized</key>
 	<true/>
 	<key>sensor_PPBR</key>
@@ -110,13 +159,17 @@
 	<false/>
 	<key>setupProcess</key>
 	<true/>
+	<key>support_ts</key>
+	<integer>1777834584</integer>
 	<key>telemetry</key>
 	<false/>
 	<key>temperature_units</key>
 	<string>celsius</string>
 	<key>updater_check_ts</key>
-	<integer>1748039027</integer>
+	<integer>1779754795</integer>
+	<key>updater_install_ts</key>
+	<integer>1779754801</integer>
 	<key>version</key>
-	<string>2.11.43</string>
+	<string>2.12.15</string>
 </dict>
 </plist>
