@@ -28,12 +28,30 @@
                   size = "100%";
                   content = {
                     type = "btrfs";
-                    extraArgs = [ "-f" ]; # override existing partition
-                    mountpoint = "/";
-                    mountOptions = [
-                      "compress=zstd"
-                      "noatime"
-                    ];
+                    extraArgs = [ "-f" ];
+                    subvolumes = {
+                      "@root" = {
+                        mountpoint = "/";
+                        mountOptions = [
+                          "compress=zstd"
+                          "noatime"
+                        ];
+                      };
+                      "@home" = {
+                        mountpoint = "/home";
+                        mountOptions = [
+                          "compress=zstd"
+                          "noatime"
+                        ];
+                      };
+                      "@nix" = {
+                        mountpoint = "/nix";
+                        mountOptions = [
+                          "compress=zstd"
+                          "noatime"
+                        ];
+                      };
+                    };
                   };
                 };
               };
