@@ -7,6 +7,7 @@
       <pkt/kitty>
       <pkt/nautilus>
       <pkt/openrazer>
+      <pkt/sunshine>
       <pkt/tailscale>
     ];
 
@@ -39,6 +40,7 @@
           telegram-desktop
           thunderbird
           veracrypt
+          vesktop
           vlc
           zoom-us
         ];
