@@ -63,6 +63,7 @@
           "raycast"
           "stats"
           "ti-connect-ce"
+          "veracrypt"
           "zoom"
         ];
 
