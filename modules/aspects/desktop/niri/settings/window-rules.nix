@@ -39,7 +39,7 @@
           open-maximized = true;
         }
 
-        # Steam Notifications Bottom Right Corner - Main Monitor
+        # Steam Notifications Bottom Left Corner - Main Monitor
         {
           matches = [
             {
@@ -55,7 +55,7 @@
           default-floating-position = {
             x = 10;
             y = 10;
-            relative-to = "bottom-right";
+            relative-to = "bottom-left";
           };
         }
 
