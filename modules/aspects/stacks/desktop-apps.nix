@@ -7,6 +7,7 @@
       <pkt/kitty>
       <pkt/nautilus>
       <pkt/openrazer>
+      <pkt/proton>
       <pkt/sunshine>
       <pkt/tailscale>
     ];
@@ -58,7 +59,6 @@
           "microsoft-office"
           "obs"
           "obsidian"
-          "protonvpn"
           "qbittorrent"
           "raycast"
           "stats"
