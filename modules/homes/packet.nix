@@ -5,6 +5,7 @@
 
   den.aspects.packet = {
     includes = [
+      <pkt/devenv>
       <pkt/git>
       <pkt/nix>
       <pkt/ssh>
