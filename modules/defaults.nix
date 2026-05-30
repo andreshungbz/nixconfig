@@ -8,7 +8,7 @@
     ];
 
     nixos = {
-      system.stateVersion = "25.11";
+      system.stateVersion = "26.11";
 
       nixpkgs.config.allowUnfree = true;
       nix.settings.experimental-features = [
@@ -25,7 +25,7 @@
 
     homeManager = {
       home = {
-        stateVersion = "25.11";
+        stateVersion = "26.11";
       };
     };
 
