@@ -58,7 +58,7 @@
             }
             {
               type = "de";
-              key = "Desktop Environment";
+              key = " Desktop Environment";
             }
             {
               type = "wm";
