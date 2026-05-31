@@ -12,7 +12,7 @@
 
         # Mouse
         mouse = {
-          accel-speed = -0.6;
+          accel-speed = -0.8;
         };
         focus-follows-mouse = {
           enable = true;
