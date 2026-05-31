@@ -21,13 +21,16 @@
         };
 
         users.users.${user.userName}.packages = with pkgs; [
+          dusklight
+          prismlauncher
+
+          # emulators
           azahar
           cemu
           dolphin-emu
           melonds
           pcsx2
           ppsspp-sdl-wayland
-          prismlauncher
           ryubing
 
           (retroarch.withCores (
