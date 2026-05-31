@@ -29,21 +29,21 @@
           focus-ring = {
             enable = true;
             width = 2;
-            urgent.color = "#fdb00b";
+            # urgent.color = "#fdb00b";
 
-            active.gradient = {
-              from = "#5fb8f2";
-              to = "#4d6fb7";
-              angle = 45;
-              relative-to = "workspace-view";
-            };
+            # active.gradient = {
+            #   from = "#5fb8f2";
+            #   to = "#4d6fb7";
+            #   angle = 45;
+            #   relative-to = "workspace-view";
+            # };
 
-            inactive.gradient = {
-              from = "#4d6fb7";
-              to = "#2a3d66";
-              angle = 45;
-              relative-to = "workspace-view";
-            };
+            # inactive.gradient = {
+            #   from = "#4d6fb7";
+            #   to = "#2a3d66";
+            #   angle = 45;
+            #   relative-to = "workspace-view";
+            # };
           };
 
           # Window Shadow
