@@ -22,12 +22,17 @@
       };
 
     homeManager =
-      { config, ... }:
+      { config, pkgs, ... }:
       {
         programs.nh = {
           enable = true;
           flake = "${config.home.homeDirectory}/Projects/nixconfig";
         };
+
+        home.packages = with pkgs; [
+          nixfmt
+          nvd
+        ];
       };
 
     darwin =
