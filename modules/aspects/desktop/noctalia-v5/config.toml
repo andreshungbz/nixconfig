@@ -118,7 +118,7 @@ active_monitor_only = true
 active_opacity = 1.0
 active_scale = 1.0
 auto_hide = true
-background_opacity = 0.87999999523162842
+background_opacity = 0.74999998323619366
 enabled = true
 icon_size = 30
 inactive_opacity = 0.85000002384185791
@@ -338,8 +338,8 @@ source = "wallpaper"
 wallpaper_scheme = "faithful"
 
     [theme.templates]
-    builtin_ids = [ "niri", "kitty" ]
-    community_ids = []
+    builtin_ids = [ "btop", "gtk3", "gtk4", "helix", "kcolorscheme", "kitty", "niri", "qt" ]
+    community_ids = [ "vscode", "steam", "telegram" ]
     enable_builtin_templates = true
     enable_community_templates = true
 
@@ -362,16 +362,16 @@ transition_duration = 1500.0
     recursive = true
 
     [wallpaper.default]
-    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/bluey-mackenzie.jpg"
+    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/tnt-camp.jpg"
 
     [wallpaper.last]
-    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/bluey-mackenzie.jpg"
+    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/tnt-camp.jpg"
 
     [wallpaper.monitors.DP-1]
-    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/bluey-mackenzie.jpg"
+    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/tnt-camp.jpg"
 
     [wallpaper.monitors.DP-2]
-    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/bluey-mackenzie.jpg"
+    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/tnt-camp.jpg"
 
 [weather]
 address = "Belmopan"
