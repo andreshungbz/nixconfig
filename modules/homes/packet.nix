@@ -1,12 +1,8 @@
 { den, __findFile, ... }:
 {
   # General Home Setup for Non-GUI Systems
-  den.homes.x86_64-linux.packet = {
-    homeManager.programs.home-manager.enable = true;
-  };
-  den.homes.aarch64-linux.packet = {
-    homeManager.programs.home-manager.enable = true;
-  };
+  den.homes.x86_64-linux.packet = { };
+  den.homes.aarch64-linux.packet = { };
 
   den.aspects.packet = {
     includes = [
@@ -16,5 +12,7 @@
       <pkt/ssh>
       <pkt/terminal>
     ];
+
+    homeManager.programs.home-manager.enable = true;
   };
 }
