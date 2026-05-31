@@ -18,7 +18,8 @@ This repository contains my fully refactored Nix configurations using the aspect
 
 ## General Installation Steps
 
-### NixOS
+<details>
+<summary>NixOS</summary>
 
 Using `kangaroo` as an example:
 
@@ -37,7 +38,10 @@ sudo nix run 'github:nix-community/disko/latest#disko-install' -- \
 
 4. Restart the computer with `reboot`.
 
-### nix-darwin (MacOS)
+</details>
+
+<details>
+<summary>nix-darwin (MacOS)</summary>
 
 Using `hyena` as an example:
 
@@ -55,7 +59,10 @@ git clone https://github.com/andreshungbz/nixconfig.git && cd nixconfig
 sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#hyena
 ```
 
-### Standalone Home Manager
+</details>
+
+<details>
+<summary>Standalone Home Manager</summary>
 
 The `packet` home contains both architectures, accessible via `#packet@x86_64-linux` and `#packet@aarch64-linux`. Using `packet@xaarch64-linux` as an example:
 
@@ -73,9 +80,11 @@ git clone https://github.com/andreshungbz/nixconfig.git && cd nixconfig
 nix run github:nix-community/home-manager/master -- switch --flake .#packet@aarch64-linux
 ```
 
+</details>
+
 ### Post-Installation
 
-For nix-darwin and standalone home manager systems, the default shell can be set to `fish` by running the following command:
+For nix-darwin and standalone Home Manager systems, the default shell can be set to `fish` by running the following command:
 
 ```
 echo "$(which fish)" | sudo tee -a /etc/shells && chsh -s "$(which fish)"
