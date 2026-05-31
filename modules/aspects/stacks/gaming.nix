@@ -16,7 +16,24 @@
         };
 
         users.users.${user.userName}.packages = with pkgs; [
+          azahar
+          cemu
+          dolphin-emu
+          melonds
+          pcsx2
+          ppsspp-sdl-wayland
           prismlauncher
+          ryubing
+
+          (retroarch.withCores (
+            cores: with cores; [
+              bsnes
+              mesen
+              mgba
+              mupen64plus
+              sameboy
+            ]
+          ))
         ];
 
         services.flatpak.packages = [
