@@ -24,7 +24,7 @@ Using `kangaroo` as an example:
 
 1. Create a bootable USB drive with one of the latest NixOS ISO images from the [downloads page](https://nixos.org/download/).
 2. Boot into the NixOS live environment and connect to the internet.
-3. Open the terminal and run the following `disko-install` [command](https://github.com/nix-community/disko/blob/master/docs/disko-install.md). If necessary, replace the disk id by choosing one from the output of `ls -l /dev/disk/by-id/`. Caches are passed as options to avoid building Niri and Noctalia.
+3. Open the terminal and run the following `disko-install` [command](https://github.com/nix-community/disko/blob/master/docs/disko-install.md). If necessary, replace the disk ID by choosing one from the output of `ls -l /dev/disk/by-id/`. Caches are passed as options to avoid building Niri and Noctalia.
 
 ```
 sudo nix run 'github:nix-community/disko/latest#disko-install' -- \
@@ -41,7 +41,7 @@ sudo nix run 'github:nix-community/disko/latest#disko-install' -- \
 
 Using `hyena` as an example:
 
-1. Starting with a fresh install of MacOS, install the [Homebrew](https://brew.sh/) package manager, then install Nix through [Determinate Systems](https://determinate.systems/). Afterwards, restart the computer.
+1. Starting with a fresh install of MacOS, install the [Homebrew](https://brew.sh/) package manager, then install Nix through [Determinate Systems](https://determinate.systems/). Afterward, restart the computer.
 2. Open the terminal and run the following command to create the `Projects` directory, clone this repository, and navigate into it:
 
 ```
@@ -57,7 +57,7 @@ sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#hyena
 
 ### Standalone Home Manager
 
-The `packet` home consists of both architectures, accessible through `#packet@x86_64-linux` and `#packet@aarch64-linux`. Using `packet@xaarch64-linux` as an example:
+The `packet` home contains both architectures, accessible via `#packet@x86_64-linux` and `#packet@aarch64-linux`. Using `packet@xaarch64-linux` as an example:
 
 1. Install Nix through [Determinate Systems](https://determinate.systems/).
 2. Run the following command to create the `Projects` directory, clone this repository, and navigate into it:
