@@ -6,13 +6,18 @@
       {
         imports = [ inputs.nix-flatpak.nixosModules.nix-flatpak ];
 
-        # https://wiki.nixos.org/wiki/Steam
-        programs.steam = {
-          enable = true;
-          remotePlay.openFirewall = true;
-          dedicatedServer.openFirewall = true;
-          localNetworkGameTransfers.openFirewall = true;
-          gamescopeSession.enable = true;
+        programs = {
+          gamemode.enable = true;
+
+          # https://wiki.nixos.org/wiki/Steam
+          steam = {
+            enable = true;
+            remotePlay.openFirewall = true;
+            dedicatedServer.openFirewall = true;
+            localNetworkGameTransfers.openFirewall = true;
+
+            extraPackages = with pkgs; [ hidapi ];
+          };
         };
 
         users.users.${user.userName}.packages = with pkgs; [
