@@ -1,5 +1,3 @@
-# adapted from https://github.com/antholeole/nixconfig
-
 add_newline = false
 
 format = "$character"
