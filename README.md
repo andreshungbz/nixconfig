@@ -25,18 +25,30 @@ Using `kangaroo` as an example:
 
 1. Create a bootable USB drive with one of the latest NixOS ISO images from the [downloads page](https://nixos.org/download/).
 2. Boot into the NixOS live environment and connect to the internet.
-3. Open the terminal and run the following `disko-install` [command](https://github.com/nix-community/disko/blob/master/docs/disko-install.md). If necessary, replace the disk ID by choosing one from the output of `ls -l /dev/disk/by-id/`. Caches are passed as options to avoid building Niri and Noctalia.
+3. Open the terminal and run the following `disko` [command](https://github.com/nix-community/disko) to format the appropriate drive. If necessary, replace the disk ID in the disko configuration by choosing one from the output of `ls -l /dev/disk/by-id/`.
 
 ```
-sudo nix --extra-experimental-features 'nix-command flakes' run 'github:nix-community/disko/latest#disko-install' -- \
+sudo nix \
+  --extra-experimental-features 'nix-command flakes' \
+  run 'github:nix-community/disko/latest' -- \
+  --mode disko \
+  --flake 'github:andreshungbz/nixconfig#kangaroo'
+```
+
+4. Install the system with the `nixos-install` command, passing the following options. Additional caches are included to avoid building Niri and Noctalia.
+
+```
+sudo nixos-install \
+  --no-channel-copy \
+  --no-root-password \
   --flake 'github:andreshungbz/nixconfig#kangaroo' \
-  --disk main /dev/disk/by-id/nvme-WD_BLACK_SN850X_2000GB_23424M802412 \
-  --write-efi-boot-entries \
+  --option extra-experimental-features "nix-command flakes" \
+  --option allow-unfree true \
   --option substituters "https://cache.nixos.org https://niri.cachix.org https://noctalia.cachix.org" \
   --option trusted-public-keys "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964= noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
 ```
 
-4. Restart the computer with `reboot`.
+5. Restart the computer with `reboot`.
 
 </details>
 
