@@ -28,7 +28,7 @@ Using `kangaroo` as an example:
 3. Open the terminal and run the following `disko-install` [command](https://github.com/nix-community/disko/blob/master/docs/disko-install.md). If necessary, replace the disk ID by choosing one from the output of `ls -l /dev/disk/by-id/`. Caches are passed as options to avoid building Niri and Noctalia.
 
 ```
-sudo nix run 'github:nix-community/disko/latest#disko-install' -- \
+sudo nix --extra-experimental-features 'nix-command flakes' run 'github:nix-community/disko/latest#disko-install' -- \
   --flake 'github:andreshungbz/nixconfig#kangaroo' \
   --disk main /dev/disk/by-id/nvme-WD_BLACK_SN850X_2000GB_23424M802412 \
   --write-efi-boot-entries \
