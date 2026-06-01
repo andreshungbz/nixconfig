@@ -13,7 +13,7 @@
   den.aspects.kangaroo = {
     includes = [
       den.aspects.kangaroo-computer
-      # den.aspects.kangaroo-disko
+      den.aspects.kangaroo-disko
     ];
 
     provides.packet = {
