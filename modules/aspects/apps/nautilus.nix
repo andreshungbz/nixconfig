@@ -32,6 +32,20 @@
           gvfs.enable = true;
           udisks2.enable = true;
         };
+
+        programs.dconf = {
+          enable = true;
+
+          profiles.user.databases = [
+            {
+              settings = {
+                "org/gnome/nautilus/preferences" = {
+                  show-image-thumbnails = "always";
+                };
+              };
+            }
+          ];
+        };
       };
   };
 }
