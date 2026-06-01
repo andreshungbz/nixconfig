@@ -33,21 +33,24 @@
                       "@root" = {
                         mountpoint = "/";
                         mountOptions = [
-                          "compress=zstd"
+                          "compress=zstd:1"
+                          "discard=async"
                           "noatime"
                         ];
                       };
                       "@home" = {
                         mountpoint = "/home";
                         mountOptions = [
-                          "compress=zstd"
+                          "compress=zstd:1"
+                          "discard=async"
                           "noatime"
                         ];
                       };
                       "@nix" = {
                         mountpoint = "/nix";
                         mountOptions = [
-                          "compress=zstd"
+                          "compress=zstd:1"
+                          "discard=async"
                           "noatime"
                         ];
                       };
