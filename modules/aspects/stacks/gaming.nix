@@ -31,7 +31,6 @@
           melonds
           pcsx2
           ppsspp-sdl-wayland
-          ryubing
 
           (retroarch.withCores (
             cores: with cores; [
