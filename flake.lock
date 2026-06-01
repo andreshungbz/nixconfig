@@ -22,11 +22,11 @@
     },
     "den": {
       "locked": {
-        "lastModified": 1780098105,
-        "narHash": "sha256-uTh8BcraCGcLVkQPaTpPo6jNqp+vqGXokxzsCkRo9KQ=",
+        "lastModified": 1780270913,
+        "narHash": "sha256-7jmaw+1HI0mfZvxNj7qo8GL4wAjo9fCBkPDqDfzzt3E=",
         "owner": "denful",
         "repo": "den",
-        "rev": "30ebfdc1b6b3e02f668b2559c0af75cbd1cfe086",
+        "rev": "294d58404758df423e0332646a241b98ed087d78",
         "type": "github"
       },
       "original": {
@@ -296,11 +296,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1780205316,
-        "narHash": "sha256-Tthi5R/m7ZUtN0zb0THlsQmwtzevTtnkKhLUbet8/FA=",
+        "lastModified": 1780282968,
+        "narHash": "sha256-OIk0EpI+KeDNpq0ZWgUHA8pIItoOoFq1no1XNgvfbwM=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "298fad1678d23c964aa8ea56bfe9dc3c84eed6a4",
+        "rev": "8293cd7e3d3b25254c7b082f8ff1540b62e7b891",
         "type": "github"
       },
       "original": {
