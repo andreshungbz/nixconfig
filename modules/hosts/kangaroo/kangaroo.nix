@@ -7,7 +7,7 @@
 {
   # ASUS AMD Gaming Desktop
   den.hosts.x86_64-linux.kangaroo = {
-    users.andreshung.classes = [ "homeManager" ];
+    users.packet.classes = [ "homeManager" ];
   };
 
   den.aspects.kangaroo = {
@@ -16,7 +16,7 @@
       # den.aspects.kangaroo-disko
     ];
 
-    provides.andreshung = {
+    provides.packet = {
       includes = [
         <pkt/desktop-apps>
         <pkt/dev-tools>

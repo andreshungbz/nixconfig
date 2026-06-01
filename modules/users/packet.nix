@@ -1,13 +1,13 @@
 { den, __findFile, ... }:
 {
-  den.aspects.andreshung = {
+  den.aspects.packet = {
     includes = [
       <den/primary-user>
       (<den/user-shell> "fish")
     ];
 
     nixos = {
-      users.users.andreshung = {
+      users.users.packet = {
         isNormalUser = true;
         description = "Andres Hung";
         initialHashedPassword = "$2b$05$8XN4POkJCMRkxqd//Vw0VuQWdeM9oL5vBr8qMcXcfS7mQeZrXmRCG";
@@ -20,10 +20,10 @@
     };
 
     darwin = {
-      users.users.andreshung = {
+      users.users.packet = {
         isHidden = false;
         description = "Andres Hung";
-        home = "/Users/andreshung";
+        home = "/Users/packet";
       };
     };
   };

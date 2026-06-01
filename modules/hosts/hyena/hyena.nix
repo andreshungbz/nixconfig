@@ -2,11 +2,11 @@
 {
   # M1 MacBook Air
   den.hosts.aarch64-darwin.hyena = {
-    users.andreshung.classes = [ "homeManager" ];
+    users.packet.classes = [ "homeManager" ];
   };
 
   den.aspects.hyena = {
-    provides.andreshung = {
+    provides.packet = {
       includes = [
         <pkt/darwin-base>
         <pkt/desktop-apps>
