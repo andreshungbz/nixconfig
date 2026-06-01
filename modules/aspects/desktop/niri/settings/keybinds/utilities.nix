@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  pkt.niri-binds-utilities = {
+  pkt.niri-keybinds = {
     imports = [ inputs.niri.homeModules.niri ];
 
     homeManager = {

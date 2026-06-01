@@ -13,12 +13,8 @@
   # https://niri-wm.github.io/niri/index.html
   pkt.niri = {
     includes = [
-      <pkt/niri-binds-columns>
-      <pkt/niri-binds-media>
-      <pkt/niri-binds-system>
-      <pkt/niri-binds-utilities>
-      <pkt/niri-binds-workspace>
       <pkt/niri-input>
+      <pkt/niri-keybinds>
       <pkt/niri-layout>
       <pkt/niri-outputs>
       <pkt/niri-startup>
