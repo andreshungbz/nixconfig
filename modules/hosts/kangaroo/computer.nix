@@ -9,7 +9,7 @@
         boot.kernelPackages = pkgs.linuxPackages_latest;
 
         boot.loader = {
-          efi.canTouchEfiVariables = false;
+          efi.canTouchEfiVariables = true;
           systemd-boot.enable = false;
           timeout = 5;
 
@@ -17,7 +17,7 @@
             enable = true;
             device = "nodev";
             efiSupport = true;
-            efiInstallAsRemovable = true;
+            efiInstallAsRemovable = false;
             useOSProber = true;
             fontSize = 24;
             font = "${pkgs.nerd-fonts.jetbrains-mono}/share/fonts/truetype/NerdFonts/JetBrainsMono/JetBrainsMonoNerdFont-Regular.ttf";
