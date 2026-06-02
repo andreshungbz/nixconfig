@@ -1,6 +1,6 @@
 # Nix Configuration
 
-This repository contains my dentritic Nix configurations for a variety of hosts using the aspect-oriented [Den](https://den.denful.dev/) Nix framework. Aspects are defined in the `modules/aspects` directory and are often grouped in `modules/aspects/stacks`. These are included in the various home and host configurations, defined in `modules/homes` and `modules/hosts`, respectively. The `modules/dotfiles` directory contains miscellaneous configuration files that are not integrated with Nix.
+This repository contains my dentritic Nix configurations for a variety of hosts using the aspect-oriented [Den](https://den.denful.dev/) Nix framework. Aspects are defined in the `modules/aspects` directory and are often grouped in `modules/aspects/stacks`. These are included in the various home and host configurations, defined in `modules/homes` and `modules/hosts`, respectively. The `dotfiles` directory contains miscellaneous configuration files that are not integrated with Nix.
 
 ## Showcase
 
