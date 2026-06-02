@@ -15,13 +15,6 @@
 
     homeManager = {
       programs.home-manager.enable = true;
-
-      home.file.".ssh/authorized_keys" = {
-        mode = "0600";
-        text = ''
-          ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJSHAzMVnHblW0xy4tdMxCZBpEsDRlh+khOMmYzJs5K/
-        '';
-      };
     };
   };
 }
