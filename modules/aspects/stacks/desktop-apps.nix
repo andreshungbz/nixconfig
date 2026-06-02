@@ -68,9 +68,9 @@
         ];
 
         masApps = {
-          "Affinity Designer 2" = 1616831348;
-          "Affinity Photo 2: Image Editor" = 1616822987;
-          "Affinity Publisher 2" = 1606941598;
+          # "Affinity Designer 2" = 1616831348;
+          # "Affinity Photo 2: Image Editor" = 1616822987;
+          # "Affinity Publisher 2" = 1606941598;
           "Goodnotes 6: AI Notes & Docs" = 1444383602;
           "Hidden Bar" = 1452453066;
           "Pixelmator Pro" = 1289583905;
