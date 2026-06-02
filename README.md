@@ -88,7 +88,7 @@ sudo nix-darwin rebuild --flake .#hyena
 </details>
 
 <details>
-<summary>Standalone Home Manager</summary>
+<summary>home-manager (standalone)</summary>
 
 The `packet` home contains both architectures, accessible via `#packet@x86_64-linux` and `#packet@aarch64-linux`. Using `packet@xaarch64-linux` as an example:
 
@@ -111,7 +111,7 @@ nix run github:nix-community/home-manager/master -- switch --flake .#packet@aarc
 <details>
 <summary>Post-Installation</summary>
 
-For nix-darwin and standalone Home Manager systems, the default shell can be set to `fish` by running the following command:
+For nix-darwin and home-manager (standalone) systems, the default shell can be set to `fish` by running the following command:
 
 ```
 echo "$(which fish)" | sudo tee -a /etc/shells && chsh -s "$(which fish)"
@@ -123,12 +123,12 @@ When dual-booting NixOS with Windows, run another rebuild so that grub can detec
 
 ## Management Commands
 
-| Action                          | Command                                        |
-| ------------------------------- | ---------------------------------------------- |
-| NixOS Rebuild                   | `nh os switch --ask`                           |
-| nix-darwin Rebuild              | `nh darwin switch --ask`                       |
-| Home Manager Standalone Rebuild | `nh home switch --ask -c packet@aarch64-linux` |
-| Garbage Collection              | `nh clean all --ask`                           |
+| Action                            | Command                                        |
+| --------------------------------- | ---------------------------------------------- |
+| NixOS Rebuild                     | `nh os switch --ask`                           |
+| nix-darwin Rebuild                | `nh darwin switch --ask`                       |
+| home-manager (standalone) Rebuild | `nh home switch --ask -c packet@aarch64-linux` |
+| Garbage Collection                | `nh clean all --ask`                           |
 
 ## Inspirations
 
