@@ -1,6 +1,6 @@
 # Nix Configuration
 
-This repository contains my fully refactored Nix configurations using the aspect-oriented [Den](https://den.denful.dev/) Nix framework to implement the Dendritic pattern. Aspects are defined in the `modules/aspects` directory and are composed in `modules/aspects/stacks`. These are included in the various home and host configurations, defined in `modules/homes` and `modules/hosts`, respectively. The `modules/dotfiles` directory contains miscellaneous configuration files that are not integrated with Nix.
+This repository contains my dentritic Nix configurations for a variety of hosts using the aspect-oriented [Den](https://den.denful.dev/) Nix framework. Aspects are defined in the `modules/aspects` directory and are often grouped in `modules/aspects/stacks`. These are included in the various home and host configurations, defined in `modules/homes` and `modules/hosts`, respectively. The `modules/dotfiles` directory contains miscellaneous configuration files that are not integrated with Nix.
 
 ## Showcase
 
@@ -25,7 +25,8 @@ Using `kangaroo` as an example:
 
 1. Create a bootable USB drive with one of the latest NixOS ISO images from the [downloads page](https://nixos.org/download/).
 2. Boot into the NixOS live environment and connect to the internet.
-3. Open the terminal and run the following `disko` [command](https://github.com/nix-community/disko) to format the appropriate drive. If necessary, replace the disk ID in the disko configuration by choosing one from the output of `ls -l /dev/disk/by-id/`.
+3. [Optional] If necessary, clone the repository and set up the proper hardware configuration for the particular system. Replace the contents of the `_hardware.nix` file with the output of `nixos-generate-config --no-filesystems --show-hardware-config --root /tmp` and choose the drive to install to by replacing the device attribute in the `disko.nix` file with one chosen from the output of `ls -l /dev/disk/by-id/`. Run `git add .` then replace the `--flake` argument in the next steps with `.#kangaroo`.
+4. Open the terminal and run the following `disko` command to format the appropriate drive.
 
 ```
 sudo nix \
@@ -35,7 +36,7 @@ sudo nix \
   --flake 'github:andreshungbz/nixconfig#kangaroo'
 ```
 
-4. Install the system with the `nixos-install` command, passing the following options. Additional caches are included to avoid building Niri and Noctalia.
+5. Install the system with the `nixos-install` command, passing the following options. Additional caches are included to avoid building Niri and Noctalia.
 
 ```
 sudo nixos-install \
@@ -47,7 +48,7 @@ sudo nixos-install \
   --option trusted-public-keys "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964= noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
 ```
 
-5. Restart the computer with `reboot`.
+6. Restart the computer with `reboot`.
 
 </details>
 
@@ -64,7 +65,7 @@ mkdir ~/Projects && cd ~/Projects
 git clone https://github.com/andreshungbz/nixconfig.git && cd nixconfig
 ```
 
-3. Build the first configuration. Occasionally, some Homebrew casks will prompt for the `sudo` password.
+3. Build the first configuration. Some Homebrew casks may prompt for the `sudo` password, so the installation cannot be fully unattended.
 
 ```
 sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#hyena
@@ -76,7 +77,7 @@ sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#hyena
 sudo nix-darwin rebuild --flake .#hyena
 ```
 
-5. Restart the computer.
+5. Restart the computer and configure any remaining settings.
 
 </details>
 
@@ -101,7 +102,8 @@ nix run github:nix-community/home-manager/master -- switch --flake .#packet@aarc
 
 </details>
 
-### Post-Installation
+<details>
+<summary>Post-Installation</summary>
 
 For nix-darwin and standalone Home Manager systems, the default shell can be set to `fish` by running the following command:
 
@@ -109,8 +111,14 @@ For nix-darwin and standalone Home Manager systems, the default shell can be set
 echo "$(which fish)" | sudo tee -a /etc/shells && chsh -s "$(which fish)"
 ```
 
+When dual-booting NixOS with Windows, run another rebuild so that grub can detect the Windows partition and add it to the boot menu. Windows should also be configured to use UTC, so that there isn't a time mismatch when switching between the two operating systems. See https://wiki.archlinux.org/title/System_time#UTC_in_Microsoft_Windows
+
+</details>
+
 ## Inspirations
 
-- Dendritic structures and ideas were greatly inspired by https://tangled.org/quasigod.xyz/nixconfig.
-- V2 Starship configuration is adapted from https://github.com/antholeole/nixconfig.
-- Previous non-dendritic Nix configurations were inspired by https://github.com/Andrey0189/nixos-config-reborn and https://github.com/dustinlyons/nixos-config.
+- [quasigod](https://tangled.org/quasigod.xyz/nixconfig) (dendritic structure and modules)
+- [Adda](https://codeberg.org/Adda/nixos-config) (more dendritic ideas)
+- [antholeole](https://github.com/antholeole/nixconfig) (V2 Starship configuration)
+- [Andrey0189](https://github.com/Andrey0189/nixos-config-reborn) (non-dendritic NixOS configurations for old configuration)
+- [dustinlyons](https://github.com/dustinlyons/nixos-config) (non-dendritic nix-darwin configurations for old configuration)
