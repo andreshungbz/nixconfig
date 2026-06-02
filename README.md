@@ -115,6 +115,15 @@ When dual-booting NixOS with Windows, run another rebuild so that grub can detec
 
 </details>
 
+## Management Commands
+
+| Action                          | Command                                        |
+| ------------------------------- | ---------------------------------------------- |
+| NixOS Rebuild                   | `nh os switch --ask`                           |
+| nix-darwin Rebuild              | `nh darwin switch --ask`                       |
+| Home Manager Standalone Rebuild | `nh home switch --ask -c packet@aarch64-linux` |
+| Garbage Collection              | `nh clean all --ask`                           |
+
 ## Inspirations
 
 - [quasigod](https://tangled.org/quasigod.xyz/nixconfig) (dendritic structure and modules)
