@@ -7,6 +7,8 @@
         sudo.extraConfig = ''
           Defaults env_keep += "WAYLAND_DISPLAY QT_QPA_PLATFORM XDG_RUNTIME_DIR"
         '';
+
+        polkit.enable = true;
       };
     };
 
