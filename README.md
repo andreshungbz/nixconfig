@@ -64,11 +64,19 @@ mkdir ~/Projects && cd ~/Projects
 git clone https://github.com/andreshungbz/nixconfig.git && cd nixconfig
 ```
 
-3. Build the first configuration:
+3. Build the first configuration. Occasionally, some Homebrew casks will prompt for the `sudo` password.
 
 ```
 sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#hyena
 ```
+
+4. Rebuild the configuration with `nix-darwin` to properly apply `$HOME`.
+
+```
+sudo nix-darwin rebuild --flake .#hyena
+```
+
+5. Restart the computer.
 
 </details>
 
