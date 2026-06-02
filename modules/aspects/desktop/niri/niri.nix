@@ -54,6 +54,13 @@
               xdg-desktop-portal-gnome # screencasting support
               xdg-desktop-portal-gtk # fallback portal
             ];
+
+            config = {
+              common.default = [
+                "gnome"
+                "gtk"
+              ];
+            };
           };
         };
 
