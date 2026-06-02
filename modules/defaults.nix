@@ -30,6 +30,8 @@
     };
 
     darwin = {
+      nix.enable = false;
+
       system = {
         checks.verifyNixPath = false;
         stateVersion = 7;
