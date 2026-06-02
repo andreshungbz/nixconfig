@@ -1,6 +1,6 @@
 add_newline = false
 
-format = "$character"
+format = "$hostname$character"
 right_format = "[ $directory $git_branch](bg:#38528a fg:#fdb00b)"
 
 [character]
@@ -14,3 +14,9 @@ truncation_length = 1
 
 [git_branch]
 format = "\\[$branch\\] "
+
+[hostname]
+ssh_only = true
+ssh_symbol = "󱘖"
+format = "[ $ssh_symbol $hostname ](bg:#38528a fg:#fdb00b) "
+trim_at = "."
