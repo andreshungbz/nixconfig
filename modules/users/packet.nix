@@ -11,6 +11,10 @@
         isNormalUser = true;
         description = "Andres Hung";
         initialHashedPassword = "$2b$05$8XN4POkJCMRkxqd//Vw0VuQWdeM9oL5vBr8qMcXcfS7mQeZrXmRCG";
+
+        openssh.authorizedKeys.keys = [
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJSHAzMVnHblW0xy4tdMxCZBpEsDRlh+khOMmYzJs5K/"
+        ];
       };
     };
 
@@ -24,6 +28,10 @@
         isHidden = false;
         description = "Andres Hung";
         home = "/Users/packet";
+
+        openssh.authorizedKeys.keys = [
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJSHAzMVnHblW0xy4tdMxCZBpEsDRlh+khOMmYzJs5K/"
+        ];
       };
     };
   };
