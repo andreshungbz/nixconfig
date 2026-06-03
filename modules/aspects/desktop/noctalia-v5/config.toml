@@ -240,7 +240,7 @@ position = "top_right"
 scale = 1.0
 
 [shell]
-avatar_path = "/home/packet/Pictures/nixconfig-avatars/mackenzie.png"
+avatar_path = "/home/packet/Pictures/nixconfig-avatars/hackmon.png"
 clipboard_auto_paste = "auto"
 clipboard_confirm_clear_history = false
 clipboard_enabled = true
