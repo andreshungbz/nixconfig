@@ -10,6 +10,8 @@
     };
 
     darwin = {
+      # need brew for Tailscale SSH Console, but MagicDNS currently not working
+      # https://github.com/tailscale/tailscale/issues/13461
       homebrew.brews = [ "tailscale" ];
     };
   };
