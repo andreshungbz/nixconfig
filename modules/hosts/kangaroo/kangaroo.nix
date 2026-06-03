@@ -41,7 +41,7 @@
           ];
 
           variables = {
-
+            POWERDEVIL_NO_DDCUTIL = "1";
           };
         };
 
