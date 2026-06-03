@@ -20,17 +20,19 @@ order = [ "main" ]
     border_width = 0.0
     capsule = true
     capsule_fill = "surface_variant"
-    capsule_groups = []
+    capsule_group = []
     capsule_opacity = 1.0
     capsule_padding = 6.0
     center = [ "date", "control-center", "clock" ]
     contact_shadow = false
     enabled = true
-    end = [ "media", "tray", "notifications", "clipboard", "bluetooth", "network", "brightness", "volume", "temp" ]
+    end = [ "media", "tray", "weather", "clipboard", "notifications", "bluetooth", "network", "volume", "temp", "battery" ]
     font_weight = 500
-    margin_edge = 10.0
-    margin_ends = 10.0
+    layer = "top"
+    margin_edge = 10
+    margin_ends = 10
     padding = 10
+    panel_overlap = 2
     position = "top"
     radius = 12
     radius_bottom_left = 6
@@ -51,18 +53,20 @@ order = [ "main" ]
         border_width = 0.0
         capsule = true
         capsule_fill = "surface_variant"
-        capsule_groups = []
+        capsule_group = []
         capsule_opacity = 1.0
         capsule_padding = 6.0
-        center = [ "workspaces" ]
+        center = []
         contact_shadow = false
         enabled = true
         end = []
         font_weight = 500
-        margin_edge = 10.0
-        margin_ends = 10.0
+        layer = "top"
+        margin_edge = 10
+        margin_ends = 10
         match = "DP-2"
         padding = 10
+        panel_overlap = 2
         radius = 12
         radius_bottom_left = 6
         radius_bottom_right = 6
@@ -71,17 +75,25 @@ order = [ "main" ]
         reserve_space = true
         scale = 1.0
         shadow = true
-        start = []
+        start = [ "workspaces" ]
         thickness = 30
         widget_spacing = 4
+
+[battery]
+warning_threshold = 20
 
 [brightness]
 enable_ddcutil = true
 ignore_mmids = []
 
+[calendar]
+accounts = []
+enabled = true
+refresh_minutes = 15
+
 [control_center]
-compact = false
 sidebar = "full"
+sidebar_section = "full"
 
     [[control_center.shortcuts]]
     type = "wifi"
@@ -104,21 +116,18 @@ sidebar = "full"
 [desktop_widgets]
 enabled = false
 schema_version = 1
-widget_order = []
 
     [desktop_widgets.grid]
     cell_size = 16
     major_interval = 4
     visible = true
 
-    [desktop_widgets.widget]
-
 [dock]
 active_monitor_only = true
 active_opacity = 1.0
 active_scale = 1.0
 auto_hide = true
-background_opacity = 0.74999998323619366
+background_opacity = 0.75
 enabled = true
 icon_size = 30
 inactive_opacity = 0.85000002384185791
@@ -144,9 +153,9 @@ show_instance_count = true
 show_running = true
 
 [hooks]
-battery_low_percent_threshold = 0
-battery_state_changed = []
-battery_under_threshold = []
+battery_charging = []
+battery_discharging = []
+battery_percentage_changed = []
 bluetooth_disabled = []
 bluetooth_enabled = []
 colors_changed = []
@@ -170,7 +179,6 @@ pre_action_fade_seconds = 2.0
     action = "lock"
     command = "noctalia:screen-lock"
     enabled = false
-    lock_before_suspend = true
     resume_command = ""
     timeout = 600
 
@@ -178,7 +186,6 @@ pre_action_fade_seconds = 2.0
     action = "screen_off"
     command = "noctalia:dpms-off"
     enabled = false
-    lock_before_suspend = true
     resume_command = "noctalia:dpms-on"
     timeout = 660
 
@@ -190,31 +197,44 @@ right = [ "Right" ]
 up = [ "Up" ]
 validate = [ "Return", "KP_Enter" ]
 
+[location]
+address = "Belmopan, Belize"
+auto_locate = false
+sunrise = ""
+sunset = ""
+
+[lockscreen]
+blur_intensity = 0.5
+blurred_desktop = false
+tint_intensity = 0.30000001192092896
+wallpaper_blur_intensity = 0.0
+wallpaper_tint_intensity = 0.0
+
 [nightlight]
-enabled = false
-force = false
-start_time = ""
-stop_time = ""
+enabled = true
+force = true
 temperature_day = 6500
-temperature_night = 4000
-use_weather_location = true
+temperature_night = 4900
 
 [notification]
 background_opacity = 0.75
+collapse_on_dismiss = true
 enable_daemon = true
 layer = "top"
 monitors = [ "DP-1" ]
-offset_x = 10.0
-offset_y = 10.0
+offset_x = 10
+offset_y = 10
 position = "top_right"
 scale = 1.0
+show_app_name = true
 
 [osd]
-background_opacity = 0.74999998323619366
+background_opacity = 0.75
 keyboard_layout = true
 lock_keys = true
-offset_x = 10.0
-offset_y = 10.0
+monitors = []
+offset_x = 10
+offset_y = 10
 orientation = "horizontal"
 position = "top_right"
 scale = 1.0
@@ -222,11 +242,13 @@ scale = 1.0
 [shell]
 avatar_path = "/home/packet/Pictures/nixconfig-avatars/mackenzie.png"
 clipboard_auto_paste = "auto"
+clipboard_confirm_clear_history = false
 clipboard_enabled = true
-clipboard_history_max_entries = 25.0
+clipboard_history_max_entries = 25
 clipboard_image_action_command = ""
 corner_radius_scale = 0.5
 date_format = "%A, %x"
+disable_mipmaps = false
 font_family = "Noto Sans"
 lang = "en"
 launch_apps_as_systemd_services = false
@@ -237,6 +259,8 @@ password_style = "random"
 polkit_agent = true
 screen_time_enabled = true
 settings_show_advanced = true
+setup_wizard_enabled = true
+shared_gl_context = true
 show_location = true
 telemetry_enabled = true
 time_format = "{:%-I:%M %p}"
@@ -255,7 +279,9 @@ ui_scale = 1.0
     clipboard_placement = "attached"
     control_center_placement = "attached"
     launcher_categories = false
+    launcher_compact = false
     launcher_placement = "centered"
+    launcher_show_icons = true
     open_near_click_clipboard = true
     open_near_click_control_center = false
     open_near_click_launcher = false
@@ -317,9 +343,7 @@ ui_scale = 1.0
 
     [shell.shadow]
     alpha = 0.55000001192092896
-    blur = 8
-    offset_x = 2
-    offset_y = 2
+    direction = "down"
 
 [system.monitor]
 cpu_poll_seconds = 2.0
@@ -354,6 +378,7 @@ fill_mode = "crop"
 per_monitor_directories = false
 transition = [ "disc", "fade", "honeycomb", "stripes", "wipe", "zoom" ]
 transition_duration = 1500.0
+transition_on_startup = false
 
     [wallpaper.automation]
     enabled = false
@@ -364,18 +389,7 @@ transition_duration = 1500.0
     [wallpaper.default]
     path = "~/Pictures/Wallpapers/nixconfig-wallpapers/tnt-camp.jpg"
 
-    [wallpaper.last]
-    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/tnt-camp.jpg"
-
-    [wallpaper.monitors.DP-1]
-    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/tnt-camp.jpg"
-
-    [wallpaper.monitors.DP-2]
-    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/tnt-camp.jpg"
-
 [weather]
-address = "Belmopan"
-auto_locate = false
 effects = true
 enabled = true
 refresh_minutes = 30
@@ -396,6 +410,7 @@ type = "scripted"
 
 [widget.brightness]
 show_label = false
+type = "brightness"
 
 [widget.clock]
 format = "{:%-I:%M %p}"
@@ -420,6 +435,7 @@ type = "volume"
 
 [widget.keyboard_layout]
 cycle_command = ""
+hide_when_single_layout = false
 type = "keyboard_layout"
 
 [widget.lock_keys]
@@ -478,3 +494,4 @@ type = "tray"
 [widget.workspaces]
 display = "name"
 max_label_chars = 10
+type = "workspaces"
