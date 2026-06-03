@@ -211,7 +211,7 @@ wallpaper_blur_intensity = 0.0
 wallpaper_tint_intensity = 0.0
 
 [nightlight]
-enabled = true
+enabled = false
 force = true
 temperature_day = 6500
 temperature_night = 4900
@@ -359,7 +359,7 @@ community_palette = "Oxocarbon"
 custom_palette = ""
 mode = "auto"
 source = "wallpaper"
-wallpaper_scheme = "faithful"
+wallpaper_scheme = "m3-rainbow"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "helix", "kcolorscheme", "kitty", "niri", "qt" ]
