@@ -26,7 +26,7 @@ order = [ "main" ]
     center = [ "date", "control-center", "clock" ]
     contact_shadow = false
     enabled = true
-    end = [ "media", "tray", "weather", "clipboard", "notifications", "bluetooth", "network", "volume", "temp", "battery" ]
+    end = [ "media", "weather", "tray", "clipboard", "notifications", "bluetooth", "network", "volume", "temp", "battery" ]
     font_weight = 500
     layer = "top"
     margin_edge = 10
@@ -490,6 +490,9 @@ drawer = true
 drawer_columns = 5
 match_adjacent_spacing = true
 type = "tray"
+
+[widget.weather]
+show_condition = false
 
 [widget.workspaces]
 display = "name"
