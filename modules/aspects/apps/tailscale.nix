@@ -10,7 +10,7 @@
     };
 
     darwin = {
-      homebrew.casks = [ "tailscale-app" ];
+      homebrew.brews = [ "tailscale" ];
     };
   };
 }
