@@ -29,9 +29,10 @@
           cemu
           dolphin-emu
           melonds
-          mupen64plus
           pcsx2
           ppsspp-sdl-wayland
+          rmg-wayland
+          ryubing
 
           (retroarch.withCores (
             cores: with cores; [
