@@ -127,7 +127,7 @@ When dual-booting NixOS with Windows, run another rebuild so that grub can detec
 ## Inspirations
 
 - [quasigod](https://tangled.org/quasigod.xyz/nixconfig) (dendritic structure and modules)
-- [Adda](https://codeberg.org/Adda/nixos-config) (more dendritic ideas)
-- [antholeole](https://github.com/antholeole/nixconfig) (V2 Starship configuration)
+- [Adda](https://codeberg.org/Adda/nixos-config) (more ideas for dendritic repository structure)
+- [antholeole](https://github.com/antholeole/nixconfig) (adapted [starship](https://starship.rs/) configuration)
 - [Andrey0189](https://github.com/Andrey0189/nixos-config-reborn) (non-dendritic NixOS configurations for old configuration)
 - [dustinlyons](https://github.com/dustinlyons/nixos-config) (non-dendritic nix-darwin configurations for old configuration)
