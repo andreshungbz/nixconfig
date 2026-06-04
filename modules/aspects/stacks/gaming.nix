@@ -29,6 +29,7 @@
           cemu
           dolphin-emu
           melonds
+          mupen64plus
           pcsx2
           ppsspp-sdl-wayland
 
@@ -37,7 +38,6 @@
               bsnes
               mesen
               mgba
-              mupen64plus
               sameboy
             ]
           ))
