@@ -16,12 +16,6 @@ This repository contains my dentritic Nix configurations for a variety of hosts 
 
 [TODO: screenshot]
 
-### `dragon`
-
-[home-manager](https://github.com/nix-community/home-manager) (standalone) Raspberry Pi 5 running Raspberry Pi OS with the `packet` home.
-
-[TODO: screenshot]
-
 ## General Installation Steps
 
 <details>
