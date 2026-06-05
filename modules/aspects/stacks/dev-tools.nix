@@ -33,6 +33,7 @@
           rpi-imager
           termius
           vscode
+          zed-editor
         ];
       };
 
@@ -67,6 +68,7 @@
             "utm"
             "visual-studio-code"
             "warp"
+            "zed"
           ];
 
           masApps = {
