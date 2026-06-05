@@ -13,6 +13,8 @@
       { pkgs, ... }:
       {
         environment.systemPackages = with pkgs; [
+          nil
+          nixd
           nixfmt
           nvd
         ];
@@ -39,6 +41,8 @@
       { pkgs, ... }:
       {
         environment.systemPackages = with pkgs; [
+          nil
+          nixd
           nixfmt
           nvd
         ];
