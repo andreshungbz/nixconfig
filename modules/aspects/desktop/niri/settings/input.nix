@@ -31,6 +31,11 @@
         trackpoint = {
           natural-scroll = false;
         };
+
+        # Tablet
+        tablet = {
+          map-to-output = "DP-1";
+        };
       };
     };
   };
