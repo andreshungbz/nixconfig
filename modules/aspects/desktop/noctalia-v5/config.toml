@@ -207,8 +207,27 @@ sunset = ""
 blur_intensity = 0.5
 blurred_desktop = false
 tint_intensity = 0.30000001192092896
-wallpaper_blur_intensity = 0.0
-wallpaper_tint_intensity = 0.0
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 1
+widget_order = [ "lockscreen-widget-0000000000000001" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    cx = 1024.0
+    cy = 926.0
+    enabled = true
+    output = "DP-1"
+    rotation = 0.0
+    scale = 1.0
+    type = "weather"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
 
 [nightlight]
 enabled = false
@@ -217,7 +236,10 @@ temperature_day = 6500
 temperature_night = 4900
 
 [notification]
+allowed_urgencies = []
 background_opacity = 0.75
+blacklist = []
+blacklist_allow_critical = true
 collapse_on_dismiss = true
 enable_daemon = true
 layer = "top"
@@ -226,6 +248,7 @@ offset_x = 10
 offset_y = 10
 position = "top_right"
 scale = 1.0
+show_actions = true
 show_app_name = true
 
 [osd]
@@ -240,6 +263,7 @@ position = "top_right"
 scale = 1.0
 
 [shell]
+app_icon_colorize = false
 avatar_path = "/home/packet/Pictures/nixconfig-avatars/hackmon.png"
 clipboard_auto_paste = "auto"
 clipboard_confirm_clear_history = false
@@ -274,7 +298,6 @@ ui_scale = 1.0
     blacklist = []
 
     [shell.panel]
-    background_blur = true
     borders = true
     clipboard_placement = "attached"
     control_center_placement = "attached"
@@ -295,6 +318,15 @@ ui_scale = 1.0
     [shell.screen_corners]
     enabled = false
     size = 32
+
+    [shell.screenshot]
+    copy_to_clipboard = true
+    directory = ""
+    filename_pattern = ""
+    freeze_screen = true
+    pipe_command = ""
+    pipe_to_command = false
+    save_to_file = true
 
     [[shell.session.actions]]
     action = "lock"
@@ -493,6 +525,7 @@ type = "tray"
 
 [widget.weather]
 show_condition = false
+type = "weather"
 
 [widget.workspaces]
 display = "name"
