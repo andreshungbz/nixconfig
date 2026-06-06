@@ -21,6 +21,7 @@
           dnsmasq
           dnsutils
           ffmpeg
+          github-cli
           jq
           ookla-speedtest
           powershell
@@ -56,6 +57,7 @@
 
         homebrew = {
           brews = [
+            "gh"
             "telnet"
           ];
 
