@@ -176,6 +176,7 @@ show_running = true
 battery_charging = []
 battery_discharging = []
 battery_percentage_changed = []
+battery_plugged = []
 bluetooth_disabled = []
 bluetooth_enabled = []
 colors_changed = []
@@ -240,34 +241,37 @@ widget_order = [ "lockscreen-login-box@DP-2", "lockscreen-login-box@DP-1", "lock
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 0.0
+    box_width = 0.0
     cx = 1024.0
     cy = 1029.0
     enabled = true
     output = "DP-1"
     rotation = 0.0
-    scale = 1.0
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
+    box_height = 0.0
+    box_width = 0.0
     cx = 576.0
     cy = 1925.0
     enabled = true
     output = "DP-2"
     rotation = 0.0
-    scale = 1.0
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 0.0
+    box_width = 0.0
     cx = 208.40000915527344
     cy = 129.56829833984375
     enabled = true
     output = "DP-1"
     rotation = 0.0
-    scale = 1.4450315237045288
     type = "weather"
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
@@ -297,14 +301,25 @@ show_app_name = true
 
 [osd]
 background_opacity = 0.75
-keyboard_layout = true
-lock_keys = true
 monitors = [ "DP-1" ]
 offset_x = 10
 offset_y = 10
 orientation = "horizontal"
 position = "top_right"
 scale = 1.0
+
+    [osd.kinds]
+    bluetooth = true
+    brightness = true
+    caffeine = true
+    dnd = true
+    keyboard_layout = true
+    lock_keys = true
+    power_profile = true
+    volume = true
+    volume_input = true
+    volume_output = true
+    wifi = true
 
 [shell]
 app_icon_colorize = false
