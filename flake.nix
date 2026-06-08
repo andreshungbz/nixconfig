@@ -26,7 +26,7 @@
     niri.url = "github:sodiboo/niri-flake?shallow=true";
     nix-flatpak.url = "github:gmodena/nix-flatpak/";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    noctalia.url = "github:noctalia-dev/noctalia-shell/v5";
+    noctalia.url = "github:noctalia-dev/noctalia";
     pixie-sddm.url = "github:xCaptaiN09/pixie-sddm";
   };
 }

@@ -2,7 +2,7 @@
 {
   # https://docs.noctalia.dev/v5/
   flake-file.inputs = {
-    noctalia.url = "github:noctalia-dev/noctalia-shell/v5";
+    noctalia.url = "github:noctalia-dev/noctalia";
   };
 
   pkt.noctalia = {
