@@ -30,6 +30,7 @@
           snapshot
 
           discord
+          discord-canary
           cider-2
           firefox
           microsoft-edge
