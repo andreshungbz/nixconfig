@@ -15,6 +15,7 @@
     includes = [
       <pkt/niri-input>
       <pkt/niri-keybinds>
+      <pkt/niri-keybinds-noctalia>
       <pkt/niri-layout>
       <pkt/niri-outputs>
       <pkt/niri-startup>

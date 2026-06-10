@@ -11,13 +11,6 @@
         "Mod+O".action.toggle-overview = [ ];
         "Mod+Q".action.close-window = [ ];
 
-        # Noctalia
-        "Alt+Space".action.spawn-sh = "noctalia msg panel-toggle launcher";
-        "Mod+A".action.spawn-sh = "noctalia msg panel-toggle control-center";
-        "Mod+L".action.spawn-sh = "noctalia msg session lock";
-        "Mod+Pause".action.spawn-sh = "noctalia msg notification-dnd-toggle";
-        "Mod+F9".action.spawn-sh = "noctalia msg mic-mute";
-
         # Applications
         "Mod+B".action.spawn = "firefox";
         "Mod+T".action.spawn = "kitty";
