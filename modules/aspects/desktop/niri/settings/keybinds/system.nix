@@ -16,6 +16,7 @@
         "Mod+A".action.spawn-sh = "noctalia msg panel-toggle control-center";
         "Mod+L".action.spawn-sh = "noctalia msg session lock";
         "Mod+Pause".action.spawn-sh = "noctalia msg notification-dnd-toggle";
+        "Mod+F9".action.spawn-sh = "noctalia msg mic-mute";
 
         # Applications
         "Mod+B".action.spawn = "firefox";
