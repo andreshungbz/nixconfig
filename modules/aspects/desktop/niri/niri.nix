@@ -45,12 +45,13 @@
 
         xdg = {
           # mkForce for VM testing
-          autostart.enable = lib.mkForce true;
-          icons.enable = lib.mkForce true;
-          mime.enable = lib.mkForce true;
+          # autostart.enable = lib.mkForce true;
+          # icons.enable = lib.mkForce true;
+          # mime.enable = lib.mkForce true;
 
           portal = {
             enable = true;
+            xdgOpenUsePortal = true;
             extraPortals = with pkgs; [
               xdg-desktop-portal-gnome # screencasting support
               xdg-desktop-portal-gtk # fallback portal
@@ -59,7 +60,6 @@
             config = {
               common.default = [
                 "gnome"
-                "gtk"
               ];
             };
           };
@@ -94,6 +94,7 @@
 
             debug = {
               # disable-cursor-plane = [ ];
+              # force-pipewire-invalid-modifier = [ ];
             };
           };
         };
