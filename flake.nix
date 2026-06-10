@@ -23,7 +23,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     import-tree.url = "github:vic/import-tree";
-    niri.url = "github:sodiboo/niri-flake?shallow=true";
+    niri-nix.url = "git+https://codeberg.org/BANanaD3V/niri-nix";
     nix-flatpak.url = "github:gmodena/nix-flatpak/";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     noctalia.url = "github:noctalia-dev/noctalia";

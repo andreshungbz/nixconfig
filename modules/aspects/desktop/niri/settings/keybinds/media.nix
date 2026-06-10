@@ -1,14 +1,14 @@
 { inputs, ... }:
 {
   pkt.niri-keybinds = {
-    imports = [ inputs.niri.homeModules.niri ];
+    imports = [ inputs.niri-nix.homeModules.default ];
 
     homeManager = {
-      programs.niri.settings.binds = {
+      wayland.windowManager.niri.settings.binds = {
         # Volume Up
-        "XF86AudioRaiseVolume" = {
-          allow-when-locked = true;
-          action.spawn = [
+        XF86AudioRaiseVolume = {
+          _props.allow-when-locked = true;
+          spawn = [
             "noctalia"
             "msg"
             "volume-up 5"
@@ -16,9 +16,9 @@
         };
 
         # Volume Down
-        "XF86AudioLowerVolume" = {
-          allow-when-locked = true;
-          action.spawn = [
+        XF86AudioLowerVolume = {
+          _props.allow-when-locked = true;
+          spawn = [
             "noctalia"
             "msg"
             "volume-down 5"
@@ -26,9 +26,9 @@
         };
 
         # Volume Mute
-        "XF86AudioMute" = {
-          allow-when-locked = true;
-          action.spawn = [
+        XF86AudioMute = {
+          _props.allow-when-locked = true;
+          spawn = [
             "noctalia"
             "msg"
             "volume-mute"
@@ -36,9 +36,9 @@
         };
 
         # Media Play/Pause (Toggle)
-        "XF86AudioPlay" = {
-          allow-when-locked = true;
-          action.spawn = [
+        XF86AudioPlay = {
+          _props.allow-when-locked = true;
+          spawn = [
             "noctalia"
             "msg"
             "media"
@@ -47,9 +47,9 @@
         };
 
         # Media Play/Pause (Toggle)
-        "XF86AudioPause" = {
-          allow-when-locked = true;
-          action.spawn = [
+        XF86AudioPause = {
+          _props.allow-when-locked = true;
+          spawn = [
             "noctalia"
             "msg"
             "media"
@@ -58,9 +58,9 @@
         };
 
         # Media Stop
-        "XF86AudioStop" = {
-          allow-when-locked = true;
-          action.spawn = [
+        XF86AudioStop = {
+          _props.allow-when-locked = true;
+          spawn = [
             "noctalia"
             "msg"
             "media"
@@ -69,9 +69,9 @@
         };
 
         # Media Previous
-        "XF86AudioPrev" = {
-          allow-when-locked = true;
-          action.spawn = [
+        XF86AudioPrev = {
+          _props.allow-when-locked = true;
+          spawn = [
             "noctalia"
             "msg"
             "media"
@@ -80,9 +80,9 @@
         };
 
         # Media Next
-        "XF86AudioNext" = {
-          allow-when-locked = true;
-          action.spawn = [
+        XF86AudioNext = {
+          _props.allow-when-locked = true;
+          spawn = [
             "noctalia"
             "msg"
             "media"

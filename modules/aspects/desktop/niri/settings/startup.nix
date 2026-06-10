@@ -1,15 +1,15 @@
 { inputs, ... }:
 {
   pkt.niri-startup = {
-    imports = [ inputs.niri.homeModules.niri ];
+    imports = [ inputs.niri-nix.homeModules.default ];
 
     homeManager = {
-      programs.niri.settings = {
+      wayland.windowManager.niri.settings = {
         hotkey-overlay.skip-at-startup = true;
 
         spawn-at-startup = [
           {
-            command = [ "noctalia" ];
+            _args = [ "noctalia" ];
           }
         ];
       };

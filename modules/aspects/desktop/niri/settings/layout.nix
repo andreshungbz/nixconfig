@@ -1,10 +1,10 @@
 { inputs, ... }:
 {
   pkt.niri-layout = {
-    imports = [ inputs.niri.homeModules.niri ];
+    imports = [ inputs.niri-nix.homeModules.default ];
 
     homeManager = {
-      programs.niri.settings = {
+      wayland.windowManager.niri.settings = {
         prefer-no-csd = true; # no client-side decorations
 
         layout = {
@@ -14,48 +14,20 @@
 
           # Width/Height Defaults & Presets
           default-column-width.proportion = 0.5;
-          preset-column-widths = [
-            { proportion = 0.33; }
+          preset-column-widths._children = [
+            { proportion = 0.33333; }
             { proportion = 0.5; }
-            { proportion = 0.67; }
+            { proportion = 0.66667; }
             { proportion = 1.0; }
           ];
-          preset-window-heights = [
+          preset-window-heights._children = [
             { proportion = 0.5; }
             { proportion = 1.0; }
           ];
 
           # Window Focus Ring
           focus-ring = {
-            enable = true;
             width = 2;
-            # urgent.color = "#fdb00b";
-
-            # active.gradient = {
-            #   from = "#5fb8f2";
-            #   to = "#4d6fb7";
-            #   angle = 45;
-            #   relative-to = "workspace-view";
-            # };
-
-            # inactive.gradient = {
-            #   from = "#4d6fb7";
-            #   to = "#2a3d66";
-            #   angle = 45;
-            #   relative-to = "workspace-view";
-            # };
-          };
-
-          # Window Shadow
-          shadow = {
-            enable = true;
-            color = "#0007";
-            softness = 30;
-            spread = 5;
-            offset = {
-              x = 0;
-              y = 5;
-            };
           };
         };
       };

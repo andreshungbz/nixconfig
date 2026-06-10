@@ -1,25 +1,25 @@
 { inputs, ... }:
 {
   pkt.niri-keybinds = {
-    imports = [ inputs.niri.homeModules.niri ];
+    imports = [ inputs.niri-nix.homeModules.default ];
 
     homeManager = {
-      programs.niri.settings.binds = {
+      wayland.windowManager.niri.settings.binds = {
         # Niri
-        "Mod+Shift+Slash".action.show-hotkey-overlay = [ ];
-        "Ctrl+Alt+Delete".action.quit = [ ];
-        "Mod+O".action.toggle-overview = [ ];
-        "Mod+Q".action.close-window = [ ];
+        "Mod+Shift+Slash".show-hotkey-overlay = [ ];
+        "Ctrl+Alt+Delete".quit = [ ];
+        "Mod+O".toggle-overview = [ ];
+        "Mod+Q".close-window = [ ];
 
         # Applications
-        "Mod+B".action.spawn = "firefox";
-        "Mod+T".action.spawn = "kitty";
-        "Mod+S".action.spawn = [
+        "Mod+B".spawn = "firefox";
+        "Mod+T".spawn = "kitty";
+        "Mod+S".spawn = [
           "kitty"
           "--class"
           "kitty-scratchpad"
         ];
-        "Mod+E".action.spawn = [
+        "Mod+E".spawn = [
           "nautilus"
           "--new-window"
         ];

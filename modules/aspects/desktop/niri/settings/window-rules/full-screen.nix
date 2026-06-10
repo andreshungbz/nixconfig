@@ -1,22 +1,20 @@
 { inputs, ... }:
 {
   pkt.niri-window-rules = {
-    imports = [ inputs.niri.homeModules.niri ];
+    imports = [ inputs.niri-nix.homeModules.default ];
 
     homeManager = {
-      programs.niri.settings.window-rules = [
+      wayland.windowManager.niri.settings.window-rule = [
         # Steam - Main Monitor
         {
-          matches = [ { app-id = "^steam$"; } ];
-
+          match._props.app-id = "^steam$";
           open-on-output = "DP-1";
           open-maximized = true;
         }
 
-        # Thunderbird - Main Monitor
+        # Thunderbird
         {
-          matches = [ { app-id = "thunderbird"; } ];
-
+          match._props.app-id = "thunderbird";
           open-maximized = true;
         }
       ];

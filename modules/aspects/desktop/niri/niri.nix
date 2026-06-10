@@ -5,9 +5,9 @@
   ...
 }:
 {
-  # https://github.com/sodiboo/niri-flake
+  # https://codeberg.org/BANanaD3V/niri-nix
   flake-file.inputs = {
-    niri.url = "github:sodiboo/niri-flake?shallow=true";
+    niri-nix.url = "git+https://codeberg.org/BANanaD3V/niri-nix";
   };
 
   # https://niri-wm.github.io/niri/index.html
@@ -25,44 +25,23 @@
     nixos =
       { pkgs, ... }:
       {
+        imports = [ inputs.niri-nix.nixosModules.default ];
+
         # binary cache
         nix.settings = {
-          substituters = [ "https://niri.cachix.org" ];
-          trusted-public-keys = [ "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964=" ];
+          substituters = [ "https://niri-nix.cachix.org" ];
+          trusted-public-keys = [ "niri-nix.cachix.org-1:SvFtqpDcf7Sm1SMJdby1/+Y+6f3Yt3/3PMcSTKPJNJ0=" ];
         };
 
         # Niri package overlay
-        nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+        # nixpkgs.overlays = [ inputs.niri-nix.overlays.niri-nix ];
         programs.niri = {
           enable = true;
-          package = pkgs.niri-unstable;
+          # package = pkgs.niri-unstable;
         };
 
-        environment.systemPackages = with pkgs; [
-          xwayland-satellite # for X11 apps (e.g., Steam, Discord)
-          # gnome-keyring already provided by sodiboo flake
-        ];
-
-        xdg = {
-          # mkForce for VM testing
-          # autostart.enable = lib.mkForce true;
-          # icons.enable = lib.mkForce true;
-          # mime.enable = lib.mkForce true;
-
-          portal = {
-            enable = true;
-            xdgOpenUsePortal = true;
-            extraPortals = with pkgs; [
-              xdg-desktop-portal-gnome # screencasting support
-              xdg-desktop-portal-gtk # fallback portal
-            ];
-
-            config = {
-              common.default = [
-                "gnome"
-              ];
-            };
-          };
+        environment.sessionVariables = {
+          NIXOS_OZONE_WL = "1";
         };
 
         # enable 3D acceleration in VM testing
@@ -79,25 +58,11 @@
     homeManager =
       { pkgs, ... }:
       {
-        imports = [ inputs.niri.homeModules.niri ];
+        imports = [ inputs.niri-nix.homeModules.default ];
+        home.packages = with pkgs; [ xwayland-satellite ];
+        xdg.autostart.enable = true;
 
-        programs.niri = {
-          enable = true;
-          package = pkgs.niri-unstable;
-
-          settings = {
-            environment = {
-              # https://niri-wm.github.io/niri/Application-Issues.html#electron-applications
-              "ELECTRON_OZONE_PLATFORM_HINT" = "auto";
-              "NIXOS_OZONE_WL" = "1";
-            };
-
-            debug = {
-              # disable-cursor-plane = [ ];
-              # force-pipewire-invalid-modifier = [ ];
-            };
-          };
-        };
+        wayland.windowManager.niri.enable = true;
 
         # avoid warnings for VS Code due to the environment variables set above
         programs.fish.shellAliases.code = "command code 2>/dev/null";

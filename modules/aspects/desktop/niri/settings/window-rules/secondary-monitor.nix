@@ -1,14 +1,13 @@
 { inputs, ... }:
 {
   pkt.niri-window-rules = {
-    imports = [ inputs.niri.homeModules.niri ];
+    imports = [ inputs.niri-nix.homeModules.default ];
 
     homeManager = {
-      programs.niri.settings.window-rules = [
+      wayland.windowManager.niri.settings.window-rule = [
         # Discord Full Width Half Height - Secondary Monitor
         {
-          matches = [ { app-id = "^discord$"; } ];
-
+          match._props.app-id = "^discord$";
           open-on-output = "DP-2";
           default-column-display = "normal";
           default-column-width.proportion = 1.0;
@@ -17,8 +16,7 @@
 
         # Vesktop Full Width Half Height - Secondary Monitor
         {
-          matches = [ { app-id = "^vesktop$"; } ];
-
+          match._props.app-id = "^vesktop$";
           open-on-output = "DP-2";
           default-column-display = "normal";
           default-column-width.proportion = 1.0;
@@ -27,7 +25,7 @@
 
         # Telegram Full Width Half Height - Secondary Monitor
         {
-          matches = [ { app-id = "^org.telegram.desktop$"; } ];
+          match._props.app-id = "^org.telegram.desktop$";
           open-on-output = "DP-2";
           default-column-display = "normal";
           default-column-width.proportion = 1.0;
