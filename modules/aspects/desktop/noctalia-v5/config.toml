@@ -227,13 +227,19 @@ sunset = ""
 [lockscreen]
 blur_intensity = 0.5
 blurred_desktop = false
+monitors = []
 tint_intensity = 0.30000001192092896
 wallpaper = ""
 
 [lockscreen_widgets]
 enabled = true
 schema_version = 1
-widget_order = [ "lockscreen-login-box@DP-2", "lockscreen-login-box@DP-1", "lockscreen-widget-0000000000000001" ]
+widget_order = [
+    "lockscreen-login-box@DP-2",
+    "lockscreen-login-box@DP-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002"
+]
 
     [lockscreen_widgets.grid]
     cell_size = 16
@@ -244,7 +250,7 @@ widget_order = [ "lockscreen-login-box@DP-2", "lockscreen-login-box@DP-1", "lock
     box_height = 0.0
     box_width = 0.0
     cx = 1024.0
-    cy = 1029.0
+    cy = 1049.0
     enabled = true
     output = "DP-1"
     rotation = 0.0
@@ -265,10 +271,10 @@ widget_order = [ "lockscreen-login-box@DP-2", "lockscreen-login-box@DP-1", "lock
         [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
-    box_height = 0.0
-    box_width = 0.0
+    box_height = 132.04226684570312
+    box_width = 288.10568237304688
     cx = 208.40000915527344
-    cy = 129.56829833984375
+    cy = 258.0211181640625
     enabled = true
     output = "DP-1"
     rotation = 0.0
@@ -276,6 +282,20 @@ widget_order = [ "lockscreen-login-box@DP-2", "lockscreen-login-box@DP-1", "lock
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
         background_opacity = 0.78000000000000003
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 96.0
+    box_width = 288.0
+    cx = 208.45285034179688
+    cy = 112.0
+    enabled = true
+    output = "DP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        clock_style = "digital"
+        format = "{:%-I:%M %p}"
 
 [nightlight]
 enabled = false
@@ -321,9 +341,24 @@ scale = 1.0
     volume_output = true
     wifi = true
 
+[plugins]
+enabled = []
+
+    [[plugins.source]]
+    auto_update = false
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    auto_update = false
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
 [shell]
 app_icon_colorize = false
-avatar_path = "/home/packet/Pictures/nixconfig-avatars/hackmon.png"
+avatar_path = "~/Pictures/nixconfig-avatars/hackmon.png"
 clipboard_auto_paste = "auto"
 clipboard_confirm_clear_history = false
 clipboard_enabled = true
