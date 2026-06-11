@@ -345,13 +345,13 @@ scale = 1.0
 enabled = []
 
     [[plugins.source]]
-    auto_update = false
+    auto_update = true
     kind = "git"
     location = "https://github.com/noctalia-dev/official-plugins"
     name = "official"
 
     [[plugins.source]]
-    auto_update = false
+    auto_update = true
     kind = "git"
     location = "https://github.com/noctalia-dev/community-plugins"
     name = "community"
