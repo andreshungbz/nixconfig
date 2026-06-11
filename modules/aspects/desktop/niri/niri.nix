@@ -60,9 +60,19 @@
       {
         imports = [ inputs.niri-nix.homeModules.default ];
         home.packages = with pkgs; [ xwayland-satellite ];
-        xdg.autostart.enable = true;
-
         wayland.windowManager.niri.enable = true;
+
+        xdg.portal = {
+          enable = true;
+          xdgOpenUsePortal = true;
+          extraPortals = [
+            pkgs.xdg-desktop-portal-gtk
+            pkgs.xdg-desktop-portal-gnome
+          ];
+          config = {
+            common.default = [ "gnome" ];
+          };
+        };
 
         # avoid warnings for VS Code due to the environment variables set above
         programs.fish.shellAliases.code = "command code 2>/dev/null";
