@@ -40,8 +40,27 @@
           # package = pkgs.niri-unstable;
         };
 
-        environment.sessionVariables = {
-          NIXOS_OZONE_WL = "1";
+        environment = {
+          systemPackages = with pkgs; [ xwayland-satellite ];
+          sessionVariables = {
+            NIXOS_OZONE_WL = "1";
+            NIXOS_XDG_OPEN_USE_PORTAL = "1";
+            QT_QPA_PLATFORM = "wayland;xcb";
+          };
+        };
+
+        xdg.portal = {
+          enable = true;
+          xdgOpenUsePortal = true;
+
+          extraPortals = [
+            pkgs.xdg-desktop-portal-gtk
+            pkgs.xdg-desktop-portal-gnome
+          ];
+
+          config = {
+            common.default = [ "gnome" ];
+          };
         };
 
         # enable 3D acceleration in VM testing
@@ -59,20 +78,7 @@
       { pkgs, ... }:
       {
         imports = [ inputs.niri-nix.homeModules.default ];
-        home.packages = with pkgs; [ xwayland-satellite ];
         wayland.windowManager.niri.enable = true;
-
-        xdg.portal = {
-          enable = true;
-          xdgOpenUsePortal = true;
-          extraPortals = [
-            pkgs.xdg-desktop-portal-gtk
-            pkgs.xdg-desktop-portal-gnome
-          ];
-          config = {
-            common.default = [ "gnome" ];
-          };
-        };
 
         # avoid warnings for VS Code due to the environment variables set above
         programs.fish.shellAliases.code = "command code 2>/dev/null";
