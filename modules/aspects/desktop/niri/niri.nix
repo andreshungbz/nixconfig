@@ -44,22 +44,6 @@
           systemPackages = with pkgs; [ xwayland-satellite ];
           sessionVariables = {
             NIXOS_OZONE_WL = "1";
-            NIXOS_XDG_OPEN_USE_PORTAL = "1";
-            QT_QPA_PLATFORM = "wayland;xcb";
-          };
-        };
-
-        xdg.portal = {
-          enable = true;
-          xdgOpenUsePortal = true;
-
-          extraPortals = [
-            pkgs.xdg-desktop-portal-gtk
-            pkgs.xdg-desktop-portal-gnome
-          ];
-
-          config = {
-            common.default = [ "gnome" ];
           };
         };
 
