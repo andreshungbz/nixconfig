@@ -5,45 +5,12 @@
 
     homeManager = {
       wayland.windowManager.niri.settings.binds = {
-        "Alt+Space".spawn = [
-          "noctalia"
-          "msg"
-          "panel-toggle"
-          "launcher"
-        ];
-
-        "Mod+A".spawn = [
-          "noctalia"
-          "msg"
-          "panel-toggle"
-          "control-center"
-        ];
-
-        "Mod+L".spawn = [
-          "noctalia"
-          "msg"
-          "session"
-          "lock"
-        ];
-
-        "Mod+Pause".spawn = [
-          "noctalia"
-          "msg"
-          "notification-dnd-toggle"
-        ];
-
-        "Mod+F9".spawn = [
-          "noctalia"
-          "msg"
-          "mic-mute"
-        ];
-
-        "Ctrl+Print".spawn = [
-          "noctalia"
-          "msg"
-          "screenshot-fullscreen"
-          "pick"
-        ];
+        "Alt+Space".spawn-sh = "noctalia msg panel-toggle launcher";
+        "Mod+A".spawn-sh = "noctalia msg panel-toggle control-center";
+        "Mod+Alt+L".spawn-sh = "noctalia msg session lock";
+        "Mod+Pause".spawn-sh = "noctalia msg notification-dnd-toggle";
+        "Mod+F9".spawn-sh = "noctalia msg mic-mute";
+        "Ctrl+Print".spawn-sh = "noctalia msg screenshot-fullscreen pick";
       };
     };
   };
