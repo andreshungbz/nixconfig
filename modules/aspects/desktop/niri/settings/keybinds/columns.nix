@@ -48,6 +48,22 @@
         "Mod+BracketRight".consume-or-expel-window-right = [ ];
         "Mod+Comma".consume-window-into-column = [ ];
         "Mod+Period".expel-window-from-column = [ ];
+
+        # HJKLUI Binds
+        "Mod+H".focus-column-left = [ ];
+        "Mod+L".focus-column-right = [ ];
+        "Mod+K".focus-window-down = [ ];
+        "Mod+J".focus-window-up = [ ];
+        "Mod+Ctrl+H".move-column-left = [ ];
+        "Mod+Ctrl+L".move-column-right = [ ];
+        "Mod+Ctrl+K".move-window-down = [ ];
+        "Mod+Ctrl+J".move-window-up = [ ];
+        "Mod+U".focus-workspace-down = [ ];
+        "Mod+I".focus-workspace-up = [ ];
+        "Mod+Shift+U".move-workspace-down = [ ];
+        "Mod+Shift+I".move-workspace-up = [ ];
+        "Mod+Ctrl+U".move-column-to-workspace-down = [ ];
+        "Mod+Ctrl+I".move-column-to-workspace-up = [ ];
       };
     };
   };
