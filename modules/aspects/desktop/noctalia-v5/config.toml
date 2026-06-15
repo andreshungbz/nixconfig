@@ -519,7 +519,7 @@ source = "wallpaper"
 wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
-    builtin_ids = [ "btop", "gtk3", "gtk4", "helix", "kcolorscheme", "kitty", "niri", "qt", "starship" ]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "helix", "kcolorscheme", "kitty", "niri", "qt" ]
     community_ids = [ "discord", "papirus-icons", "steam", "telegram" ]
     enable_builtin_templates = true
     enable_community_templates = true
