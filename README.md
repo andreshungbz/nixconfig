@@ -8,13 +8,13 @@ This repository contains my dentritic Nix configurations for a variety of hosts 
 
 [NixOS](https://nixos.org/) AMD gaming desktop running [Niri](https://github.com/niri-wm/niri) and [Noctalia](https://noctalia.dev/) v5, testable with the `nix run .#vm-kangaroo` command.
 
-![Screenshot of the kangaroo desktop.](./assets/screenshots/2026-06-03-kangaroo.png)
+![Screenshot of the kangaroo desktop.](./assets/screenshots/2026-06-14-kangaroo.png)
 
 ### `hyena`
 
 [nix-darwin](https://github.com/nix-darwin/nix-darwin) M1 MacBook Air laptop with settings configured and [Homebrew](https://brew.sh/) installed.
 
-![Screenshot of the hyena desktop.](./assets/screenshots/2026-06-03-hyena.png)
+![Screenshot of the hyena desktop.](./assets/screenshots/2026-06-14-hyena.png)
 
 ## General Installation Steps
 
