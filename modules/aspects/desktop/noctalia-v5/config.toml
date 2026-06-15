@@ -23,6 +23,7 @@ order = [ "main" ]
     capsule_group = []
     capsule_opacity = 1.0
     capsule_padding = 6.0
+    capsule_thickness = 0.75999999046325684
     center = [ "date", "control-center", "clock" ]
     contact_shadow = false
     enabled = true
@@ -56,6 +57,7 @@ order = [ "main" ]
         capsule_group = []
         capsule_opacity = 1.0
         capsule_padding = 6.0
+        capsule_thickness = 0.75999999046325684
         center = []
         contact_shadow = false
         enabled = true
@@ -228,6 +230,7 @@ sunset = ""
 blur_intensity = 0.5
 blurred_desktop = false
 enabled = true
+fingerprint = true
 monitors = []
 tint_intensity = 0.30000001192092896
 wallpaper = ""
@@ -258,6 +261,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        show_login_button = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
     box_height = 0.0
@@ -270,19 +274,23 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
+        show_login_button = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
-    box_height = 132.04226684570312
-    box_width = 288.10568237304688
-    cx = 208.40000915527344
-    cy = 258.0211181640625
+    box_height = 128.0
+    box_width = 288.0
+    cx = 208.0
+    cy = 256.0
     enabled = true
     output = "DP-1"
     rotation = 0.0
     type = "weather"
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
-        background_opacity = 0.78000000000000003
+        background_opacity = 0.80000000000000004
+        forecast_days = 3
+        shadow = false
+        show_forecast = false
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
     box_height = 96.0
@@ -305,10 +313,7 @@ temperature_day = 6500
 temperature_night = 4900
 
 [notification]
-allowed_urgencies = []
 background_opacity = 0.75
-blacklist = []
-blacklist_allow_critical = true
 collapse_on_dismiss = true
 enable_daemon = true
 layer = "top"
@@ -347,12 +352,14 @@ enabled = []
 
     [[plugins.source]]
     auto_update = true
+    enabled = true
     kind = "git"
     location = "https://github.com/noctalia-dev/official-plugins"
     name = "official"
 
     [[plugins.source]]
     auto_update = true
+    enabled = true
     kind = "git"
     location = "https://github.com/noctalia-dev/community-plugins"
     name = "community"
@@ -401,6 +408,7 @@ ui_scale = 1.0
     launcher_placement = "centered"
     launcher_session_search = true
     launcher_show_icons = true
+    launcher_sort_by_usage = true
     open_near_click_clipboard = true
     open_near_click_control_center = false
     open_near_click_launcher = false
@@ -477,6 +485,7 @@ ui_scale = 1.0
 cpu_poll_seconds = 2.0
 cpu_temp_activity_threshold = 60.0
 cpu_temp_critical_threshold = 85.0
+cpu_temp_sensor_path = ""
 cpu_usage_activity_threshold = 10.0
 cpu_usage_critical_threshold = 100.0
 disk_pct_activity_threshold = 80.0
@@ -503,15 +512,15 @@ swap_pct_critical_threshold = 90.0
 
 [theme]
 builtin = "Noctalia"
-community_palette = "Oxocarbon"
+community_palette = "Osaka jade"
 custom_palette = ""
 mode = "auto"
 source = "wallpaper"
-wallpaper_scheme = "m3-rainbow"
+wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
-    builtin_ids = [ "btop", "gtk3", "gtk4", "kcolorscheme", "qt" ]
-    community_ids = []
+    builtin_ids = [ "btop", "gtk3", "gtk4", "helix", "kcolorscheme", "kitty", "niri", "qt", "starship" ]
+    community_ids = [ "discord", "papirus-icons", "steam", "telegram" ]
     enable_builtin_templates = true
     enable_community_templates = true
 
