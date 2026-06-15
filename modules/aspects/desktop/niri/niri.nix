@@ -65,7 +65,11 @@
         wayland.windowManager.niri.enable = true;
 
         # avoid warnings for VS Code due to the environment variables set above
-        programs.fish.shellAliases.code = "command code 2>/dev/null";
+        programs.fish.functions = {
+          code = {
+            body = "command code $argv 2>/dev/null";
+          };
+        };
       };
   };
 }
