@@ -10,6 +10,7 @@
         "Ctrl+Alt+Delete".quit = [ ];
         "Mod+O".toggle-overview = [ ];
         "Mod+Q".close-window = [ ];
+        "Mod+Alt+Q".close-window = [ ];
 
         # Applications
         "Mod+B".spawn = "firefox";
