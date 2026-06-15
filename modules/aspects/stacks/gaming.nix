@@ -6,6 +6,10 @@
       {
         imports = [ inputs.nix-flatpak.nixosModules.nix-flatpak ];
 
+        environment.sessionVariables = {
+          PROTON_ENABLE_WAYLAND = 1;
+        };
+
         programs = {
           gamemode.enable = true;
 
@@ -16,6 +20,7 @@
             dedicatedServer.openFirewall = true;
             localNetworkGameTransfers.openFirewall = true;
 
+            extraCompatPackages = with pkgs; [ proton-ge-bin ];
             extraPackages = with pkgs; [ hidapi ];
           };
         };
