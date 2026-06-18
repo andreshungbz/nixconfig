@@ -14,6 +14,15 @@
           default-window-height.proportion = 0.5;
         }
 
+        # Discord PTB Full Width Half Height - Secondary Monitor
+        {
+          match._props.app-id = "^discord-ptb$";
+          open-on-output = "DP-2";
+          default-column-display = "normal";
+          default-column-width.proportion = 1.0;
+          default-window-height.proportion = 0.5;
+        }
+
         # Discord Canary Full Width Half Height - Secondary Monitor
         {
           match._props.app-id = "^discord-canary$";
