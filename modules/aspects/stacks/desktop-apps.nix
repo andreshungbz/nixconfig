@@ -31,6 +31,7 @@
 
           discord
           discord-canary
+          discord-ptb
           cider-2
           firefox
           microsoft-edge
