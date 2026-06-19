@@ -79,6 +79,7 @@ order = [ "main" ]
         match = "DP-2"
         padding = 10
         panel_overlap = 2
+        position = "bottom"
         radius = 12
         radius_bottom_left = 6
         radius_bottom_right = 6
