@@ -68,7 +68,7 @@ order = [ "main" ]
         capsule_opacity = 1.0
         capsule_padding = 6.0
         capsule_thickness = 0.75999999046325684
-        center = [ "privacy" ]
+        center = [ "date", "audio_visualizer", "clock" ]
         contact_shadow = false
         enabled = true
         end = [ "group:g1" ]
@@ -95,7 +95,7 @@ order = [ "main" ]
             [[bar.main.monitor.DP-2.capsule_group]]
             fill = "surface_variant"
             id = "g1"
-            members = [ "network_rx", "temp" ]
+            members = [ "network_rx", "ram", "temp" ]
             opacity = 1.0
             padding = 6.0
 
@@ -583,6 +583,10 @@ min_length = 80.0
 title_scroll = "none"
 type = "active_window"
 
+[widget.audio_visualizer]
+anchor = true
+type = "audio_visualizer"
+
 [widget.bongocat]
 audio_spectrum = true
 script = "scripts/bongocat.lua"
@@ -650,6 +654,10 @@ type = "sysmon"
 [widget.output_volume]
 device = "output"
 type = "volume"
+
+[widget.privacy]
+anchor = true
+type = "privacy"
 
 [widget.ram]
 stat = "ram_used"
