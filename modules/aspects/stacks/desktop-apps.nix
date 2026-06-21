@@ -58,7 +58,6 @@
           "google-drive"
           "iina"
           "microsoft-edge"
-          "microsoft-office"
           "obs"
           "obsidian"
           "qbittorrent"
