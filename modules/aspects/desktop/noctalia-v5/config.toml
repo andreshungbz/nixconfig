@@ -132,6 +132,7 @@ refresh_minutes = 15
 [control_center]
 sidebar = "full"
 sidebar_section = "full"
+width = 680
 
     [[control_center.shortcuts]]
     type = "wifi"
@@ -363,6 +364,7 @@ scale = 1.0
     lock_keys = true
     media = true
     power_profile = true
+    privacy = true
     volume = true
     volume_input = true
     volume_output = true
@@ -685,7 +687,7 @@ show_label = false
 type = "volume"
 
 [widget.weather]
-show_condition = true
+show_condition = false
 type = "weather"
 
 [widget.workspaces]
