@@ -43,6 +43,7 @@ order = [ "main" ]
     layer = "top"
     margin_edge = 10
     margin_ends = 10
+    margin_opposite_edge = 0
     padding = 10
     panel_overlap = 2
     position = "top"
@@ -57,6 +58,13 @@ order = [ "main" ]
     start = [ "workspaces" ]
     thickness = 30
     widget_spacing = 4
+
+        [bar.main.dead_zone]
+        command = ""
+        middle_command = ""
+        right_command = ""
+        scroll_down_command = ""
+        scroll_up_command = ""
 
         [bar.main.monitor.DP-2]
         auto_hide = false
@@ -76,6 +84,7 @@ order = [ "main" ]
         layer = "top"
         margin_edge = 10
         margin_ends = 10
+        margin_opposite_edge = 0
         match = "DP-2"
         padding = 10
         panel_overlap = 2
@@ -91,6 +100,13 @@ order = [ "main" ]
         start = [ "workspaces" ]
         thickness = 30
         widget_spacing = 4
+
+            [bar.main.monitor.DP-2.dead_zone]
+            command = ""
+            middle_command = ""
+            right_command = ""
+            scroll_down_command = ""
+            scroll_up_command = ""
 
             [[bar.main.monitor.DP-2.capsule_group]]
             fill = "surface_variant"
@@ -132,7 +148,7 @@ refresh_minutes = 15
 [control_center]
 sidebar = "full"
 sidebar_section = "full"
-width = 680
+width = 800
 
     [[control_center.shortcuts]]
     type = "wifi"
@@ -353,6 +369,7 @@ offset_x = 10
 offset_y = 10
 orientation = "horizontal"
 position = "top_right"
+position_vertical = "top_center"
 scale = 1.0
 
     [osd.kinds]
@@ -363,6 +380,7 @@ scale = 1.0
     keyboard_layout = true
     lock_keys = true
     media = true
+    nightlight = true
     power_profile = true
     privacy = true
     volume = true
@@ -430,7 +448,7 @@ ui_scale = 1.0
     launcher_categories = false
     launcher_compact = false
     launcher_placement = "centered"
-    launcher_session_search = true
+    launcher_session_search = false
     launcher_show_icons = true
     launcher_sort_by_usage = true
     open_near_click_clipboard = true
@@ -442,6 +460,10 @@ ui_scale = 1.0
     shadow = true
     transparency_mode = "glass"
     wallpaper_placement = "attached"
+
+    [shell.privacy]
+    cam_filter_regex = ""
+    mic_filter_regex = ""
 
     [shell.screen_corners]
     enabled = false
