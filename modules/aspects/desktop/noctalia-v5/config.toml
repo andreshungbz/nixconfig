@@ -445,10 +445,11 @@ ui_scale = 1.0
     clipboard_placement = "attached"
     control_center_placement = "attached"
     floating_offset = 8
+    launcher_app_grid = false
     launcher_categories = false
     launcher_compact = false
     launcher_placement = "centered"
-    launcher_session_search = false
+    launcher_session_search = true
     launcher_show_icons = true
     launcher_sort_by_usage = true
     open_near_click_clipboard = true
@@ -470,6 +471,7 @@ ui_scale = 1.0
     size = 32
 
     [shell.screenshot]
+    confirm_region = true
     copy_to_clipboard = true
     directory = ""
     filename_pattern = ""
