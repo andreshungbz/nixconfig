@@ -13,7 +13,7 @@
       };
 
       starshipBgColor =
-        if builtins.hasAttr hostname hostColors then hostColors.${hostname} else "#398a38";
+        if builtins.hasAttr hostname hostColors then hostColors.${hostname} else "#327731";
     in
     {
       homeManager = {
