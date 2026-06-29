@@ -42,7 +42,7 @@
           signal-desktop
           telegram-desktop
           thunderbird
-          # veracrypt
+          veracrypt
           vesktop
           vlc
           zoom-us
