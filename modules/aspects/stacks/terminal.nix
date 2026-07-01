@@ -20,5 +20,21 @@
           timg
         ];
       };
+
+    darwin = {
+      homebrew = {
+        brews = [
+
+        ];
+
+        casks = [
+
+        ];
+
+        masApps = {
+
+        };
+      };
+    };
   };
 }
