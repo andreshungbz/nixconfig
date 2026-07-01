@@ -80,7 +80,7 @@ order = [ "main" ]
         center = [ "date", "clock" ]
         contact_shadow = false
         enabled = true
-        end = [ "group:g1", "privacy" ]
+        end = [ "group:g1" ]
         font_weight = 500
         layer = "top"
         margin_edge = 10
@@ -99,7 +99,7 @@ order = [ "main" ]
         scale = 1.0
         shadow = true
         show_on_workspace_switch = true
-        start = [ "workspaces" ]
+        start = [ "privacy", "workspaces" ]
         thickness = 30
         widget_spacing = 4
 
@@ -124,6 +124,7 @@ warning_threshold = 20
 enable_ddcutil = true
 ignore_mmids = []
 minimum_brightness = 0.0
+sync_all_monitors = false
 
 [calendar]
 enabled = true
@@ -148,6 +149,7 @@ refresh_minutes = 15
     username = ""
 
 [control_center]
+hidden_tabs = []
 sidebar = "full"
 sidebar_section = "full"
 width = 800
@@ -295,27 +297,33 @@ widget_order = [
     box_height = 70.0
     box_width = 400.0
     cx = 1024.0
-    cy = 1049.0
+    cy = 1053.0
     enabled = true
     output = "DP-1"
     rotation = 0.0
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        show_caps_lock = true
+        show_keyboard_layout = true
         show_login_button = true
+        show_password_hint = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
     box_height = 70.0
     box_width = 400.0
     cx = 576.0
-    cy = 1933.0
+    cy = 1949.0
     enabled = true
     output = "DP-2"
     rotation = 0.0
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
+        show_caps_lock = true
+        show_keyboard_layout = true
         show_login_button = true
+        show_password_hint = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
     box_height = 128.0
@@ -423,6 +431,7 @@ disable_mipmaps = false
 font_family = "Noto Sans"
 lang = "en"
 launch_apps_as_systemd_services = false
+launch_apps_custom_command = ""
 middle_click_opens_widget_settings = true
 niri_overview_type_to_launch_enabled = true
 offline_mode = false
@@ -442,6 +451,7 @@ ui_scale = 1.0
     speed = 1.0
 
     [shell.greeter_sync]
+    auto_sync = false
 
     [shell.launcher]
     app_grid = false
@@ -719,7 +729,7 @@ stat = "cpu_temp"
 type = "sysmon"
 
 [widget.temp]
-stat = "cpu_temp"
+stat = "gpu_temp"
 type = "sysmon"
 
 [widget.tray]
