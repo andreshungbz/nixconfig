@@ -32,6 +32,7 @@
           discord
           discord-canary
           discord-ptb
+          element-desktop
           cider-2
           firefox
           microsoft-edge
@@ -54,6 +55,7 @@
         casks = [
           "alt-tab"
           "discord"
+          "element"
           "firefox"
           "google-drive"
           "iina"
