@@ -12,6 +12,10 @@
 
         programs = {
           gamemode.enable = true;
+          gamescope = {
+            enable = true;
+            capSysNice = true;
+          };
 
           # https://wiki.nixos.org/wiki/Steam
           steam = {
