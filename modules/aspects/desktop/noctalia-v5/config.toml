@@ -193,6 +193,8 @@ icon_size = 30
 inactive_opacity = 1.0
 inactive_scale = 1.0
 item_spacing = 4
+launcher_custom_image = ""
+launcher_custom_image_colorize = false
 launcher_icon = "grid-dots"
 launcher_position = "start"
 magnification = true
@@ -626,7 +628,7 @@ transition_on_startup = true
     recursive = true
 
     [wallpaper.default]
-    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/tnt-camp.jpg"
+    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/cobalt-core-1.png"
 
 [weather]
 effects = true
