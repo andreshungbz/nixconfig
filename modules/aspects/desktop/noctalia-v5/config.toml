@@ -627,9 +627,6 @@ transition_on_startup = true
     order = "random"
     recursive = true
 
-    [wallpaper.default]
-    path = "~/Pictures/Wallpapers/nixconfig-wallpapers/cobalt-core-1.png"
-
 [weather]
 effects = true
 enabled = true
