@@ -28,7 +28,6 @@
           impression
           loupe
           papers
-          snapshot
 
           discord
           discord-canary
