@@ -28,6 +28,8 @@
           # Window Focus Ring
           focus-ring = {
             width = 2;
+            active-color = "#fdb00b";
+            inactive-color = "#00000000";
           };
         };
       };
