@@ -24,7 +24,7 @@
         <pkt/niri>
         <pkt/nixos-base>
         <pkt/noctalia>
-        <pkt/sddm>
+        <pkt/noctalia-greeter>
         <pkt/terminal>
       ];
     };

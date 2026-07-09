@@ -474,7 +474,7 @@ ui_scale = 1.0
     speed = 1.0
 
     [shell.greeter_sync]
-    auto_sync = false
+    auto_sync = true
 
     [shell.launcher]
     app_grid = false
@@ -620,7 +620,7 @@ swap_pct_critical_threshold = 90.0
 builtin = "Noctalia"
 community_palette = "Osaka jade"
 custom_palette = ""
-mode = "auto"
+mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "m3-tonal-spot"
 
@@ -631,7 +631,7 @@ wallpaper_scheme = "m3-tonal-spot"
     enable_community_templates = true
 
 [wallpaper]
-directory = "~/Pictures/Wallpapers"
+directory = "/home/packet/Pictures/Wallpapers"
 directory_dark = ""
 directory_light = ""
 edge_smoothness = 0.30000001192092896
