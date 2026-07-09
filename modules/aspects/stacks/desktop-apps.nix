@@ -24,6 +24,7 @@
           gnome-disk-utility
           gnome-font-viewer
           gnome-logs
+          gnome-text-editor
           impression
           loupe
           papers
