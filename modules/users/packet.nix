@@ -18,14 +18,6 @@
       };
     };
 
-    homeManager = {
-      # useful for setting an icon when testing, but probably conflicts in real setups.
-      # home.file.".face.icon".source = ./avatar.png;
-
-      # explicitly set home.pointerCursor.enable
-      home.pointerCursor.enable = true;
-    };
-
     darwin = {
       users.users.packet = {
         isHidden = false;
