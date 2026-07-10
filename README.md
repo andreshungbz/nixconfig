@@ -117,12 +117,12 @@ When dual-booting NixOS with Windows, run another rebuild so that grub can detec
 
 ## Management Commands
 
-| Action                            | Command                                        |
-| --------------------------------- | ---------------------------------------------- |
-| NixOS Rebuild                     | `nh os switch --ask`                           |
-| nix-darwin Rebuild                | `nh darwin switch --ask`                       |
-| home-manager (standalone) Rebuild | `nh home switch --ask -c packet@aarch64-linux` |
-| Garbage Collection                | `nh clean all --ask`                           |
+| Action               | `nh` Command                                   | Regular Command                                      |
+| -------------------- | ---------------------------------------------- | ---------------------------------------------------- |
+| NixOS Rebuild        | `nh os switch --ask`                           | `sudo nixos-rebuild switch --flake .#kangaroo`       |
+| nix-darwin Rebuild   | `nh darwin switch --ask`                       | `sudo darwin-rebuild switch --flake .#hyena`         |
+| home-manager Rebuild | `nh home switch --ask -c packet@aarch64-linux` | `home-manager switch --flake .#packet@aarch64-linux` |
+| Garbage Collection   | `nh clean all --ask`                           | `sudo nix-collect-garbage -d`                        |
 
 ## Inspirations
 
