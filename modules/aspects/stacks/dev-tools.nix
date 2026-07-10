@@ -6,6 +6,7 @@
       <pkt/docker>
       <pkt/git>
       <pkt/gpg>
+      <pkt/keyd>
       <pkt/postgresql>
       <pkt/wireshark>
     ];
