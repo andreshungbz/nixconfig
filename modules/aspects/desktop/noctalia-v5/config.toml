@@ -114,7 +114,7 @@ order = [ "main" ]
         enabled = true
         fill = "surface_variant"
         id = "g1"
-        members = [ "clipboard", "notifications", "bluetooth", "network", "volume", "battery" ]
+        members = [ "clipboard", "notifications", "volume", "bluetooth", "network", "battery" ]
         opacity = 1.0
         padding = 6.0
 
@@ -398,11 +398,11 @@ show_app_name = true
 
 [osd]
 background_opacity = 0.75
-monitors = [ "DP-1" ]
+monitors = [ "DP-2" ]
 offset_x = 10
 offset_y = 10
 orientation = "horizontal"
-position = "top_right"
+position = "bottom_right"
 position_vertical = "top_center"
 scale = 1.0
 
