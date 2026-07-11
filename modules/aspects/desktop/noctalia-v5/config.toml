@@ -750,7 +750,7 @@ stat = "cpu_temp"
 type = "sysmon"
 
 [widget.temp]
-stat = "gpu_temp"
+stat = "cpu_temp"
 type = "sysmon"
 
 [widget.tray]
