@@ -3,6 +3,7 @@
   pkt.desktop-apps = {
     includes = [
       <pkt/bitwarden>
+      <pkt/davinci-resolve>
       <pkt/flatpak>
       <pkt/kitty>
       <pkt/nautilus>
