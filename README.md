@@ -8,7 +8,7 @@ This repository contains my dentritic Nix configurations for a variety of hosts 
 
 [NixOS](https://nixos.org/) AMD gaming desktop running [Niri](https://github.com/niri-wm/niri) and [Noctalia](https://noctalia.dev/) v5, testable with the `nix run .#vm-kangaroo` command.
 
-![Screenshot of the kangaroo desktop.](./assets/screenshots/2026-06-14-kangaroo.png)
+![Screenshot of the kangaroo desktop.](./assets/screenshots/2026-07-17-kangaroo.png)
 
 ### `hyena`
 
