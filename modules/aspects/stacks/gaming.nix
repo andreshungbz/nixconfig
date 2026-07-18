@@ -67,7 +67,10 @@
         ];
 
         taps = [
-          "LizardByte/homebrew"
+          {
+            name = "LizardByte/homebrew";
+            trusted = true;
+          }
         ];
       };
     };
