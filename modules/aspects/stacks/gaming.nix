@@ -61,9 +61,12 @@
 
     darwin = {
       homebrew = {
+        brews = [
+          "sunshine"
+        ];
+
         casks = [
           "steam"
-          "sunshine"
         ];
 
         taps = [
