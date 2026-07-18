@@ -31,6 +31,7 @@
 
         users.users.${user.userName}.packages = with pkgs; [
           dusklight
+          moonlight-qt
           prismlauncher
 
           # emulators
