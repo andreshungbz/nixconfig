@@ -63,6 +63,11 @@
       homebrew = {
         casks = [
           "steam"
+          "sunshine"
+        ];
+
+        taps = [
+          "LizardByte/homebrew"
         ];
       };
     };
