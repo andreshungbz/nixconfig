@@ -26,6 +26,7 @@
           jq
           ookla-speedtest
           powershell
+          texliveFull
           tldr
           tree
           wget
@@ -51,6 +52,7 @@
           jq
           ookla-speedtest
           powershell
+          texliveFull
           tldr
           tree
           wget
