@@ -5,6 +5,15 @@
 
     homeManager = {
       wayland.windowManager.niri.settings.window-rule = [
+        # Element Full Width Half Height - Secondary Monitor
+        {
+          match._props.app-id = "element";
+          open-on-output = "DP-2";
+          default-column-display = "normal";
+          default-column-width.proportion = 1.0;
+          default-window-height.proportion = 0.5;
+        }
+
         # Discord Full Width Half Height - Secondary Monitor
         {
           match._props.app-id = "^discord$";
@@ -53,6 +62,15 @@
         # Telegram Full Width Half Height - Secondary Monitor
         {
           match._props.app-id = "^org.telegram.desktop$";
+          open-on-output = "DP-2";
+          default-column-display = "normal";
+          default-column-width.proportion = 1.0;
+          default-window-height.proportion = 0.5;
+        }
+
+        # Signal Full Width Half Height - Secondary Monitor
+        {
+          match._props.app-id = "signal";
           open-on-output = "DP-2";
           default-column-display = "normal";
           default-column-width.proportion = 1.0;
