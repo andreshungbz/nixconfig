@@ -41,6 +41,15 @@
           default-window-height.proportion = 0.5;
         }
 
+        # Fluxer Full Width Half Height - Secondary Monitor
+        {
+          match._props.app-id = "^app.fluxer.Fluxer$";
+          open-on-output = "DP-2";
+          default-column-display = "normal";
+          default-column-width.proportion = 1.0;
+          default-window-height.proportion = 0.5;
+        }
+
         # Telegram Full Width Half Height - Secondary Monitor
         {
           match._props.app-id = "^org.telegram.desktop$";

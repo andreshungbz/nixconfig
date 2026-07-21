@@ -1,4 +1,4 @@
-{ __findFile, ... }:
+{ __findFile, inputs, ... }:
 {
   pkt.desktop-apps = {
     includes = [
@@ -16,6 +16,12 @@
     nixos =
       { pkgs, user, ... }:
       {
+        imports = [ inputs.nix-flatpak.nixosModules.nix-flatpak ];
+
+        services.flatpak.packages = [
+          "app.fluxer.Fluxer"
+        ];
+
         users.users.${user.userName}.packages = with pkgs; [
           # https://apps.gnome.org/
           baobab
