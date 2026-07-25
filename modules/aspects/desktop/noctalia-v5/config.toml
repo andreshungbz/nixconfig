@@ -56,11 +56,6 @@ order = [ "main" ]
     widget_spacing = 4
 
         [bar.main.dead_zone]
-        command = ""
-        middle_command = ""
-        right_command = ""
-        scroll_down_command = ""
-        scroll_up_command = ""
 
         [bar.main.monitor.DP-2]
         auto_hide = false
@@ -102,11 +97,6 @@ order = [ "main" ]
         widget_spacing = 4
 
             [bar.main.monitor.DP-2.dead_zone]
-            command = ""
-            middle_command = ""
-            right_command = ""
-            scroll_down_command = ""
-            scroll_up_command = ""
 
             [[bar.main.monitor.DP-2.capsule_group]]
             enabled = true
@@ -140,7 +130,9 @@ refresh_minutes = 15
     [calendar.account.personal_google]
     calendars = []
     color = ""
+    credential_source = "secret-service"
     name = "Gmail Main"
+    password_file = ""
     provider = ""
     server_url = ""
     type = "google"
@@ -149,7 +141,9 @@ refresh_minutes = 15
     [calendar.account.school_google]
     calendars = []
     color = ""
+    credential_source = "secret-service"
     name = "University of Belize"
+    password_file = ""
     provider = ""
     server_url = ""
     type = "google"
@@ -162,7 +156,10 @@ sidebar_section = "full"
 width = 800
 
     [control_center.calendar]
+    event_date_format = "%A %e %B"
+    event_time_format = "%H:%M"
     show_events_card = true
+    show_week_numbers = false
 
     [[control_center.shortcuts]]
     type = "wifi"
@@ -210,6 +207,7 @@ launcher_custom_image = ""
 launcher_custom_image_colorize = false
 launcher_icon = "grid-dots"
 launcher_position = "start"
+layer = "top"
 magnification = true
 magnification_scale = 1.4500000476837158
 main_axis_padding = 16
@@ -492,7 +490,6 @@ input_borders = true
 lang = "en"
 launch_apps_as_systemd_services = false
 launch_apps_custom_command = ""
-middle_click_opens_widget_settings = true
 niri_overview_type_to_launch_enabled = true
 offline_mode = false
 password_style = "random"
@@ -516,6 +513,7 @@ time_format = "{:%-I:%M %p}"
 
     [shell.launcher]
     app_grid = false
+    auto_paste = "auto"
     categories = true
     compact = false
     fetch_exchange_rates = true
@@ -575,6 +573,7 @@ time_format = "{:%-I:%M %p}"
     [shell.session]
     grid = false
     grid_columns = 3
+    show_shortcuts = true
 
         [shell.session.power]
 
@@ -632,6 +631,10 @@ time_format = "{:%-I:%M %p}"
     alpha = 0.5
     direction = "down_left"
 
+[storage]
+key_file = ""
+key_source = "secret-service"
+
 [system.monitor]
 cpu_poll_seconds = 2.0
 cpu_temp_activity_threshold = 60.0
@@ -639,9 +642,15 @@ cpu_temp_critical_threshold = 85.0
 cpu_temp_sensor_path = ""
 cpu_usage_activity_threshold = 10.0
 cpu_usage_critical_threshold = 100.0
-disk_pct_activity_threshold = 80.0
-disk_pct_critical_threshold = 99.0
+disk_free_activity_threshold = 80.0
+disk_free_critical_threshold = 95.0
+disk_free_pct_activity_threshold = 80.0
+disk_free_pct_critical_threshold = 95.0
 disk_poll_seconds = 10.0
+disk_used_activity_threshold = 80.0
+disk_used_critical_threshold = 95.0
+disk_used_pct_activity_threshold = 80.0
+disk_used_pct_critical_threshold = 95.0
 enabled = true
 gpu_poll_seconds = 5.0
 gpu_temp_activity_threshold = 60.0
@@ -744,7 +753,6 @@ device = "input"
 type = "volume"
 
 [widget.keyboard_layout]
-cycle_command = ""
 hide_when_single_layout = false
 type = "keyboard_layout"
 
