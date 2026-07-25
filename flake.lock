@@ -150,11 +150,11 @@
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
       },
       "locked": {
-        "lastModified": 1784765696,
-        "narHash": "sha256-jrAo+NMWWtKulUqpGf3ybqwM7Iu59C4Xm/Z35PIoZ3Q=",
+        "lastModified": 1784938247,
+        "narHash": "sha256-yO+L8iSAjvDA6gm+9Jmr+pLt9FkGU5j5mT1DdFpz9Wk=",
         "ref": "refs/heads/main",
-        "rev": "5453dbd159ee958f5d98dc963b877d6c945c7b4a",
-        "revCount": 146,
+        "rev": "baa586fdd74462f853e478cd3f2c60c57cbd08ae",
+        "revCount": 147,
         "type": "git",
         "url": "https://codeberg.org/BANanaD3V/niri-nix"
       },
@@ -196,11 +196,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1784497964,
-        "narHash": "sha256-vlHUuqAcbcH2RKmHbPiuQzbv1pnzzavXnI62RD0bqCU=",
+        "lastModified": 1784796856,
+        "narHash": "sha256-wWFrV5/Qbm+lyt5x20E/bSbfJiGKMo4RCxZV8cl/WZI=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "241313f4e8e508cb9b13278c2b0fa25b9ca27163",
+        "rev": "e2587caef70cea85dd97d7daab492899902dbf5d",
         "type": "github"
       },
       "original": {
@@ -260,11 +260,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1784908531,
-        "narHash": "sha256-Rdzn2W6f1M5YDeOO0+LZBen07+1ih3Rcv+hEuvY6V8c=",
+        "lastModified": 1784944609,
+        "narHash": "sha256-+TlclUP7Q2ylQ8Uh9M35U1ftuGdp++/QfnX9I3V3VeI=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "2a4a210a95b7dbfeb77f034cd07e5d278b119868",
+        "rev": "8fc7fac1fd637f0027ce1b3cc9544d053cfd8f2c",
         "type": "github"
       },
       "original": {
