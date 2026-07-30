@@ -151,9 +151,10 @@ refresh_minutes = 15
 
 [control_center]
 hidden_tabs = []
+show_shortcut_labels = true
 sidebar = "full"
 sidebar_section = "full"
-width = 800
+width = 850
 
     [control_center.calendar]
     event_date_format = "%A %e %B"
@@ -288,9 +289,12 @@ pre_action_fade_seconds = 2.0
 
 [keybinds]
 cancel = [ "Escape" ]
+copy = [ "Ctrl+c" ]
+delete = [ "Delete" ]
 down = [ "Down" ]
 left = [ "Left" ]
 right = [ "Right" ]
+save = [ "Ctrl+s" ]
 tab_next = [ "Tab" ]
 tab_previous = [ "Shift+Tab", "ISO_Left_Tab" ]
 up = [ "Up" ]
@@ -319,7 +323,6 @@ schema_version = 1
 widget_order = [
     "lockscreen-login-box@DP-2",
     "lockscreen-login-box@DP-1",
-    "lockscreen-widget-0000000000000001",
     "lockscreen-widget-0000000000000002",
     "lockscreen-widget-0000000000000003"
 ]
@@ -330,52 +333,47 @@ widget_order = [
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
-    box_height = 96.0
-    box_width = 448.0
+    box_height = 196.0
+    box_width = 720.0
     cx = 1024.0
-    cy = 1040.0
+    cy = 990.0
     enabled = true
     output = "DP-1"
     rotation = 0.0
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_opacity = 0.84999999999999998
+        center_password_text = false
+        layout = "regular"
         show_caps_lock = true
         show_keyboard_layout = true
         show_login_button = true
-        show_password_hint = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
-    box_height = 96.0
-    box_width = 464.0
+    box_height = 196.0
+    box_width = 720.0
     cx = 576.0
-    cy = 1936.0
+    cy = 1886.0
     enabled = true
     output = "DP-2"
     rotation = 0.0
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
+        center_password_text = false
+        layout = "regular"
         show_caps_lock = true
         show_keyboard_layout = true
         show_login_button = true
-        show_password_hint = true
-
-    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
-    box_height = 128.0
-    box_width = 288.0
-    cx = 208.0
-    cy = 256.0
-    enabled = true
-    output = "DP-1"
-    rotation = 0.0
-    type = "weather"
-
-        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
-        background_opacity = 0.80000000000000004
-        forecast_days = 3
-        shadow = false
-        show_forecast = false
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
     box_height = 96.0
@@ -394,8 +392,8 @@ widget_order = [
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
     box_height = 128.0
     box_width = 288.0
-    cx = 208.0
-    cy = 416.0
+    cx = 208.45285034179688
+    cy = 240.0
     enabled = true
     output = "DP-1"
     rotation = 0.0
@@ -416,6 +414,7 @@ background_opacity = 0.75
 border = true
 collapse_on_dismiss = true
 enable_daemon = true
+history_retention_hours = 0
 layer = "top"
 monitors = [ "DP-1" ]
 offset_x = 10
@@ -476,11 +475,13 @@ enabled = []
 app_icon_colorize = false
 avatar_path = "/home/packet/Pictures/nixconfig-avatars/crow.png"
 button_borders = true
+card_borders = true
 clipboard_auto_paste = "auto"
 clipboard_confirm_clear_history = false
 clipboard_enabled = true
 clipboard_history_max_entries = 50
 clipboard_image_action_command = ""
+clipboard_keep_from_closed_apps = true
 corner_radius_scale = 0.5
 date_format = "%A, %x"
 disable_mipmaps = false
@@ -532,6 +533,7 @@ time_format = "{:%-I:%M %p}"
     clipboard_position = "center"
     control_center_placement = "attached"
     control_center_position = "auto"
+    floating_layer = "overlay"
     floating_offset = 8
     launcher_placement = "floating"
     launcher_position = "center"
@@ -567,6 +569,7 @@ time_format = "{:%-I:%M %p}"
     freeze_screen = true
     pipe_command = ""
     pipe_to_command = false
+    remember_last_region = false
     save_to_file = true
     show_cursor = false
 
@@ -797,6 +800,7 @@ stat = "ram_used"
 type = "sysmon"
 
 [widget.spacer]
+interactive = false
 type = "spacer"
 
 [widget.sysmon]
