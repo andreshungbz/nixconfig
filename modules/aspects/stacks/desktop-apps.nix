@@ -72,6 +72,7 @@
           "obsidian"
           "qbittorrent"
           "raycast"
+          "signal"
           "stats"
           "ti-connect-ce"
           "veracrypt"
