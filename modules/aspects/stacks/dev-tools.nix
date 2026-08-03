@@ -31,12 +31,16 @@
           tree
           wget
 
-          #gui
+          # gui
           postman
           rpi-imager
           termius
           vscode
           zed-editor
+
+          # game development
+          godot
+          godot-mono
         ];
       };
 
