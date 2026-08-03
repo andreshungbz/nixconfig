@@ -99,6 +99,8 @@ order = [ "main" ]
             [bar.main.monitor.DP-2.dead_zone]
 
             [[bar.main.monitor.DP-2.capsule_group]]
+            accordion = false
+            accordion_direction = "end"
             enabled = true
             fill = "surface_variant"
             id = "g1"
@@ -107,6 +109,8 @@ order = [ "main" ]
             padding = 6.0
 
         [[bar.main.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
         enabled = true
         fill = "surface_variant"
         id = "g1"
@@ -512,6 +516,8 @@ time_format = "{:%-I:%M %p}"
     [shell.greeter_sync]
     auto_sync = true
 
+    [shell.keyboard_layout]
+
     [shell.launcher]
     app_grid = false
     auto_paste = "auto"
@@ -826,6 +832,6 @@ show_condition = false
 type = "weather"
 
 [widget.workspaces]
-display = "name"
+label_source = "name"
 max_label_chars = 10
 type = "workspaces"
