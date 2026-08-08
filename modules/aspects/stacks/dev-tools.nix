@@ -41,6 +41,9 @@
           # game development
           godot
           godot-mono
+
+          # digital logic
+          logisim-evolution
         ];
       };
 
@@ -60,6 +63,9 @@
           tldr
           tree
           wget
+
+          # digital logic
+          logisim-evolution
         ];
 
         homebrew = {
