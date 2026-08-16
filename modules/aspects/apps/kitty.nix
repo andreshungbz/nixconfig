@@ -22,6 +22,7 @@
             settings = {
               background_opacity = 0.75;
               background_blur = 1;
+              tab_bar_edge = "top";
               window_padding_width = 8;
 
               # workaround for https://github.com/nix-darwin/nix-darwin/issues/1237
