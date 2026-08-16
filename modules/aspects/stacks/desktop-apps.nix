@@ -36,6 +36,8 @@
           loupe
           papers
 
+          brave
+          brave-origin
           discord
           discord-canary
           discord-ptb
@@ -62,6 +64,7 @@
       homebrew = {
         casks = [
           "alt-tab"
+          "brave-browser"
           "discord"
           "element"
           "firefox"
