@@ -30,7 +30,7 @@
         };
 
         users.users.${user.userName}.packages = with pkgs; [
-          dusklight
+          # dusklight
           moonlight-qt
           prismlauncher
 
