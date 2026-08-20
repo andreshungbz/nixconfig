@@ -30,6 +30,7 @@
           tldr
           tree
           wget
+          zellij
 
           # gui
           postman
@@ -63,6 +64,7 @@
           tldr
           tree
           wget
+          zellij
 
           # digital logic
           logisim-evolution
