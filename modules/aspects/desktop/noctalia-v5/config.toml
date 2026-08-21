@@ -473,7 +473,7 @@ scale = 1.0
 [plugin_settings]
 
 [plugins]
-auto_update = true
+auto_update = "all"
 enabled = []
 
     [[plugins.source]]
@@ -541,6 +541,7 @@ time_format = "{:%-I:%M %p}"
     pinned = []
     provider_prefix = "/"
     show_app_actions = false
+    show_app_origin_indicator = true
     show_icons = true
     sort_by_usage = true
 
