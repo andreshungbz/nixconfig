@@ -20,6 +20,7 @@
       <pkt/niri-outputs>
       <pkt/niri-startup>
       <pkt/niri-window-rules>
+      <pkt/niri-workspaces>
     ];
 
     nixos =

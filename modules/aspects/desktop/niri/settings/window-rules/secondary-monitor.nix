@@ -5,76 +5,76 @@
 
     homeManager = {
       wayland.windowManager.niri.settings.window-rule = [
-        # Element Full Width Half Height - Secondary Monitor
+        # Element
         {
           match._props.app-id = "element";
-          open-on-output = "DP-2";
+          open-on-workspace = "chat";
           default-column-display = "normal";
           default-column-width.proportion = 1.0;
-          default-window-height.proportion = 0.5;
+          default-window-height.proportion = 1.0;
         }
 
-        # Discord Full Width Half Height - Secondary Monitor
+        # Discord
         {
           match._props.app-id = "^discord$";
-          open-on-output = "DP-2";
+          open-on-workspace = "chat";
           default-column-display = "normal";
           default-column-width.proportion = 1.0;
-          default-window-height.proportion = 0.5;
+          default-window-height.proportion = 1.0;
         }
 
-        # Discord PTB Full Width Half Height - Secondary Monitor
+        # Discord PTB
         {
           match._props.app-id = "^discord-ptb$";
-          open-on-output = "DP-2";
+          open-on-workspace = "chat";
           default-column-display = "normal";
           default-column-width.proportion = 1.0;
-          default-window-height.proportion = 0.5;
+          default-window-height.proportion = 1.0;
         }
 
-        # Discord Canary Full Width Half Height - Secondary Monitor
+        # Discord Canary
         {
           match._props.app-id = "^discord-canary$";
-          open-on-output = "DP-2";
+          open-on-workspace = "chat";
           default-column-display = "normal";
           default-column-width.proportion = 1.0;
-          default-window-height.proportion = 0.5;
+          default-window-height.proportion = 1.0;
         }
 
-        # Vesktop Full Width Half Height - Secondary Monitor
+        # Vesktop
         {
           match._props.app-id = "^vesktop$";
-          open-on-output = "DP-2";
+          open-on-workspace = "chat";
           default-column-display = "normal";
           default-column-width.proportion = 1.0;
-          default-window-height.proportion = 0.5;
+          default-window-height.proportion = 1.0;
         }
 
-        # Fluxer Full Width Half Height - Secondary Monitor
+        # Fluxer
         {
           match._props.app-id = "^app.fluxer.Fluxer$";
-          open-on-output = "DP-2";
+          open-on-workspace = "chat";
           default-column-display = "normal";
           default-column-width.proportion = 1.0;
-          default-window-height.proportion = 0.5;
+          default-window-height.proportion = 1.0;
         }
 
-        # Telegram Full Width Half Height - Secondary Monitor
+        # Telegram
         {
           match._props.app-id = "^org.telegram.desktop$";
-          open-on-output = "DP-2";
+          open-on-workspace = "chat";
           default-column-display = "normal";
           default-column-width.proportion = 1.0;
-          default-window-height.proportion = 0.5;
+          default-window-height.proportion = 1.0;
         }
 
-        # Signal Full Width Half Height - Secondary Monitor
+        # Signal
         {
           match._props.app-id = "signal";
-          open-on-output = "DP-2";
+          open-on-workspace = "chat";
           default-column-display = "normal";
           default-column-width.proportion = 1.0;
-          default-window-height.proportion = 0.5;
+          default-window-height.proportion = 1.0;
         }
       ];
     };
