@@ -9,15 +9,6 @@
 
         spawn-at-startup = [
           { _args = [ "noctalia" ]; }
-          { _args = [ "Telegram" ]; }
-          { _args = [ "discord" ]; }
-          { _args = [ "discordptb" ]; }
-          { _args = [ "discordcanary" ]; }
-          { _args = [ "element-desktop" ]; }
-          { _args = [ "signal-desktop" ]; }
-          { _args = [ "cider-2" ]; }
-          { _args = [ "steam" ]; }
-          { _args = [ "thunderbird" ]; }
         ];
       };
     };
