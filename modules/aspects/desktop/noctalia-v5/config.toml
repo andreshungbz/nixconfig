@@ -26,12 +26,12 @@ order = [ "main" ]
     capsule_fill = "surface_variant"
     capsule_opacity = 1.0
     capsule_padding = 6.0
-    capsule_thickness = 0.75999999046325684
-    center = [ "date", "control-center", "clock" ]
+    capsule_thickness = 0.80000001192092896
+    center = [ "clock", "date", "control-center", "media" ]
     concave_edge_corners = false
     contact_shadow = false
     enabled = true
-    end = [ "media", "weather", "tray", "group:g1" ]
+    end = [ "widget", "weather", "tray", "group:g1", "group:g4" ]
     font_weight = 500
     hover_highlight = true
     layer = "top"
@@ -51,7 +51,7 @@ order = [ "main" ]
     shadow = true
     show_on_workspace_switch = true
     smart_auto_hide = false
-    start = [ "launcher", "workspaces" ]
+    start = [ "group:g2" ]
     thickness = 30
     widget_spacing = 4
 
@@ -67,7 +67,7 @@ order = [ "main" ]
         capsule_opacity = 1.0
         capsule_padding = 6.0
         capsule_thickness = 0.75999999046325684
-        center = [ "date", "control-center", "clock" ]
+        center = [ "clock", "date", "control-center", "privacy" ]
         concave_edge_corners = false
         contact_shadow = false
         enabled = true
@@ -92,7 +92,7 @@ order = [ "main" ]
         shadow = true
         show_on_workspace_switch = true
         smart_auto_hide = false
-        start = [ "privacy", "workspaces" ]
+        start = [ "group:g2" ]
         thickness = 30
         widget_spacing = 4
 
@@ -104,9 +104,20 @@ order = [ "main" ]
             enabled = true
             fill = "surface_variant"
             id = "g1"
-            members = [ "network_rx", "ram", "temp" ]
+            members = [ "network_tx", "network_rx", "ram", "temp" ]
             opacity = 1.0
             padding = 6.0
+
+            [[bar.main.monitor.DP-2.capsule_group]]
+            accordion = false
+            accordion_direction = "end"
+            enabled = true
+            fill = "surface_variant"
+            id = "g2"
+            members = [ "launcher", "workspaces" ]
+            opacity = 1.0
+            padding = 6.0
+            widget_spacing = 8
 
         [[bar.main.capsule_group]]
         accordion = false
@@ -114,9 +125,32 @@ order = [ "main" ]
         enabled = true
         fill = "surface_variant"
         id = "g1"
-        members = [ "clipboard", "notifications", "volume", "bluetooth", "network", "battery" ]
+        members = [ "notes_2", "clipboard", "notifications", "volume", "bluetooth", "network", "battery" ]
         opacity = 1.0
         padding = 6.0
+        widget_spacing = 8
+
+        [[bar.main.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g2"
+        members = [ "launcher", "workspaces" ]
+        opacity = 1.0
+        padding = 6.0
+        widget_spacing = 8
+
+        [[bar.main.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g4"
+        members = [ "status", "nix_monitor_2" ]
+        opacity = 1.0
+        padding = 6.0
+        widget_spacing = 8
 
 [battery]
 warning_threshold = 20
@@ -165,7 +199,7 @@ width = 850
     event_date_format = "%A %e %B"
     event_time_format = "%H:%M"
     show_events_card = true
-    show_week_numbers = false
+    show_week_numbers = true
 
     [[control_center.shortcuts]]
     type = "wifi"
@@ -332,7 +366,9 @@ widget_order = [
     "lockscreen-login-box@DP-2",
     "lockscreen-login-box@DP-1",
     "lockscreen-widget-0000000000000002",
-    "lockscreen-widget-0000000000000003"
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-widget-0000000000000005",
+    "lockscreen-widget-0000000000000006"
 ]
 
     [lockscreen_widgets.grid]
@@ -416,8 +452,39 @@ widget_order = [
     type = "sysmon"
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        display = "graph"
+        network_speed_compact = false
         stat = "net_rx"
-        stat2 = ""
+        stat2 = "net_tx"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000005]
+    box_height = 384.0
+    box_width = 608.0
+    cx = 1680.0
+    cy = 256.0
+    enabled = true
+    output = "DP-1"
+    placement_height = 1152.0
+    placement_width = 2048.0
+    rotation = 0.0
+    type = "calendar"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000005.settings]
+        show_week_numbers = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000006]
+    box_height = 176.0
+    box_width = 288.0
+    cx = 208.45285034179688
+    cy = 408.0
+    enabled = true
+    output = "DP-1"
+    placement_height = 1152.0
+    placement_width = 2048.0
+    rotation = 0.0
+    type = "noctalia/timer:desktop"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000006.settings]
 
 [nightlight]
 enabled = false
@@ -470,11 +537,37 @@ scale = 1.0
     volume_output = true
     wifi = true
 
-[plugin_settings]
+[plugin_settings."8bury/mini-docker"]
+manager_position = "auto"
+
+[plugin_settings."avivbintangaringga/nix-monitor"]
+panel_placement = "floating"
+show_update_available_notification = false
+update_command = "sudo nixos-rebuild switch --flake ~/Projects/nixconfig#kangaroo"
+
+[plugin_settings."davemhammer/tailscale"]
+manager_position = "auto"
+
+[plugin_settings."noctalia/notes"]
+panel_open_near_click = true
+panel_position = "auto"
+
+[plugin_settings."noctalia/wallhaven"]
+download_dir = "/home/packet/Pictures/Wallpapers/wallhaven"
+
+[plugin_settings."rylos/tailnet"]
+panel_placement = "floating"
 
 [plugins]
 auto_update = "all"
-enabled = []
+enabled = [
+    "noctalia/notes",
+    "noctalia/timer",
+    "noctalia/translator",
+    "avivbintangaringga/nix-monitor",
+    "davemhammer/tailscale",
+    "thepunkoff/pomodoro"
+]
 
     [[plugins.source]]
     enabled = true
@@ -794,8 +887,9 @@ type = "lock_keys"
 
 [widget.media]
 art_size = 16.0
+capsule = true
 hide_when_no_media = true
-max_length = 220.0
+max_length = 280
 min_length = 80.0
 title_scroll = "always"
 type = "media"
@@ -812,6 +906,20 @@ type = "sysmon"
 stat = "net_tx"
 type = "sysmon"
 
+[widget.nix-monitor]
+show_text = false
+type = "avivbintangaringga/nix-monitor:nix-monitor"
+
+[widget.nix_monitor_2]
+show_text = false
+type = "avivbintangaringga/nix-monitor:nix-monitor"
+
+[widget.notes]
+type = "noctalia/notes:notes"
+
+[widget.notes_2]
+type = "noctalia/notes:notes"
+
 [widget.output_volume]
 device = "output"
 type = "volume"
@@ -827,6 +935,12 @@ type = "sysmon"
 [widget.spacer]
 interactive = false
 type = "spacer"
+
+[widget.status]
+capsule = true
+scale = 0.90000000000000013
+show_counts = false
+type = "davemhammer/tailscale:status"
 
 [widget.sysmon]
 stat = "cpu_temp"
@@ -849,6 +963,9 @@ type = "volume"
 [widget.weather]
 show_condition = false
 type = "weather"
+
+[widget.widget]
+type = "thepunkoff/pomodoro:widget"
 
 [widget.workspaces]
 label_source = "name"
