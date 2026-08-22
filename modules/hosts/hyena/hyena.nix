@@ -35,10 +35,11 @@
             { app = "/Applications/Telegram.app"; }
             { app = "/Applications/Discord.app"; }
             { app = "/Applications/Firefox.app"; }
-            { app = "/Applications/Microsoft Edge.app"; }
+            { app = "/Applications/Brave Browser.app"; }
             { app = "/Applications/Visual Studio Code.app"; }
             # { app = "/Applications/Obsidian.app"; }
             { app = "/Users/${user.userName}/Applications/Home Manager Apps/kitty.app"; }
+            { app = "/Applications/UTM.app"; }
           ];
         };
     };
