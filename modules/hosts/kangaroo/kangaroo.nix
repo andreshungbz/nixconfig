@@ -94,7 +94,6 @@
               /etc/profiles/per-user/packet/bin/element-desktop &
               /etc/profiles/per-user/packet/bin/signal-desktop &
               /etc/profiles/per-user/packet/bin/cider-2 &
-              /run/current-system/sw/bin/steam &
               /etc/profiles/per-user/packet/bin/thunderbird &
             '';
           };
