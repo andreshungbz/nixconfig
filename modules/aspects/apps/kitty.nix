@@ -22,6 +22,7 @@
             settings = {
               background_opacity = 0.75;
               background_blur = 1;
+              macos_option_as_alt = true;
               tab_bar_edge = "top";
               window_padding_width = 8;
 
