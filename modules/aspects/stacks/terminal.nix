@@ -9,6 +9,7 @@
       <pkt/fish>
       <pkt/helix>
       <pkt/starship>
+      <pkt/zellij>
     ];
 
     homeManager =
@@ -18,7 +19,6 @@
           fd
           fzf
           timg
-          zellij
         ];
       };
 
