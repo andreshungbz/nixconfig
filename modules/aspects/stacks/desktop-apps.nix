@@ -37,7 +37,6 @@
           papers
 
           brave
-          brave-origin
           discord
           discord-canary
           discord-ptb
