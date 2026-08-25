@@ -40,7 +40,6 @@
           discord
           discord-canary
           discord-ptb
-          element-desktop
           cider-2
           firefox
           localsend
@@ -65,7 +64,6 @@
           "alt-tab"
           "brave-browser"
           "discord"
-          "element"
           "firefox"
           "google-drive"
           "iina"

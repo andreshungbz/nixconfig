@@ -89,7 +89,6 @@
               /etc/profiles/per-user/packet/bin/discord &
               /etc/profiles/per-user/packet/bin/discordptb &
               /etc/profiles/per-user/packet/bin/discordcanary &
-              /etc/profiles/per-user/packet/bin/element-desktop &
               /etc/profiles/per-user/packet/bin/signal-desktop &
               /etc/profiles/per-user/packet/bin/cider-2 &
               /etc/profiles/per-user/packet/bin/thunderbird &
