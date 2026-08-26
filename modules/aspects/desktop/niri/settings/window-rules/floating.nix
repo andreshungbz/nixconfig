@@ -20,21 +20,20 @@
           };
         }
 
-        # Steam Notifications Bottom Right Corner - Main Monitor
+        # Steam Notifications Top Right Corner
         {
           match._props = {
             app-id = "steam";
             title = "^notificationtoasts_\\d+_desktop$";
           };
 
-          open-on-output = "DP-1";
-          open-floating = true;
+          # open-on-output = "DP-1";
           open-focused = false;
 
           default-floating-position._props = {
-            x = 20;
-            y = 20;
-            relative-to = "bottom-right";
+            x = 10;
+            y = 10;
+            relative-to = "top-right";
           };
         }
 
