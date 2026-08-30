@@ -20,7 +20,7 @@
           };
         }
 
-        # Steam Notifications Top Right Corner
+        # Steam Notifications Bottom Right Corner
         {
           match._props = {
             app-id = "steam";
@@ -33,7 +33,7 @@
           default-floating-position._props = {
             x = 10;
             y = 10;
-            relative-to = "top-right";
+            relative-to = "bottom-right";
           };
         }
 
