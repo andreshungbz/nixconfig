@@ -36,6 +36,7 @@
           loupe
           papers
 
+          anki
           brave
           discord
           discord-canary
@@ -61,6 +62,7 @@
     darwin = {
       homebrew = {
         casks = [
+          "anki"
           "alt-tab"
           "brave-browser"
           "discord"
