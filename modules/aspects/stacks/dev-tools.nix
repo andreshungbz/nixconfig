@@ -29,6 +29,7 @@
           texliveFull
           tldr
           tree
+          wakatime-cli
           wget
 
           # gui
@@ -62,6 +63,7 @@
           texliveFull
           tldr
           tree
+          wakatime-cli
           wget
 
           # digital logic
