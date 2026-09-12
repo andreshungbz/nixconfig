@@ -491,6 +491,7 @@ border = true
 collapse_on_dismiss = true
 enable_daemon = true
 history_retention_hours = 0
+keep_dismissed_in_history = true
 layer = "top"
 max_visible = 0
 monitors = [ "DP-1" ]
@@ -672,6 +673,8 @@ time_format = "{:%-I:%M %p}"
     size = 32
 
     [shell.screenshot]
+    annotate = true
+    close_on_copy = true
     confirm_region = true
     copy_to_clipboard = true
     directory = "/home/packet/Pictures/Screenshots"
@@ -679,7 +682,7 @@ time_format = "{:%-I:%M %p}"
     freeze_screen = true
     pipe_command = ""
     pipe_to_command = false
-    remember_last_region = false
+    remember_last_region = true
     save_to_file = true
     show_cursor = false
 

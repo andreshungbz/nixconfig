@@ -10,7 +10,8 @@
         "Mod+Alt+L".spawn-sh = "noctalia msg session lock";
         "Mod+Pause".spawn-sh = "noctalia msg notification-dnd-toggle";
         "Pause".spawn-sh = "noctalia msg mic-mute";
-        "Ctrl+Print".spawn-sh = "noctalia msg screenshot-fullscreen pick";
+        "Print".spawn-sh = "noctalia msg screenshot-region";
+        "Mod+Print".spawn-sh = "noctalia msg screenshot-fullscreen pick";
       };
     };
   };
