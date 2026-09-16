@@ -74,7 +74,6 @@
           "obsidian"
           "qbittorrent"
           "signal"
-          "stats"
           "ti-connect-ce"
           "veracrypt"
           "vorssaint"
