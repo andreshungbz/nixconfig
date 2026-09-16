@@ -73,11 +73,12 @@
           "obs"
           "obsidian"
           "qbittorrent"
-          "raycast"
+          "rectangle"
           "signal"
           "stats"
           "ti-connect-ce"
           "veracrypt"
+          "vorssaint"
           "zoom"
         ];
 
@@ -86,7 +87,6 @@
           # "Affinity Photo 2: Image Editor" = 1616822987;
           # "Affinity Publisher 2" = 1606941598;
           "Goodnotes 6: AI Notes & Docs" = 1444383602;
-          "Hidden Bar" = 1452453066;
           "LocalSend" = 1661733229;
           "Pixelmator Pro" = 1289583905;
           "Telegram" = 747648890;
