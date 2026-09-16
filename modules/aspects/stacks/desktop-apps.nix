@@ -73,7 +73,6 @@
           "obs"
           "obsidian"
           "qbittorrent"
-          "rectangle"
           "signal"
           "stats"
           "ti-connect-ce"
