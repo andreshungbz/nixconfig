@@ -44,6 +44,7 @@
           godot-mono
 
           # digital logic
+          fritzing
           logisim-evolution
         ];
       };
@@ -67,6 +68,7 @@
           wget
 
           # digital logic
+          fritzing
           logisim-evolution
         ];
 
