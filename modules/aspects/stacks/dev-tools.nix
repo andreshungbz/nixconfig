@@ -68,7 +68,6 @@
           wget
 
           # digital logic
-          fritzing
           logisim-evolution
         ];
 
