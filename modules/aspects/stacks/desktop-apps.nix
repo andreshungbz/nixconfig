@@ -68,6 +68,7 @@
           "discord"
           "firefox"
           "google-drive"
+          "helium-browser"
           "iina"
           "microsoft-edge"
           "obs"
