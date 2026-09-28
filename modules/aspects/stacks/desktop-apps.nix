@@ -63,7 +63,6 @@
       homebrew = {
         casks = [
           "anki"
-          "alt-tab"
           "brave-browser"
           "discord"
           "firefox"
