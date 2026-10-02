@@ -5,9 +5,8 @@ ui_scale = 1.0
 [audio]
 enable_overdrive = false
 enable_sounds = false
-notification_sound = ""
+sound_theme = "freedesktop"
 sound_volume = 0.5
-volume_change_sound = ""
 
 [backdrop]
 blur_intensity = 0.5
@@ -31,7 +30,7 @@ order = [ "main" ]
     concave_edge_corners = false
     contact_shadow = false
     enabled = true
-    end = [ "widget", "weather", "tray", "group:g1", "status" ]
+    end = [ "weather", "tray", "group:g1", "status" ]
     font_scale = 1.0
     font_weight = 500
     hover_highlight = true
@@ -155,7 +154,7 @@ sync_all_monitors = false
 [calendar]
 enabled = true
 event_date_format = "%A %e %B"
-event_time_format = "%H:%M"
+event_time_format = "{:%-I:%M %p}"
 refresh_minutes = 15
 
     [calendar.account.personal_google]
@@ -181,6 +180,12 @@ refresh_minutes = 15
     server_url = ""
     type = "google"
     username = ""
+
+    [calendar.reminders]
+    all_day_digest_time = "09:00"
+    default_lead_minutes = 10
+    enabled = true
+    use_event_reminders = true
 
 [control_center]
 hidden_tabs = []
@@ -345,11 +350,14 @@ sunset = ""
 allow_empty_password = false
 blur_intensity = 0.5
 blurred_desktop = false
+edge_smoothness = 0.0
 enabled = true
 fingerprint = false
 lock_before_suspend = true
 monitors = []
 tint_intensity = 0.30000001192092896
+transition = [ "zoom" ]
+transition_duration = 500.0
 wallpaper = ""
 
 [lockscreen_widgets]
@@ -560,8 +568,7 @@ enabled = [
     "noctalia/timer",
     "noctalia/translator",
     "avivbintangaringga/nix-monitor",
-    "davemhammer/tailscale",
-    "thepunkoff/pomodoro"
+    "davemhammer/tailscale"
 ]
 
     [[plugins.source]]
@@ -603,6 +610,7 @@ polkit_agent = true
 popup_borders = true
 popup_shadows = true
 screen_time_enabled = true
+settings_expand_all_groups = false
 settings_show_advanced = true
 settings_window_translucent = false
 setup_wizard_enabled = true
@@ -610,6 +618,7 @@ shared_gl_context = true
 show_location = true
 telemetry_enabled = true
 time_format = "{:%-I:%M %p}"
+umbriel_overview_type_to_launch_enabled = false
 
     [shell.animation]
     enabled = true
@@ -634,6 +643,9 @@ time_format = "{:%-I:%M %p}"
     sort_by_usage = true
 
         [shell.launcher.dmenu]
+
+        [shell.launcher.panels]
+        ignored = [ "polkit", "setup-wizard", "test", "launcher" ]
 
     [shell.mpris]
     blacklist = []
@@ -675,6 +687,7 @@ time_format = "{:%-I:%M %p}"
     [shell.screenshot]
     annotate = true
     close_on_copy = true
+    close_on_save = true
     confirm_region = true
     copy_to_clipboard = true
     directory = "/home/packet/Pictures/Screenshots"
@@ -685,6 +698,7 @@ time_format = "{:%-I:%M %p}"
     remember_last_region = true
     save_to_file = true
     show_cursor = false
+    skip_annotate_on_copy_save = true
 
     [shell.session]
     grid = false
@@ -748,7 +762,13 @@ time_format = "{:%-I:%M %p}"
     direction = "down_left"
 
     [shell.window_switcher]
+    current_workspace_only = false
     mru = false
+    show_all_outputs = true
+    show_app_icon = true
+    show_caption = true
+    show_count = true
+    style = "carousel"
 
 [storage]
 key_file = ""
@@ -816,8 +836,8 @@ enabled = true
 fill_color = ""
 fill_mode = "crop"
 per_monitor_directories = false
-transition = [ "honeycomb" ]
-transition_duration = 1500.0
+transition = [ "zoom" ]
+transition_duration = 500.0
 transition_on_startup = true
 
     [wallpaper.automation]
