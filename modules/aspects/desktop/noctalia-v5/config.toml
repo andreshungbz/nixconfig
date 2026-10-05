@@ -778,10 +778,10 @@ umbriel_overview_type_to_launch_enabled = false
     direction = "down_left"
 
     [shell.window_switcher]
-    current_workspace_only = false
-    mru = false
-    show_all_outputs = true
-    show_app_icon = true
+    current_workspace_only = true
+    mru = true
+    show_all_outputs = false
+    show_app_icon = false
     show_caption = true
     show_count = true
     style = "carousel"
