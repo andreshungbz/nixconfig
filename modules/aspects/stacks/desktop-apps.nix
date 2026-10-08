@@ -5,6 +5,7 @@
       <pkt/bitwarden>
       <pkt/davinci-resolve>
       <pkt/flatpak>
+      <pkt/headsetcontrol>
       <pkt/kitty>
       <pkt/nautilus>
       <pkt/openrazer>

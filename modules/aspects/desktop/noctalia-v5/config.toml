@@ -133,7 +133,7 @@ order = [ "main" ]
         enabled = true
         fill = "surface_variant"
         id = "g1"
-        members = [ "notes_2", "clipboard", "notifications", "volume", "bluetooth", "network", "battery" ]
+        members = [ "notes_2", "clipboard", "notifications", "widget_2", "volume", "bluetooth", "network", "battery" ]
         opacity = 1.0
         padding = 6.0
         widget_spacing = 8
@@ -583,7 +583,8 @@ enabled = [
     "noctalia/timer",
     "noctalia/translator",
     "avivbintangaringga/nix-monitor",
-    "davemhammer/tailscale"
+    "davemhammer/tailscale",
+    "vavadik/headsetcontrol"
 ]
 
     [[plugins.source]]
@@ -781,10 +782,10 @@ umbriel_overview_type_to_launch_enabled = false
     current_workspace_only = true
     mru = true
     show_all_outputs = false
-    show_app_icon = false
+    show_app_icon = true
     show_caption = true
     show_count = true
-    style = "carousel"
+    style = "compact"
 
 [storage]
 key_file = ""
@@ -1003,6 +1004,9 @@ type = "weather"
 
 [widget.widget]
 type = "thepunkoff/pomodoro:widget"
+
+[widget.widget_2]
+type = "vavadik/headsetcontrol:widget"
 
 [widget.workspaces]
 label_source = "name"
