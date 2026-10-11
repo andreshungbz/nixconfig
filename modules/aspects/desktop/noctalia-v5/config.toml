@@ -3,8 +3,12 @@ high_contrast = false
 ui_scale = 1.0
 
 [audio]
+enable_notification_sounds = true
 enable_overdrive = false
+enable_power_sounds = true
+enable_screenshot_sounds = true
 enable_sounds = false
+enable_volume_sounds = true
 sound_theme = "freedesktop"
 sound_volume = 0.5
 
@@ -27,12 +31,12 @@ order = [ "main" ]
     capsule_opacity = 1.0
     capsule_padding = 6.0
     capsule_thickness = 0.80000001192092896
-    center = [ "clock", "date", "control-center", "media" ]
+    center = [ "clock", "control-center", "date" ]
     compositor_blur = true
     concave_edge_corners = false
     contact_shadow = false
     enabled = true
-    end = [ "weather", "tray", "group:g1", "status" ]
+    end = [ "media", "weather", "tray", "group:g1", "status" ]
     font_scale = 1.0
     font_weight = 500
     hover_highlight = true
@@ -52,6 +56,7 @@ order = [ "main" ]
     scale = 1.0
     shadow = true
     show_on_workspace_switch = true
+    show_tooltip = true
     smart_auto_hide = false
     start = [ "nix_monitor_2", "group:g2" ]
     thickness = 30
@@ -96,6 +101,7 @@ order = [ "main" ]
         scale = 1.0
         shadow = true
         show_on_workspace_switch = true
+        show_tooltip = true
         smart_auto_hide = false
         start = [ "group:g2" ]
         thickness = 30
@@ -160,6 +166,8 @@ minimum_brightness = 0.0
 sync_all_monitors = false
 
 [calendar]
+dedupe_events = false
+dedupe_ignore_patterns = []
 enabled = true
 event_date_format = "%A %e %B"
 event_time_format = "{:%-I:%M %p}"
@@ -691,6 +699,7 @@ umbriel_overview_type_to_launch_enabled = false
     transparency_mode = "glass"
     wallpaper_placement = "attached"
     wallpaper_position = "auto"
+    wallpaper_show_names = true
 
     [shell.privacy]
     cam_filter_regex = ""
