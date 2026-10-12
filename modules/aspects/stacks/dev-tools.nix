@@ -35,7 +35,6 @@
           # gui
           postman
           rpi-imager
-          termius
           vscode
           zed-editor
 
@@ -82,7 +81,6 @@
             "netspot"
             "postman"
             "postman-cli"
-            "termius"
             "utm"
             "visual-studio-code"
             "warp"
@@ -90,7 +88,7 @@
           ];
 
           masApps = {
-            "Termix" = 6752672071;
+
           };
         };
       };
