@@ -23,9 +23,9 @@
           system.defaults.dock.persistent-apps = [
             { app = "/System/Applications/Mail.app"; }
             { app = "/System/Applications/Calendar.app"; }
-            { app = "/System/Applications/Reminders.app"; }
-            { app = "/System/Applications/Notes.app"; }
-            { app = "/System/Applications/News.app"; }
+            # { app = "/System/Applications/Reminders.app"; }
+            # { app = "/System/Applications/Notes.app"; }
+            # { app = "/System/Applications/News.app"; }
             { app = "/System/Applications/Photos.app"; }
             # { app = "/Applications/Eagle.app"; }
             { app = "/System/Applications/Books.app"; }
@@ -35,7 +35,7 @@
             { app = "/Applications/Telegram.app"; }
             { app = "/Applications/Discord.app"; }
             { app = "/Applications/Firefox.app"; }
-            { app = "/Applications/Brave Browser.app"; }
+            { app = "/Applications/Helium.app"; }
             { app = "/Applications/Visual Studio Code.app"; }
             # { app = "/Applications/Obsidian.app"; }
             { app = "/Users/${user.userName}/Applications/Home Manager Apps/kitty.app"; }
