@@ -30,7 +30,7 @@ order = [ "main" ]
     capsule_fill = "surface_variant"
     capsule_opacity = 1.0
     capsule_padding = 6.0
-    capsule_thickness = 0.80000001192092896
+    capsule_thickness = 0.79999998584389687
     center = [ "clock", "control-center", "date" ]
     compositor_blur = true
     concave_edge_corners = false
@@ -112,7 +112,6 @@ order = [ "main" ]
             [[bar.main.monitor.DP-2.capsule_group]]
             accordion = false
             accordion_direction = "end"
-            border_width = 1.0
             enabled = true
             fill = "surface_variant"
             id = "g1"
@@ -123,7 +122,6 @@ order = [ "main" ]
             [[bar.main.monitor.DP-2.capsule_group]]
             accordion = false
             accordion_direction = "end"
-            border_width = 1.0
             enabled = true
             fill = "surface_variant"
             id = "g2"
@@ -372,7 +370,7 @@ lock_before_suspend = true
 monitors = []
 tint_intensity = 0.30000001192092896
 transition = [ "zoom" ]
-transition_duration = 500.0
+transition_duration = 500
 wallpaper = ""
 
 [lockscreen_widgets]
@@ -662,6 +660,7 @@ umbriel_overview_type_to_launch_enabled = false
     fetch_exchange_rates = true
     pinned = []
     provider_prefix = "/"
+    search_position = "top"
     show_app_actions = false
     show_app_origin_indicator = true
     show_icons = true
@@ -863,7 +862,7 @@ fill_color = ""
 fill_mode = "crop"
 per_monitor_directories = false
 transition = [ "zoom" ]
-transition_duration = 500.0
+transition_duration = 500
 transition_on_startup = true
 
     [wallpaper.automation]
@@ -871,6 +870,18 @@ transition_on_startup = true
     interval_seconds = 1800
     order = "random"
     recursive = true
+
+    [wallpaper.default]
+    path = "/home/packet/Pictures/Wallpapers/wallhaven/wallhaven-lyd7wl.jpg"
+
+    [wallpaper.last]
+    path = "/home/packet/Pictures/Wallpapers/nixconfig-wallpapers/cobalt-core-2.png"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/packet/Pictures/Wallpapers/nixconfig-wallpapers/cobalt-core-2.png"
+
+    [wallpaper.monitors.DP-2]
+    path = "/home/packet/Pictures/Wallpapers/vertical/cobalt-core-1.png"
 
 [weather]
 effects = true
@@ -936,9 +947,10 @@ type = "lock_keys"
 art_size = 16.0
 capsule = true
 hide_when_no_media = true
-max_length = 280
+max_length = 260
 min_length = 80.0
-title_scroll = "always"
+show_progress = true
+title_scroll = "on_hover"
 type = "media"
 
 [widget.network]
