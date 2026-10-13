@@ -44,6 +44,7 @@
           discord-ptb
           cider-2
           firefox
+          hardinfo2
           localsend
           microsoft-edge
           obsidian
