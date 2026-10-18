@@ -43,7 +43,6 @@
           godot-mono
 
           # digital logic
-          fritzing
           logisim-evolution
         ];
       };
