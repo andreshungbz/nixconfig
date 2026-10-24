@@ -22,6 +22,7 @@ order = [ "main" ]
 
     [bar.main]
     auto_hide = false
+    auto_hide_delay_ms = 0
     background_opacity = 0.75
     border = "outline"
     border_width = 0.0
@@ -30,7 +31,7 @@ order = [ "main" ]
     capsule_fill = "surface_variant"
     capsule_opacity = 1.0
     capsule_padding = 6.0
-    capsule_thickness = 0.79999998584389687
+    capsule_thickness = 0.80000001192092896
     center = [ "clock", "control-center", "date" ]
     compositor_blur = true
     concave_edge_corners = false
@@ -63,9 +64,11 @@ order = [ "main" ]
     widget_spacing = 4
 
         [bar.main.dead_zone]
+        click_through = false
 
         [bar.main.monitor.DP-2]
         auto_hide = false
+        auto_hide_delay_ms = 0
         background_opacity = 0.75
         border = "outline"
         border_width = 0.0
@@ -108,10 +111,12 @@ order = [ "main" ]
         widget_spacing = 4
 
             [bar.main.monitor.DP-2.dead_zone]
+            click_through = false
 
             [[bar.main.monitor.DP-2.capsule_group]]
             accordion = false
             accordion_direction = "end"
+            border_width = 1.0
             enabled = true
             fill = "surface_variant"
             id = "g1"
@@ -122,6 +127,7 @@ order = [ "main" ]
             [[bar.main.monitor.DP-2.capsule_group]]
             accordion = false
             accordion_direction = "end"
+            border_width = 1.0
             enabled = true
             fill = "surface_variant"
             id = "g2"
@@ -157,6 +163,9 @@ order = [ "main" ]
 [battery]
 warning_threshold = 20
 
+[bluetooth]
+connect_when_enabled = false
+
 [brightness]
 enable_ddcutil = true
 ignore_mmids = []
@@ -173,6 +182,8 @@ refresh_minutes = 15
 
     [calendar.account.personal_google]
     calendars = []
+    client_cert_file = ""
+    client_key_file = ""
     color = ""
     credential_source = "secret-service"
     name = "Gmail Main"
@@ -185,6 +196,8 @@ refresh_minutes = 15
 
     [calendar.account.school_google]
     calendars = []
+    client_cert_file = ""
+    client_key_file = ""
     color = ""
     credential_source = "secret-service"
     name = "University of Belize"
@@ -202,7 +215,9 @@ refresh_minutes = 15
     use_event_reminders = true
 
 [control_center]
+circular_avatar = true
 hidden_tabs = []
+show_avatar_border = true
 show_session_button = true
 show_shortcut_labels = true
 sidebar = "full"
@@ -212,6 +227,9 @@ width = 850
     [control_center.calendar]
     show_events_card = true
     show_week_numbers = true
+
+    [control_center.media]
+    show_visualizer = true
 
     [[control_center.shortcuts]]
     type = "wifi"
@@ -366,11 +384,12 @@ blurred_desktop = false
 edge_smoothness = 0.0
 enabled = true
 fingerprint = false
+grace_period_seconds = 0
 lock_before_suspend = true
 monitors = []
 tint_intensity = 0.30000001192092896
 transition = [ "zoom" ]
-transition_duration = 500
+transition_duration = 500.0
 wallpaper = ""
 
 [lockscreen_widgets]
@@ -547,6 +566,7 @@ scale = 1.0
     bluetooth = true
     brightness = true
     caffeine = true
+    custom = true
     dnd = true
     keyboard_backlight = true
     keyboard_layout = true
@@ -625,6 +645,7 @@ input_borders = true
 lang = "en"
 launch_apps_as_systemd_services = false
 launch_apps_custom_command = ""
+niri_overview_close_on_launch_enabled = false
 niri_overview_type_to_launch_enabled = true
 offline_mode = false
 password_style = "random"
@@ -638,9 +659,12 @@ settings_show_advanced = true
 settings_window_translucent = false
 setup_wizard_enabled = true
 shared_gl_context = true
+show_close_buttons = true
 show_location = true
 telemetry_enabled = true
 time_format = "{:%-I:%M %p}"
+umbriel_audio_provider_enabled = false
+umbriel_overview_close_on_launch_enabled = false
 umbriel_overview_type_to_launch_enabled = false
 
     [shell.animation]
@@ -656,15 +680,23 @@ umbriel_overview_type_to_launch_enabled = false
     app_grid = false
     auto_paste = "auto"
     categories = true
+    category_icons_only = true
     compact = false
+    default_view = "recent"
     fetch_exchange_rates = true
+    ignore_mouse = false
+    layout = "full"
     pinned = []
     provider_prefix = "/"
     search_position = "top"
     show_app_actions = false
     show_app_origin_indicator = true
     show_icons = true
+    show_session_button = true
+    show_settings_button = true
     sort_by_usage = true
+    track_usage = true
+    width = 760
 
         [shell.launcher.dmenu]
 
@@ -675,6 +707,8 @@ umbriel_overview_type_to_launch_enabled = false
     blacklist = []
 
     [shell.panel]
+    border_color = "outline"
+    border_width = 1.0
     borders = false
     clipboard_placement = "attached"
     clipboard_position = "center"
@@ -717,12 +751,19 @@ umbriel_overview_type_to_launch_enabled = false
     copy_to_clipboard = true
     directory = "/home/packet/Pictures/Screenshots"
     filename_pattern = "screenshot-%Y-%m-%d-%H-%M-%S"
+    format = "png"
     freeze_screen = true
     pipe_command = ""
     pipe_to_command = false
+    quality = 90
+    region_border_width = 2.0
+    region_dim_opacity = 0.64999997615814209
+    region_modifier = "none"
     remember_last_region = true
     save_to_file = true
     show_cursor = false
+    show_region_dimensions = true
+    show_region_hint = true
     skip_annotate_on_copy_save = true
 
     [shell.session]
@@ -739,6 +780,7 @@ umbriel_overview_type_to_launch_enabled = false
         enabled = true
         glyph = ""
         label = ""
+        lockscreen_shortcut = ""
         shortcut = "1"
         variant = "default"
 
@@ -749,6 +791,7 @@ umbriel_overview_type_to_launch_enabled = false
         enabled = true
         glyph = ""
         label = ""
+        lockscreen_shortcut = ""
         shortcut = "2"
         variant = "default"
 
@@ -759,6 +802,7 @@ umbriel_overview_type_to_launch_enabled = false
         enabled = true
         glyph = ""
         label = ""
+        lockscreen_shortcut = ""
         shortcut = "3"
         variant = "default"
 
@@ -769,6 +813,7 @@ umbriel_overview_type_to_launch_enabled = false
         enabled = true
         glyph = ""
         label = ""
+        lockscreen_shortcut = ""
         shortcut = "4"
         variant = "default"
 
@@ -779,6 +824,7 @@ umbriel_overview_type_to_launch_enabled = false
         enabled = true
         glyph = ""
         label = ""
+        lockscreen_shortcut = ""
         shortcut = "5"
         variant = "destructive"
 
@@ -844,6 +890,7 @@ mode = "dark"
 pure_black_dark = false
 shell_mode = "follow"
 source = "wallpaper"
+sync_color_scheme = true
 wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
@@ -862,7 +909,7 @@ fill_color = ""
 fill_mode = "crop"
 per_monitor_directories = false
 transition = [ "zoom" ]
-transition_duration = 500
+transition_duration = 500.0
 transition_on_startup = true
 
     [wallpaper.automation]
@@ -870,18 +917,6 @@ transition_on_startup = true
     interval_seconds = 1800
     order = "random"
     recursive = true
-
-    [wallpaper.default]
-    path = "/home/packet/Pictures/Wallpapers/wallhaven/wallhaven-lyd7wl.jpg"
-
-    [wallpaper.last]
-    path = "/home/packet/Pictures/Wallpapers/nixconfig-wallpapers/cobalt-core-2.png"
-
-    [wallpaper.monitors.DP-1]
-    path = "/home/packet/Pictures/Wallpapers/nixconfig-wallpapers/cobalt-core-2.png"
-
-    [wallpaper.monitors.DP-2]
-    path = "/home/packet/Pictures/Wallpapers/vertical/cobalt-core-1.png"
 
 [weather]
 effects = true
