@@ -77,9 +77,11 @@
 
           casks = [
             "jetbrains-toolbox"
+            "macfuse"
             "netspot"
             "postman"
             "postman-cli"
+            "sshfs-mac"
             "utm"
             "visual-studio-code"
             "warp"
