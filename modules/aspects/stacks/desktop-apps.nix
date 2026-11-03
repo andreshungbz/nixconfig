@@ -45,11 +45,12 @@
           cider-2
           firefox
           hardinfo2
+          libreoffice
           localsend
           microsoft-edge
           obsidian
           obs-studio
-          onlyoffice-desktopeditors
+          # onlyoffice-desktopeditors # https://github.com/NixOS/nixpkgs/issues/410814
           qbittorrent
           signal-desktop
           telegram-desktop
