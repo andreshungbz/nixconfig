@@ -3,6 +3,7 @@ high_contrast = false
 ui_scale = 1.0
 
 [audio]
+colorize_icons = false
 enable_notification_sounds = true
 enable_overdrive = false
 enable_power_sounds = true
@@ -11,6 +12,7 @@ enable_sounds = false
 enable_volume_sounds = true
 sound_theme = "freedesktop"
 sound_volume = 0.5
+spectrum_frame_rate = 60
 
 [backdrop]
 blur_intensity = 0.5
@@ -23,6 +25,7 @@ order = [ "main" ]
     [bar.main]
     auto_hide = false
     auto_hide_delay_ms = 0
+    auto_hide_reserve_space = false
     background_opacity = 0.75
     border = "outline_variant"
     border_width = 0.0
@@ -37,7 +40,7 @@ order = [ "main" ]
     concave_edge_corners = false
     contact_shadow = false
     enabled = true
-    end = [ "media", "weather", "tray", "group:g1", "status" ]
+    end = [ "media", "weather", "tray", "group:g3", "group:g1", "status" ]
     font_scale = 1.0
     font_weight = 500
     hover_highlight = true
@@ -69,6 +72,7 @@ order = [ "main" ]
         [bar.main.monitor.DP-2]
         auto_hide = false
         auto_hide_delay_ms = 0
+        auto_hide_reserve_space = false
         background_opacity = 0.75
         border = "outline_variant"
         border_width = 0.0
@@ -143,7 +147,7 @@ order = [ "main" ]
         enabled = true
         fill = "surface_container"
         id = "g1"
-        members = [ "notes_2", "clipboard", "notifications", "widget_2", "volume", "bluetooth", "network", "battery" ]
+        members = [ "notes_2", "clipboard", "notifications", "bluetooth", "network", "battery" ]
         opacity = 1.0
         padding = 6.0
         widget_spacing = 8
@@ -159,6 +163,17 @@ order = [ "main" ]
         opacity = 1.0
         padding = 6.0
         widget_spacing = 8
+
+        [[bar.main.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border_width = 1.0
+        enabled = true
+        fill = "surface_container"
+        id = "g3"
+        members = [ "widget_2", "volume" ]
+        opacity = 1.0
+        padding = 6.0
 
 [battery]
 warning_threshold = 20
@@ -229,6 +244,7 @@ width = 850
     hide_past_events = false
     past_events_threshold_minutes = 30
     show_events_card = true
+    show_events_location = false
     show_week_numbers = true
 
     [control_center.media]
@@ -266,13 +282,17 @@ active_monitor_only = true
 active_opacity = 1.0
 active_scale = 1.0
 auto_hide = true
+auto_hide_reveal_delay_ms = 250
 background_opacity = 0.75
 border = "outline_variant"
 border_width = 0.0
+colorize_icons = false
 compositor_blur = true
 concave_edge_corners = false
 cross_axis_padding = 8
 enabled = true
+icon_saturation = 1.0
+icon_shadow = false
 icon_size = 30
 inactive_opacity = 1.0
 inactive_scale = 1.0
@@ -391,6 +411,7 @@ fingerprint = false
 grace_period_seconds = 0
 lock_before_suspend = true
 monitors = []
+tint_color = "surface"
 tint_intensity = 0.30000001192092896
 transition = [ "zoom" ]
 transition_duration = 500.0
@@ -535,13 +556,16 @@ border = true
 border_color = "outline_variant"
 border_width = 1.0
 collapse_on_dismiss = true
+colorize_icons = false
 enable_daemon = true
 follow_focused_output = false
+group_by_app = true
 history_retention_hours = 0
 keep_dismissed_in_history = true
 layer = "top"
 max_visible = 0
 monitors = [ "DP-1" ]
+newest_on_edge = false
 offset_x = 10
 offset_y = 10
 position = "top_right"
@@ -621,17 +645,16 @@ enabled = [
     [[plugins.source]]
     enabled = true
     kind = "git"
-    location = "https://github.com/noctalia-dev/official-plugins"
+    location = ""
     name = "official"
 
     [[plugins.source]]
     enabled = true
     kind = "git"
-    location = "https://github.com/noctalia-dev/community-plugins"
+    location = ""
     name = "community"
 
 [shell]
-app_icon_colorize = false
 avatar_path = "/home/packet/Pictures/nixconfig-avatars/crow.png"
 button_borders = true
 card_borders = true
@@ -655,9 +678,11 @@ niri_overview_type_to_launch_enabled = true
 offline_mode = false
 password_style = "random"
 polkit_agent = true
+polkit_colorize_icons = false
 popup_borders = true
 popup_shadows = true
 readline_shortcuts = false
+screen_time_colorize_icons = false
 screen_time_enabled = true
 settings_expand_all_groups = false
 settings_show_advanced = true
@@ -686,6 +711,7 @@ umbriel_overview_type_to_launch_enabled = false
     auto_paste = "auto"
     categories = true
     category_icons_only = true
+    colorize_icons = false
     compact = false
     default_view = "recent"
     fetch_exchange_rates = true
@@ -840,6 +866,7 @@ umbriel_overview_type_to_launch_enabled = false
     direction = "down_left"
 
     [shell.window_switcher]
+    colorize_icons = false
     current_workspace_only = true
     mru = true
     show_all_outputs = false
@@ -898,6 +925,7 @@ pure_black_dark = false
 shell_mode = "follow"
 source = "wallpaper"
 sync_color_scheme = true
+terminal_colors = "palette"
 wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
@@ -915,6 +943,7 @@ enabled = true
 fill_color = ""
 fill_mode = "crop"
 per_monitor_directories = false
+sync_transitions = true
 transition = [ "zoom" ]
 transition_duration = 500.0
 transition_on_startup = true
@@ -933,6 +962,7 @@ refresh_minutes = 30
 unit = "imperial"
 
 [widget.active_window]
+colorize_icons = false
 icon_size = 14.0
 max_length = 260.0
 min_length = 80.0
@@ -1048,11 +1078,16 @@ type = "davemhammer/tailscale:status"
 stat = "cpu_temp"
 type = "sysmon"
 
+[widget.taskbar]
+colorize_icons = false
+type = "taskbar"
+
 [widget.temp]
 stat = "cpu_temp"
 type = "sysmon"
 
 [widget.tray]
+colorize_icons = false
 drawer = true
 drawer_columns = 5
 match_adjacent_spacing = true
@@ -1073,6 +1108,7 @@ type = "thepunkoff/pomodoro:widget"
 type = "vavadik/headsetcontrol:widget"
 
 [widget.workspaces]
+colorize_icons = false
 label_source = "name"
 max_label_chars = 10
 type = "workspaces"
