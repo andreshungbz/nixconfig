@@ -38,7 +38,7 @@
           papers
 
           anki
-          brave
+          # brave
           discord
           discord-canary
           discord-ptb
