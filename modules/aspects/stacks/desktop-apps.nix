@@ -37,7 +37,7 @@
           loupe
           papers
 
-          anki
+          # anki
           # brave
           discord
           discord-canary
