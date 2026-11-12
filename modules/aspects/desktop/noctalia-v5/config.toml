@@ -184,8 +184,11 @@ connection_notifications = true
 
 [brightness]
 enable_ddcutil = true
+enable_scheduled_brightness = false
 ignore_mmids = []
 minimum_brightness = 0.0
+scheduled_day_brightness = 1.0
+scheduled_night_brightness = 0.5
 sync_all_monitors = false
 
 [calendar]
@@ -231,7 +234,6 @@ refresh_minutes = 15
     use_event_reminders = true
 
 [control_center]
-circular_avatar = true
 hidden_tabs = []
 show_avatar_border = true
 show_session_button = true
@@ -383,12 +385,15 @@ pre_action_fade_seconds = 2.0
 
 [keybinds]
 cancel = [ "Escape" ]
+category_next = [ "Ctrl+Tab" ]
+category_previous = [ "Ctrl+Shift+ISO_Left_Tab" ]
 copy = [ "Ctrl+c" ]
 delete = [ "Delete" ]
 down = [ "Down" ]
 left = [ "Left" ]
 right = [ "Right" ]
 save = [ "Ctrl+s" ]
+select_all = [ "Ctrl+a" ]
 tab_next = [ "Tab" ]
 tab_previous = [ "Shift+Tab", "ISO_Left_Tab" ]
 up = [ "Up" ]
@@ -405,6 +410,7 @@ sunset = ""
 allow_empty_password = false
 blur_intensity = 0.5
 blurred_desktop = false
+dnd = false
 edge_smoothness = 0.0
 enabled = true
 fingerprint = false
@@ -572,6 +578,7 @@ position = "top_right"
 scale = 1.0
 show_actions = true
 show_app_name = true
+show_progress_bar = true
 width = 360
 
 [osd]
@@ -658,6 +665,7 @@ enabled = [
 avatar_path = "/home/packet/Pictures/nixconfig-avatars/crow.png"
 button_borders = true
 card_borders = true
+circular_avatar = true
 clipboard_auto_paste = "auto"
 clipboard_confirm_clear_history = false
 clipboard_enabled = true
@@ -777,6 +785,7 @@ umbriel_overview_type_to_launch_enabled = false
 
     [shell.screenshot]
     annotate = true
+    append_mode_suffix = true
     close_on_copy = true
     close_on_save = true
     confirm_region = true
@@ -1019,6 +1028,7 @@ type = "lock_keys"
 [widget.media]
 art_size = 16.0
 capsule = true
+hide_artist = true
 hide_when_no_media = true
 max_length = 260
 min_length = 80.0
