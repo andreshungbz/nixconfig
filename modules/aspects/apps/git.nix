@@ -7,13 +7,13 @@
       signing = {
         format = "ssh";
         key = "~/.ssh/id_ed25519.pub";
-        signByDefault = false;
+        signByDefault = true;
       };
 
       settings = {
         user = {
           name = "Andres Hung";
-          email = "2018118240@ub.edu.bz";
+          email = "andres.hung@outlook.com";
         };
 
         init.defaultBranch = "main";
