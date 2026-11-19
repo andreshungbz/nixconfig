@@ -14,6 +14,7 @@
     includes = [
       den.aspects.kangaroo-computer
       den.aspects.kangaroo-disko
+      den.batteries.user-aspects
     ];
 
     provides.packet = {
