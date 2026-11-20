@@ -19,6 +19,7 @@
           fd
           fzf
           timg
+          unrar
         ];
       };
 
