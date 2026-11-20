@@ -21,6 +21,11 @@
           # disable for 26.11 warning
           boot.zfs.forceImportRoot = false;
 
+          # Warn for broken package.
+          nixpkgs.config.problems.handlers = {
+            zfs.broken = "warn";
+          };
+
           services.displayManager.autoLogin = {
             enable = false;
             user = user.userName;
