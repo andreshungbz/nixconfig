@@ -17,16 +17,6 @@
 
         environment.systemPackages = [
           inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-
-          # Cider plugin
-          # https://noctalia.dev/plugins/community/cider
-          pkgs.gtk3
-          pkgs.gtk-layer-shell
-          pkgs.python3
-          pkgs.python314Packages.python-socketio
-          pkgs.python314Packages.requests
-          pkgs.python314Packages.websocket-client
-          pkgs.xdotool
         ];
 
         services = {
