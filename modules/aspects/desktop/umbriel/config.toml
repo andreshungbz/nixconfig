@@ -24,7 +24,7 @@ xwayland_native_resolution = true
 xwayland_xsettings = true
 xwayland_primary_output = "DP-1"
 show_cheatsheet = false
-focus_on_activate = true
+focus_on_activate = false
 
 # ==============================================================================
 # Environment
