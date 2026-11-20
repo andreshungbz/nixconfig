@@ -148,7 +148,7 @@ map_to_focused_window = false
 
 [input.focus]
 follows_mouse = "sloppy"
-# hover_raises = false
+hover_raises = false
 
 # ==============================================================================
 # Keybinds
