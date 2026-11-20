@@ -160,14 +160,16 @@ hover_raises = false
 # General
 "Alt+Space" = "spawn noctalia msg panel-toggle launcher"
 "Alt+Tab" = "spawn noctalia msg window-switcher hold"
+"Mod+Escape" = "session-quit"
+"Mod+Shift+Slash" = { action = "cheatsheet-toggle", repeat = false }
+"Mod+Alt+L" = { action = "spawn noctalia msg session lock", repeat = false }
 "Mod+Alt+Q" = { action = "window-close", repeat = false }
 "Mod+Q" = { action = "window-close", repeat = false }
 "Mod+B" = { action = "spawn firefox", repeat = false }
 "Mod+E" = { action = "spawn luciole", repeat = false }
 "Mod+T" = { action = "spawn kitty", repeat = false }
-"Mod+Escape" = "session-quit"
-"Mod+Shift+Slash" = { action = "cheatsheet-toggle", repeat = false }
 "Print" = "spawn noctalia msg screenshot-region"
+"Pause" = "spawn noctalia msg mic-mute"
 
 # Scratchpad
 "Mod+Space" = "scratchpad-toggle playground"
