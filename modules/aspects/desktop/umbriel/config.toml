@@ -1,0 +1,399 @@
+# Umbriel Configuration
+# Location: ~/.config/umbriel/config.toml
+# Check: `umbriel config validate`
+# Reference: https://docs.noctalia.dev/umbriel/
+
+# ==============================================================================
+# Includes
+# https://docs.noctalia.dev/umbriel/configuration/#include
+
+[include]
+files = []
+
+[include.optional]
+files = []
+
+# ==============================================================================
+# General
+# https://docs.noctalia.dev/umbriel/configuration/#general
+
+[general]
+autostart = ["noctalia"]
+xwayland = true
+xwayland_native_resolution = true
+xwayland_xsettings = true
+xwayland_primary_output = "DP-1"
+show_cheatsheet = false
+focus_on_activate = true
+
+# ==============================================================================
+# Environment
+# https://docs.noctalia.dev/umbriel/configuration/?section=environment#environment
+
+[environment]
+ELECTRON_OZONE_PLATFORM_HINT = "auto"
+SDL_VIDEODRIVER = "wayland"
+
+# ==============================================================================
+# Events
+# https://docs.noctalia.dev/umbriel/configuration/#events
+
+[events]
+lid_close = "umbriel msg output-disable eDP-1"
+lid_open = "umbriel msg output-enable eDP-1"
+
+# ==============================================================================
+# Screencast
+# https://docs.noctalia.dev/umbriel/configuration/#screencast
+
+# ==============================================================================
+# Global Shortcuts
+# https://docs.noctalia.dev/umbriel/configuration/?section=global-shortcuts#global-shortcuts
+
+# ==============================================================================
+# Outputs
+# Check:`umbriel outputs`
+# https://docs.noctalia.dev/umbriel/outputs/
+
+[output.DP-1]
+focus_at_startup = true
+mode = "2560x1440@143.973"
+position = [0, 0]
+scale = 1.25
+vrr = "always"
+# direct_scanout = false
+hdr = "on"
+color_profile = "edid"
+bit_depth = 10
+
+[output.DP-2]
+mode = "2560x1440@179.952"
+position = [-1152, -775]
+scale = 1.25
+transform = "90"
+vrr = "always"
+hdr = "on"
+color_profile = "edid"
+bit_depth = 10
+workspace_axis = "horizontal"
+
+# ==============================================================================
+# Appearance
+# https://docs.noctalia.dev/umbriel/appearance/
+
+[appearance]
+prefer_no_csd = true
+border_width = 2
+outer_border_width = 0
+corner_radius = 5
+drag_opacity = 0.75
+opaque_fullscreen = true
+
+[appearance.blur]
+enabled = true
+optimized = false
+passes = 2
+radius = 5
+noise = 0.02
+brightness = 0.9
+contrast = 0.9
+saturation = 1.1
+
+[appearance.shadow]
+enabled = true
+softness = 10
+offset_x = 2
+offset_y = 2
+
+[colors]
+backdrop = "#000000FF"
+
+[colors.border]
+focused = "#7AA3FFFF"
+unfocused = "#292933FF"
+outer = "#1A1A1FFF"
+
+[colors.overview]
+background_tint = "#10101430"
+workspace_background = "#00000044"
+badge = "#7AA3FFFF"
+
+# ==============================================================================
+# Effects
+# https://docs.noctalia.dev/umbriel/effects/
+
+# ==============================================================================
+# Input
+# https://docs.noctalia.dev/umbriel/input/
+
+[input]
+client_window_drag = true
+
+[input.keyboard]
+layout = "us"
+repeat_rate = 25
+repeat_delay = 600
+numlock_toggle = true
+track_layout = "global"
+
+[input.mouse]
+accel_profile = "adaptive"
+sensitivity = -0.6
+
+[input.tablet]
+enabled = true
+map_to_output = "DP-1"
+map_to_focused_output = false
+map_to_focused_window = false
+
+[input.focus]
+follows_mouse = "sloppy"
+# hover_raises = false
+
+# ==============================================================================
+# Keybinds
+# Syntax: https://docs.noctalia.dev/umbriel/keybinds/
+# Actions: https://docs.noctalia.dev/umbriel/actions/
+
+[keybinds]
+
+# General
+"Alt+Space" = "spawn noctalia msg panel-toggle launcher"
+"Alt+Tab" = "spawn noctalia msg window-switcher hold"
+"Mod+Alt+Q" = { action = "window-close", repeat = false }
+"Mod+Q" = { action = "window-close", repeat = false }
+"Mod+B" = { action = "spawn firefox", repeat = false }
+"Mod+E" = { action = "spawn luciole", repeat = false }
+"Mod+T" = { action = "spawn kitty", repeat = false }
+"Mod+Escape" = "session-quit"
+"Mod+Shift+Slash" = { action = "cheatsheet-toggle", repeat = false }
+"Print" = "spawn noctalia msg screenshot-region"
+
+# Scratchpad
+"Mod+Space" = "scratchpad-toggle playground"
+"Mod+Tab" = "scratchpad-focus-next playground"
+"Mod+Shift+Space" = { action = "window-move-to-scratchpad playground", repeat = false }
+"Mod+Ctrl+Space" = { action = "window-restore-from-scratchpad playground", repeat = false }
+
+# Media, Volume & Brightness Keys
+"XF86AudioRaiseVolume" = { action = "spawn noctalia msg volume-up", allow_when_locked = true }
+"XF86AudioLowerVolume" = { action = "spawn noctalia msg volume-down", allow_when_locked = true }
+"XF86AudioMute" = { action = "spawn noctalia msg volume-mute", allow_when_locked = true, repeat = false }
+"XF86AudioPlay" = { action = "spawn noctalia msg media toggle", allow_when_locked = true, repeat = false }
+"XF86AudioNext" = { action = "spawn noctalia msg media next", allow_when_locked = true }
+"XF86AudioPrev" = { action = "spawn noctalia msg media previous", allow_when_locked = true }
+"XF86MonBrightnessUp" = { action = "spawn noctalia msg brightness-up", allow_when_locked = true }
+"XF86MonBrightnessDown" = { action = "spawn noctalia msg brightness-down", allow_when_locked = true }
+
+# Column Focus
+"Mod+Left" = "window-focus-left"
+"Mod+Down" = "window-focus-down"
+"Mod+Up" = "window-focus-up"
+"Mod+Right" = "window-focus-right"
+"Mod+H" = "window-focus-left"
+"Mod+J" = "window-focus-down"
+"Mod+K" = "window-focus-up"
+"Mod+L" = "window-focus-right"
+"Mod+F1" = "window-focus-next"
+"Mod+WheelUp" = { action = "window-focus-previous", cooldown_ms = 150 }
+"Mod+WheelDown" = { action = "window-focus-next", cooldown_ms = 150 }
+
+# Column & Monitor Movement
+"Mod+C" = "column-center"
+"Mod+Ctrl+Left" = "column-move-left"
+"Mod+Ctrl+Right" = "column-move-right"
+"Mod+Ctrl+Down" = "window-move-down"
+"Mod+Ctrl+Up" = "window-move-up"
+"Mod+Ctrl+H" = "column-move-left"
+"Mod+Ctrl+L" = "column-move-right"
+"Mod+Ctrl+K" = "window-move-down"
+"Mod+Ctrl+J" = "window-move-up"
+"Mod+Shift+Ctrl+Left" = "column-move-to-output-left"
+"Mod+Shift+Ctrl+Right" = "column-move-to-output-right"
+"Mod+Ctrl+Home" = "column-move-to-first"
+"Mod+Ctrl+End" = "column-move-to-last"
+
+# Column & Window Resizing
+"Mod+F" = { action = "window-toggle-maximize", repeat = false }
+"Mod+M" = { action = "window-toggle-maximize-to-edges", repeat = false }
+"Mod+Shift+F" = { action = "window-toggle-fullscreen", repeat = false }
+"Mod+Minus" = "window-modify-primary-extent -0.10"
+"Mod+Equal" = "window-modify-primary-extent +0.10"
+"Mod+R" = "window-cycle-primary-extent"
+"Mod+Shift+R" = "window-cycle-primary-extent-back"
+"Mod+Ctrl+Shift+R" = "window-cycle-secondary-extent"
+
+# Floating, Pinned, Tabbed & Consume/Expel
+"Mod+V" = { action = "window-toggle-floating", repeat = false }
+"Mod+P" = { action = "window-toggle-pinned", repeat = false }
+"Mod+Shift+V" = { action = "window-focus-switch-floating", repeat = false }
+"Mod+W" = { action = "column-toggle-tabbed", repeat = false }
+"Mod+BracketLeft" = "window-consume-or-expel-left"
+"Mod+BracketRight" = "window-consume-or-expel-right"
+"Mod+Comma" = "window-consume-or-expel-left"
+"Mod+Period" = "window-consume-or-expel-right"
+
+# Workspaces
+"Mod+O" = { action = "overview-toggle", repeat = false }
+"Mod+U" = "workspace-next"
+"Mod+I" = "workspace-previous"
+"Mod+Shift+U" = "workspace-move-down"
+"Mod+Shift+I" = "workspace-move-up"
+"Mod+Shift+Page_Down" = "workspace-move-down"
+"Mod+Shift+Page_Up" = "workspace-move-up"
+"Mod+Ctrl+U" = "window-move-to-workspace-next"
+"Mod+Ctrl+I" = "window-move-to-workspace-previous"
+"Mod+Ctrl+Page_Down" = "window-move-to-workspace-next"
+"Mod+Ctrl+Page_Up" = "window-move-to-workspace-previous"
+"Mod+1" = "workspace-switch 1"
+"Mod+2" = "workspace-switch 2"
+"Mod+3" = "workspace-switch 3"
+"Mod+4" = "workspace-switch 4"
+"Mod+5" = "workspace-switch 5"
+"Mod+6" = "workspace-switch 6"
+"Mod+7" = "workspace-switch 7"
+"Mod+8" = "workspace-switch 8"
+"Mod+9" = "workspace-switch 9"
+"Mod+Ctrl+1" = "window-move-to-workspace 1"
+"Mod+Ctrl+2" = "window-move-to-workspace 2"
+"Mod+Ctrl+3" = "window-move-to-workspace 3"
+"Mod+Ctrl+4" = "window-move-to-workspace 4"
+"Mod+Ctrl+5" = "window-move-to-workspace 5"
+"Mod+Ctrl+6" = "window-move-to-workspace 6"
+"Mod+Ctrl+7" = "window-move-to-workspace 7"
+"Mod+Ctrl+8" = "window-move-to-workspace 8"
+"Mod+Ctrl+9" = "window-move-to-workspace 9"
+"Mod+Ctrl+WheelDown" = { action = "workspace-next", cooldown_ms = 150 }
+"Mod+Ctrl+WheelUp" = { action = "workspace-previous", cooldown_ms = 150 }
+
+# ==============================================================================
+# Layout
+# https://docs.noctalia.dev/umbriel/layout/
+
+[layout]
+gap = 10
+mode = "scrolling"
+extent_presets = [0.33333, 0.5, 0.66667, 1.0]
+
+[layout.scrolling]
+default_extent_fraction = 0.5
+center_on_overview_select = true
+
+# ==============================================================================
+# Layer Rules
+# https://docs.noctalia.dev/umbriel/layer-rules/
+
+[[layer_rule]]
+match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
+blur = true
+blur_ignore_alpha = 0.5
+blur_popups = true
+
+[[layer_rule]]
+match.namespace = "^noctalia-(notification|dock|panel|attached-panel|osd)$"
+blur_optimized = false
+
+# ==============================================================================
+# Overview & Animations
+# Overview: https://docs.noctalia.dev/umbriel/workspaces-overview/
+# Animation: https://docs.noctalia.dev/umbriel/animation/
+
+[hot_corners.top_left]
+enabled = false
+delay_ms = 500
+action = "overview-open"
+
+# ==============================================================================
+# Workspaces
+# https://docs.noctalia.dev/umbriel/workspaces/
+
+[[workspace]]
+name = "main"
+output = "DP-1"
+
+[[workspace]]
+name = "work"
+output = "DP-1"
+
+[[workspace]]
+name = "chat"
+output = "DP-2"
+
+[[workspace]]
+name = "media"
+output = "DP-2"
+
+# ==============================================================================
+# Window Rules
+# https://docs.noctalia.dev/umbriel/window-rules/
+
+[[window_rule]]
+blur = true
+blur_optimized = false
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+default_floating_size_px = { width = 800, height = 600 }
+
+[[window_rule]]
+match.title = "^(Picture-in-Picture|Picture in picture)$"
+default_floating = true
+default_maximize = false
+default_position = { x = 20, y = 20, anchor = "bottom_right" }
+
+[[window_rule]]
+match.title = "^notificationtoasts_.+_desktop"
+default_position = { x = 0, y = 0, anchor = "bottom_right" }
+default_focused = false
+default_pinned = true
+
+[[window_rule]]
+match.app_id = "^steam_app_.*$"
+confine_pointer = true
+
+[[window_rule]]
+match.app_id = "^virt-manager$"
+allow_shortcuts_inhibit = false
+
+[[window_rule]]
+match.app_id = "^obs$"
+background_render = true
+
+[[window_rule]]
+match.app_id = "^(signal|org\\.telegram\\.desktop|discord(-ptb|-canary)?|vesktop)$"
+default_workspace = "chat"
+default_scrolling_extent = 0.5
+default_focused = false
+
+[[window_rule]]
+match.app_id = "^cider$"
+default_workspace = "media"
+default_maximize = true
+default_focused = false
+
+[[window_rule]]
+match.app_id = "^steam$"
+default_workspace = "main"
+default_maximize = true
+default_focused = false
+
+[[window_rule]]
+match.app_id = "thunderbird"
+default_workspace = "work"
+default_maximize = true
+default_focused = false
+
+[[window_rule]]
+match.app_id = "^kitty-scratchpad$"
+default_floating_size = { width = 0.6, height = 0.5 }
+
+# ==============================================================================
+# Scratchpads
+# https://docs.noctalia.dev/umbriel/scratchpads/
+
+[[scratchpad]]
+name = "playground"
+spawn_when_empty = "kitty --class kitty-scratchpad"
+hide_when_empty = true
+proportional_size = true

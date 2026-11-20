@@ -22,11 +22,11 @@
         <pkt/desktop-apps>
         <pkt/dev-tools>
         <pkt/gaming>
-        <pkt/niri>
         <pkt/nixos-base>
         <pkt/noctalia>
         <pkt/noctalia-greeter>
         <pkt/terminal>
+        <pkt/umbriel>
       ];
 
       homeManager = {
@@ -62,13 +62,9 @@
         systemd.user.services.startup-network-apps = {
           description = "Launch GUI apps after network is online";
 
-          after = [
-            "graphical-session.target"
-            "network-online.target"
-          ];
-          wants = [ "network-online.target" ];
+          after = [ "graphical-session.target" ];
           partOf = [ "graphical-session.target" ];
-          wantedBy = [ "niri.service" ];
+          wantedBy = [ "graphical-session.target" ];
 
           serviceConfig = {
             Type = "oneshot";

@@ -209,7 +209,6 @@ refresh_minutes = 15
     password_file = ""
     path = ""
     provider = ""
-    server_url = ""
     type = "google"
     username = ""
 
@@ -223,7 +222,6 @@ refresh_minutes = 15
     password_file = ""
     path = ""
     provider = ""
-    server_url = ""
     type = "google"
     username = ""
 
@@ -652,13 +650,11 @@ enabled = [
     [[plugins.source]]
     enabled = true
     kind = "git"
-    location = ""
     name = "official"
 
     [[plugins.source]]
     enabled = true
     kind = "git"
-    location = ""
     name = "community"
 
 [shell]
@@ -701,9 +697,9 @@ show_close_buttons = true
 show_location = true
 telemetry_enabled = true
 time_format = "{:%-I:%M %p}"
-umbriel_audio_provider_enabled = false
-umbriel_overview_close_on_launch_enabled = false
-umbriel_overview_type_to_launch_enabled = false
+umbriel_audio_provider_enabled = true
+umbriel_overview_close_on_launch_enabled = true
+umbriel_overview_type_to_launch_enabled = true
 
     [shell.animation]
     enabled = true
