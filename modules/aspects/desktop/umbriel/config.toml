@@ -168,6 +168,7 @@ hover_raises = false
 "Mod+B" = { action = "spawn firefox", repeat = false }
 "Mod+E" = { action = "spawn luciole", repeat = false }
 "Mod+T" = { action = "spawn kitty", repeat = false }
+"Mod+Print" = "spawn noctalia msg screenshot-fullscreen pick"
 "Print" = "spawn noctalia msg screenshot-region"
 "Pause" = "spawn noctalia msg mic-mute"
 
