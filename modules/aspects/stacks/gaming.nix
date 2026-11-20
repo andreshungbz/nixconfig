@@ -30,6 +30,7 @@
         };
 
         users.users.${user.userName}.packages = with pkgs; [
+          appimage-run
           dusklight
           moonlight-qt
           prismlauncher
