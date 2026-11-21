@@ -1,8 +1,12 @@
 { den, __findFile, ... }:
 {
   # Copy of packet.nix for systems where packet is not available
-  den.homes.x86_64-linux.ubuntu = { };
-  den.homes.aarch64-linux.ubuntu = { };
+  den.homes.x86_64-linux.ubuntu = {
+    homeManager.nixpkgs.config.allowUnfree = true;
+  };
+  den.homes.aarch64-linux.ubuntu = {
+    homeManager.nixpkgs.config.allowUnfree = true;
+  };
 
   den.aspects.ubuntu = {
     includes = [

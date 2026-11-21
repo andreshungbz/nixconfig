@@ -1,4 +1,9 @@
-{ den, __findFile, ... }:
+{
+  den,
+  lib,
+  __findFile,
+  ...
+}:
 {
   den.default = {
     includes = [
@@ -23,9 +28,7 @@
       };
     };
 
-    homeManager = {
-      nixpkgs.config.allowUnfree = true;
-
+    homeManager = { lib, ... }: {
       home = {
         stateVersion = "26.11";
       };
