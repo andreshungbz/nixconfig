@@ -6,6 +6,10 @@
   };
 
   den.aspects.hyena = {
+    includes = [
+      den.batteries.user-aspects
+    ];
+
     provides.packet = {
       includes = [
         <pkt/darwin-base>
