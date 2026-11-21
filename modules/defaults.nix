@@ -26,9 +26,7 @@
     homeManager = {
       home = {
         stateVersion = "26.11";
-        sessionVariables = {
-          NIXPKGS_ALLOW_UNFREE = 1;
-        };
+        nixpkgs.config.allowUnfree = true;
       };
     };
 
