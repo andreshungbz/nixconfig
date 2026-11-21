@@ -24,9 +24,10 @@
     };
 
     homeManager = {
+      nixpkgs.config.allowUnfree = true;
+
       home = {
         stateVersion = "26.11";
-        nixpkgs.config.allowUnfree = true;
       };
     };
 
