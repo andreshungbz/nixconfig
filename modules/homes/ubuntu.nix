@@ -2,10 +2,10 @@
 {
   # Copy of packet.nix for systems where packet is not available
   den.homes.x86_64-linux.ubuntu = {
-    homeManager.nixpkgs.config.allowUnfree = true;
+    includes = [ den.aspects.unfree ];
   };
   den.homes.aarch64-linux.ubuntu = {
-    homeManager.nixpkgs.config.allowUnfree = true;
+    includes = [ den.aspects.unfree ];
   };
 
   den.aspects.ubuntu = {

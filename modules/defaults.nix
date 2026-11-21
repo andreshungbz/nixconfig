@@ -5,6 +5,10 @@
   ...
 }:
 {
+  den.aspects.unfree = {
+    homeManager.nixpkgs.config.allowUnfree = true;
+  };
+
   den.default = {
     includes = [
       <den/define-user>

@@ -2,10 +2,10 @@
 {
   # General Home Setup for Non-GUI Systems
   den.homes.x86_64-linux.packet = {
-    homeManager.nixpkgs.config.allowUnfree = true;
+    includes = [ den.aspects.unfree ];
   };
   den.homes.aarch64-linux.packet = {
-    homeManager.nixpkgs.config.allowUnfree = true;
+    includes = [ den.aspects.unfree ];
   };
 
   den.aspects.packet = {
