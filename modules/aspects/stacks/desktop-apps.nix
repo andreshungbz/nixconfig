@@ -7,7 +7,6 @@
       <pkt/flatpak>
       <pkt/headsetcontrol>
       <pkt/kitty>
-      <pkt/luciole>
       <pkt/openrazer>
       <pkt/proton>
       <pkt/sunshine>

@@ -22,6 +22,7 @@
         <pkt/desktop-apps>
         <pkt/dev-tools>
         <pkt/gaming>
+        <pkt/luciole>
         <pkt/nixos-base>
         <pkt/noctalia>
         <pkt/noctalia-greeter>
