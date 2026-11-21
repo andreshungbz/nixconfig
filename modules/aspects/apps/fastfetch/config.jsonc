@@ -36,7 +36,7 @@
     {
       "key": "│ {#39}󰃭 os age   {#keys}│",
       "type": "command",
-      "text": "birth=$(stat -c %W /); now=$(date +%s); echo \"$(( (now - birth) / 86400 )) days\""
+      "text": "birth=$(stat -c %W / 2>/dev/null || stat -f %B /Users); now=$(date +%s); echo \"$(( (now - birth) / 86400 )) days\""
     },
     {
       "key": "│ {#39}{icon} distro   {#keys}│",
