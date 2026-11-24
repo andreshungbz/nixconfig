@@ -138,7 +138,7 @@ track_layout = "global"
 
 [input.mouse]
 accel_profile = "adaptive"
-sensitivity = -0.6
+sensitivity = -0.8
 
 [input.tablet]
 enabled = true
