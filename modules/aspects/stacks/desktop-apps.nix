@@ -57,6 +57,7 @@
           veracrypt
           vesktop
           vlc
+          zapfast
           zoom-us
         ];
       };
